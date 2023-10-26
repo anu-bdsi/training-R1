@@ -8,7 +8,7 @@ website:
       - href: index.qmd
         text: Home
       - href: day1.qmd
-        text: Day 1
+        text: "Day 1"
       #- href: day1.qmd
       #  text: Day 2
       #- href: day1.qmd
