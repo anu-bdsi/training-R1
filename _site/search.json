@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "BDSI R Training I",
+    "section": "",
+    "text": "Students will develop the skills to begin to work with their research data using R/R Studio. These workshops cover setting up R projects, importing data into R, principles of tidy data, basic data visualisation using ggplot2, data wrangling using tidyverse and setting up a reproducible statistical workflow in R.\nSupervisor approval must be confirmed.\nHDR students wishing to track points against this workshop can do so via Career Development Framework."
+  },
+  {
+    "objectID": "index.html#schedule",
+    "href": "index.html#schedule",
+    "title": "BDSI R Training I",
+    "section": "",
+    "text": "Thu 2nd Nov 2023\n\n\n\n\nTime\nContent\nSlides\n\n\n\n\n10.00-10.10\nIntroduction\n\n\n\n11.00-12.00"
+  },
+  {
+    "objectID": "day1.html",
+    "href": "day1.html",
+    "title": "BDSI R Training I",
+    "section": "",
+    "text": "Time\nContent\nSlides\n\n\n\n\n10.00-10.10\nIntroduction\n\n\n\n10.10-10.40"
+  },
+  {
+    "objectID": "day1.html#schedule",
+    "href": "day1.html#schedule",
+    "title": "BDSI R Training I",
+    "section": "",
+    "text": "Time\nContent\nSlides\n\n\n\n\n10.00-10.10\nIntroduction\n\n\n\n10.10-10.40"
+  }
+]

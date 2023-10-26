@@ -1,0 +1,26 @@
+project:
+  type: website
+
+website:
+  title: "BDSI R Training I"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: day1.qmd
+        text: Day 1
+      #- href: day1.qmd
+      #  text: Day 2
+      #- href: day1.qmd
+      #  text: Day 3
+      #- href: day1.qmd
+      #  text: Day 4
+      - help.qmd
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+

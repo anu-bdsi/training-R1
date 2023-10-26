@@ -1,0 +1,10 @@
+---
+title: "BDSI R Training I"
+subtitle: "Scientific Reproducibility in the Biological Sciences"
+---
+
+Students will develop the skills to begin to work with their research data using R/R Studio. These workshops cover setting up R projects, importing data into R, principles of tidy data, basic data visualisation using ggplot2, data wrangling using tidyverse and setting up a reproducible statistical workflow in R.
+
+Supervisor approval must be confirmed.
+
+HDR students wishing to track points against this workshop can do so via [Career Development Framework](mailto:hdr.careerdev.science@anu.edu.au).

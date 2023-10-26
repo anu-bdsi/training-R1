@@ -1,0 +1,13 @@
+---
+title: "BDSI R Training I"
+subtitle: "Day 1"
+date: 11/02/2023
+---
+
+
+## Schedule
+
+Time | Content | Slides
+---|---|---|
+10.00-10.10 | Introduction | <i class='fas fa-link'></i>  |  
+10.10-10.40 |  |   |
