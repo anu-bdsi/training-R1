@@ -4,20 +4,69 @@
     "href": "index.html",
     "title": "BDSI R Training I",
     "section": "",
-    "text": "Students will develop the skills to begin to work with their research data using R/R Studio. These workshops cover setting up R projects, importing data into R, principles of tidy data, basic data visualisation using ggplot2, data wrangling using tidyverse and setting up a reproducible statistical workflow in R.\nSupervisor approval must be confirmed.\nHDR students wishing to track points against this workshop can do so via Career Development Framework."
+    "text": "This is a training workshop for R beginners offered by Australian National University (ANU) Biological Data Science Institute (BDSI).\nYou will develop the skills to work with your research data using R through the RStudio Desktop These workshops cover setting up R projects, importing data into R, principles of tidy data, basic data visualisation using ggplot2, data wrangling using tidyverse and setting up a reproducible statistical workflow in R.\nThis website is brought to you by ANU Biological Data Science Institute."
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "BDSI R Training I",
+    "section": "",
+    "text": "This is a training workshop for R beginners offered by Australian National University (ANU) Biological Data Science Institute (BDSI).\nYou will develop the skills to work with your research data using R through the RStudio Desktop These workshops cover setting up R projects, importing data into R, principles of tidy data, basic data visualisation using ggplot2, data wrangling using tidyverse and setting up a reproducible statistical workflow in R."
+  },
+  {
+    "objectID": "index.html#installation",
+    "href": "index.html#installation",
+    "title": "BDSI R Training I",
+    "section": "Installation",
+    "text": "Installation\nPlease ensure that you download and install\n\nthe latest version of R,\nthe latest version of RStudio Desktop, and\ninstall the following packages by opening RStudio Desktop, then copy and paste the command below in the Console section, pushing Enter after pasting.\n\ninstall.packages(c(\"tidyverse\", \"rmarkdown\"))\n If you are having issues, see also here or talk to the teaching team."
+  },
+  {
+    "objectID": "index.html#teaching-team",
+    "href": "index.html#teaching-team",
+    "title": "BDSI R Training I",
+    "section": "Teaching team",
+    "text": "Teaching team\n\n\n\n\n\n\nDr. Emi Tanaka\n\n\n\n\n\n\n\nDr. Jon Rocco\n\n\n\n\n\n\n\nDr. Terry Neeman"
   },
   {
     "objectID": "day1.html",
     "href": "day1.html",
     "title": "BDSI R Training I",
     "section": "",
-    "text": "Time\nContent\nSlides\n\n\n\n\n10.00-10.10\nIntroduction\n\n\n\n10.10-10.40"
+    "text": "Time\nContent\nSlides\n\n\n\n\n10.00-10.20\nIntroduction\n\n\n\n10.20-10.40\nSetting up your project and importing data\n\n\n\n10.40-11.00\nNumerical summaries\n\n\n\n11.00-12.00\nGraphical summaries\nThis website is brought to you by ANU Biological Data Science Institute."
   },
   {
     "objectID": "day1.html#schedule",
     "href": "day1.html#schedule",
     "title": "BDSI R Training I",
     "section": "",
-    "text": "Time\nContent\nSlides\n\n\n\n\n10.00-10.10\nIntroduction\n\n\n\n10.10-10.40"
+    "text": "Time\nContent\nSlides\n\n\n\n\n10.00-10.20\nIntroduction\n\n\n\n10.20-10.40\nSetting up your project and importing data\n\n\n\n10.40-11.00\nNumerical summaries\n\n\n\n11.00-12.00\nGraphical summaries"
+  },
+  {
+    "objectID": "help.html",
+    "href": "help.html",
+    "title": "Help",
+    "section": "",
+    "text": "This website is brought to you by ANU Biological Data Science Institute."
+  },
+  {
+    "objectID": "help.html#outside-of-the-workshop",
+    "href": "help.html#outside-of-the-workshop",
+    "title": "Help",
+    "section": "Outside of the workshop",
+    "text": "Outside of the workshop"
+  },
+  {
+    "objectID": "help.html#reporting-mistakes",
+    "href": "help.html#reporting-mistakes",
+    "title": "Help",
+    "section": "Reporting mistakes",
+    "text": "Reporting mistakes"
+  },
+  {
+    "objectID": "help.html#providing-feedback",
+    "href": "help.html#providing-feedback",
+    "title": "Help",
+    "section": "Providing feedback",
+    "text": "Providing feedback"
   }
 ]

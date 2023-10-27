@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -39,6 +73,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -104,8 +140,18 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
+<p><img src="./images/ANU_Secondary_Horizontal_GoldBlack.png" class="img-fluid"></p>
+</div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome 👋</a></li>
+  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation</a></li>
+  <li><a href="#teaching-team" id="toc-teaching-team" class="nav-link" data-scroll-target="#teaching-team">Teaching team</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -128,13 +174,57 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Students will develop the skills to begin to work with their research data using R/R Studio. These workshops cover setting up R projects, importing data into R, principles of tidy data, basic data visualisation using ggplot2, data wrangling using tidyverse and setting up a reproducible statistical workflow in R.</p>
-<p>Supervisor approval must be confirmed.</p>
-<p>HDR students wishing to track points against this workshop can do so via <a href="mailto:hdr.careerdev.science@anu.edu.au">Career Development Framework</a>.</p>
+<section id="welcome" class="level2">
+<h2 class="anchored" data-anchor-id="welcome">Welcome 👋</h2>
+<p>This is a <a href="](https://bdsi.anu.edu.au/training-courses/available-courses/bdsi-r-training-i-scientific-reproducibility-biological-sciences)">training workshop for R beginners</a> offered by Australian National University (ANU) Biological Data Science Institute (BDSI).</p>
+<p>You will develop the skills to work with your research data using R through the RStudio Desktop These workshops cover setting up R projects, importing data into R, principles of tidy data, basic data visualisation using ggplot2, data wrangling using tidyverse and setting up a reproducible statistical workflow in R.</p>
+</section>
+<section id="installation" class="level2">
+<h2 class="anchored" data-anchor-id="installation">Installation</h2>
+<p>Please ensure that you download and install</p>
+<ul>
+<li>the latest version of <a href="https://cran.csiro.au/">R</a>,</li>
+<li>the latest version of <a href="https://posit.co/download/rstudio-desktop/">RStudio Desktop</a>, and</li>
+<li>install the following packages by opening RStudio Desktop, then copy and paste the command below in the Console section, pushing Enter after pasting.</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"tidyverse"</span>, <span class="st">"rmarkdown"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><i class="fa-solid fa-hand-holding-medical" aria-label="hand-holding-medical"></i> If you are having issues, see also <a href="https://learnr.numbat.space/chapter1">here</a> or talk to the teaching team.</p>
+</section>
+<section id="teaching-team" class="level2">
+<h2 class="anchored" data-anchor-id="teaching-team">Teaching team</h2>
+<div class="quarto-layout-panel" style="text-align:center;">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/emi-square.png" class="circle-image-120 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Dr.&nbsp;Emi Tanaka</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/dummy.jpg" class="circle-image-120 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Dr.&nbsp;Jon Rocco</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/dummy.jpg" class="circle-image-120 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Dr.&nbsp;Terry Neeman</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
 
 
+</section>
 
-</main> <!-- /main -->
+<p><span class="footer">This website is brought to you by <a href="https://bdsi.anu.edu.au/">ANU Biological Data Science Institute</a>.</span></p></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
