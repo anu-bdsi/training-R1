@@ -31,7 +31,7 @@ install.packages(c("tidyverse", "rmarkdown"))
 
 ![Dr. Emi Tanaka](images/emi-square.png){.circle-image-120}
 
-![Dr. Jon Rocco](images/dummy.jpg){.circle-image-120}
+![Dr. Jon Roco](images/dummy.jpg){.circle-image-120}
 
 ![Dr. Terry Neeman](images/dummy.jpg){.circle-image-120}
 
