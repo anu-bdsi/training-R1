@@ -3,8 +3,36 @@ title: "BDSI R Training I"
 subtitle: "Scientific Reproducibility in the Biological Sciences"
 ---
 
-Students will develop the skills to begin to work with their research data using R/R Studio. These workshops cover setting up R projects, importing data into R, principles of tidy data, basic data visualisation using ggplot2, data wrangling using tidyverse and setting up a reproducible statistical workflow in R.
 
-Supervisor approval must be confirmed.
+## Welcome 👋
 
-HDR students wishing to track points against this workshop can do so via [Career Development Framework](mailto:hdr.careerdev.science@anu.edu.au).
+This is a [training workshop for R beginners](](https://bdsi.anu.edu.au/training-courses/available-courses/bdsi-r-training-i-scientific-reproducibility-biological-sciences)) offered by Australian National University (ANU) Biological Data Science Institute (BDSI).
+
+You will develop the skills to work with your research data using R through the RStudio Desktop These workshops cover setting up R projects, importing data into R, principles of tidy data, basic data visualisation using ggplot2, data wrangling using tidyverse and setting up a reproducible statistical workflow in R.
+
+## Installation 
+
+Please ensure that you download and install 
+
+- the latest version of [R](https://cran.csiro.au/),
+- the latest version of [RStudio Desktop](https://posit.co/download/rstudio-desktop/), and 
+- install the following packages by opening RStudio Desktop, then copy and paste the command below in the Console section, pushing Enter after pasting.
+
+```r
+install.packages(c("tidyverse", "rmarkdown"))
+```
+
+{{< fa hand-holding-medical >}} If you are having issues, see also [here](https://learnr.numbat.space/chapter1) or talk to the teaching team.
+
+## Teaching team 
+
+::: {layout-ncol=3 style="text-align:center;"}
+
+
+![Dr. Emi Tanaka](images/emi-square.png){.circle-image-120}
+
+![Dr. Jon Rocco](images/dummy.jpg){.circle-image-120}
+
+![Dr. Terry Neeman](images/dummy.jpg){.circle-image-120}
+
+:::

@@ -1,1 +1,28 @@
 /* css styles */
+
+thead th {
+  background-color: #BE830E!important;
+  color: white;
+}
+
+.navbar-dark {
+    background-color: #BE830E;
+}
+
+.footer, .footer a {
+  margin-top: 50px!important;
+  color: grey!important;
+}
+
+.footer {
+  display: block;
+}
+
+.circle-image-120 {
+  background: #000;
+  border-radius: 50%;
+  border: solid 3px black;
+  margin: auto;
+  height: 120px;
+  overflow: hidden;
+}

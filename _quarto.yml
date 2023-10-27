@@ -16,11 +16,15 @@ website:
       #- href: day1.qmd
       #  text: Day 4
       - help.qmd
+  body-footer: | 
+    [This website is brought to you by [ANU Biological Data Science Institute](https://bdsi.anu.edu.au/).]{.footer}
+  margin-header: |
+    ![](/images/ANU_Secondary_Horizontal_GoldBlack.png)
 format:
   html:
-    theme: cosmo
     css: styles.css
     toc: true
+    
 
 
 

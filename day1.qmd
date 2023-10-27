@@ -8,6 +8,8 @@ date: 11/02/2023
 ## Schedule
 
 Time | Content | Slides
----|---|---|
-10.00-10.10 | Introduction | <i class='fas fa-link'></i>  |  
-10.10-10.40 |  |   |
+:-----------|:-----------------|:---|
+10.00-10.20 | Introduction |   |  
+10.20-10.40 | Setting up your project and importing data |   |
+10.40-11.00 | Numerical summaries |   |
+11.00-12.00 | Graphical summaries |   |
