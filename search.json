@@ -4,21 +4,21 @@
     "href": "index.html",
     "title": "BDSI R Training I",
     "section": "",
-    "text": "This is a training workshop for R beginners offered by Australian National University (ANU) Biological Data Science Institute (BDSI).\nYou will develop the skills to work with your research data using R through the RStudio Desktop These workshops cover setting up R projects, importing data into R, principles of tidy data, basic data visualisation using ggplot2, data wrangling using tidyverse and setting up a reproducible statistical workflow in R.\nThis website is brought to you by ANU Biological Data Science Institute."
+    "text": "This is a training workshop for R beginners offered by the Australian National University (ANU) Biological Data Science Institute (BDSI).\nYou will develop the skills to work with your research data using R through the RStudio Desktop These workshops cover setting up R projects, importing data into R, principles of tidy data, basic data visualisation using ggplot2, data wrangling using tidyverse and setting up a reproducible statistical workflow in R.\nThis website is brought to you by ANU Biological Data Science Institute."
   },
   {
     "objectID": "index.html#welcome",
     "href": "index.html#welcome",
     "title": "BDSI R Training I",
     "section": "",
-    "text": "This is a training workshop for R beginners offered by Australian National University (ANU) Biological Data Science Institute (BDSI).\nYou will develop the skills to work with your research data using R through the RStudio Desktop These workshops cover setting up R projects, importing data into R, principles of tidy data, basic data visualisation using ggplot2, data wrangling using tidyverse and setting up a reproducible statistical workflow in R."
+    "text": "This is a training workshop for R beginners offered by the Australian National University (ANU) Biological Data Science Institute (BDSI).\nYou will develop the skills to work with your research data using R through the RStudio Desktop These workshops cover setting up R projects, importing data into R, principles of tidy data, basic data visualisation using ggplot2, data wrangling using tidyverse and setting up a reproducible statistical workflow in R."
   },
   {
-    "objectID": "index.html#installation",
-    "href": "index.html#installation",
+    "objectID": "index.html#preperation",
+    "href": "index.html#preperation",
     "title": "BDSI R Training I",
-    "section": "Installation",
-    "text": "Installation\nPlease ensure that you download and install\n\nthe latest version of R,\nthe latest version of RStudio Desktop, and\ninstall the following packages by opening RStudio Desktop, then copy and paste the command below in the Console section, pushing Enter after pasting.\n\ninstall.packages(c(\"tidyverse\", \"rmarkdown\"))\n If you are having issues, see also here or talk to the teaching team."
+    "section": "Preperation",
+    "text": "Preperation\nPlease ensure that you download and install\n\nthe latest version of R,\nthe latest version of RStudio Desktop,\ninstall the latest version of Quarto, and\ninstall the following packages by opening RStudio Desktop, then copy and paste the command below in the Console section, pushing Enter after pasting.\n\ninstall.packages(c(\"tidyverse\", \"rmarkdown\", \"janitor\", \n                   \"readxl\", \"gtsummary\", \"lme4\", \n                   \"emmeans\", \"lmerTest\", \"ggResidpanel\"))\n If you are having issues, see also here or talk to the teaching team."
   },
   {
     "objectID": "index.html#teaching-team",

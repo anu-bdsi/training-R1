@@ -148,7 +148,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome 👋</a></li>
-  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation</a></li>
+  <li><a href="#preperation" id="toc-preperation" class="nav-link" data-scroll-target="#preperation">Preperation</a></li>
   <li><a href="#teaching-team" id="toc-teaching-team" class="nav-link" data-scroll-target="#teaching-team">Teaching team</a></li>
   </ul>
 </nav>
@@ -176,18 +176,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="welcome" class="level2">
 <h2 class="anchored" data-anchor-id="welcome">Welcome 👋</h2>
-<p>This is a <a href="](https://bdsi.anu.edu.au/training-courses/available-courses/bdsi-r-training-i-scientific-reproducibility-biological-sciences)">training workshop for R beginners</a> offered by Australian National University (ANU) Biological Data Science Institute (BDSI).</p>
+<p>This is a <a href="](https://bdsi.anu.edu.au/training-courses/available-courses/bdsi-r-training-i-scientific-reproducibility-biological-sciences)">training workshop for R beginners</a> offered by the Australian National University (ANU) Biological Data Science Institute (BDSI).</p>
 <p>You will develop the skills to work with your research data using R through the RStudio Desktop These workshops cover setting up R projects, importing data into R, principles of tidy data, basic data visualisation using ggplot2, data wrangling using tidyverse and setting up a reproducible statistical workflow in R.</p>
 </section>
-<section id="installation" class="level2">
-<h2 class="anchored" data-anchor-id="installation">Installation</h2>
+<section id="preperation" class="level2">
+<h2 class="anchored" data-anchor-id="preperation">Preperation</h2>
 <p>Please ensure that you download and install</p>
 <ul>
 <li>the latest version of <a href="https://cran.csiro.au/">R</a>,</li>
-<li>the latest version of <a href="https://posit.co/download/rstudio-desktop/">RStudio Desktop</a>, and</li>
+<li>the latest version of <a href="https://posit.co/download/rstudio-desktop/">RStudio Desktop</a>,</li>
+<li>install the latest version of <a href="https://quarto.org/docs/get-started/">Quarto</a>, and</li>
 <li>install the following packages by opening RStudio Desktop, then copy and paste the command below in the Console section, pushing Enter after pasting.</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"tidyverse"</span>, <span class="st">"rmarkdown"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"tidyverse"</span>, <span class="st">"rmarkdown"</span>, <span class="st">"janitor"</span>, </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>                   <span class="st">"readxl"</span>, <span class="st">"gtsummary"</span>, <span class="st">"lme4"</span>, </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                   <span class="st">"emmeans"</span>, <span class="st">"lmerTest"</span>, <span class="st">"ggResidpanel"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><i class="fa-solid fa-hand-holding-medical" aria-label="hand-holding-medical"></i> If you are having issues, see also <a href="https://learnr.numbat.space/chapter1">here</a> or talk to the teaching team.</p>
 </section>
 <section id="teaching-team" class="level2">
