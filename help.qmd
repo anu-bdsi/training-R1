@@ -4,7 +4,13 @@ title: "Help"
 
 You aren't alone in your R journey. Make use of the experiences of those around you.
 
-If your issue is in coding, it often helps to present your problem with a minimally reproducible example. Read more [here](https://learnr.numbat.space/chapter3).
+::: callout-note
+
+## Writing reproducible examples
+
+If your issue is in coding, it often helps to present your problem with a minimally reproducible example (show your full code so that we can run it ourselves, details about your operating system, what was the error message?, etc). Provide us the details so that we can help you! Read more [here](https://learnr.numbat.space/chapter3).
+
+:::
 
 ## During the workshop
 
