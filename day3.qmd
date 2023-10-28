@@ -28,3 +28,13 @@ Time | Content
 
 
 ## 🏋️‍♀️ Exercises
+
+<i class='fas fa-file-pdf'></i> This exercise is based on 
+
+[Mantella, N. M., & Youngentob, S. L. (2014). Prenatal alcohol exposure increases postnatal acceptability of nicotine odor and taste in adolescent rats. PloS one, 9(7), e102255.](mantella-2014-prenatal-alcohol-exposure.pdf)
+
+{{< fa download >}} Download <a href="_template-mantella.qmd" download="learning-from-data-template-mantella.qmd">this template</a> and work through it.
+
+<i class='fas fa-database'></i> Download the data <a href="data/brief-access-lick-data.xlsx" download>here</a>.
+
+This template is written by Dr. Robert Cope and Dr. Terry Neeman (with some small modifications).

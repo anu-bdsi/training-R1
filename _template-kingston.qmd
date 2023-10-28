@@ -1,0 +1,55 @@
+---
+title: "Do Orbital Hoods Protect Shrimp from Shock Waves?"
+author: "YOUR NAME HERE"
+date: today
+format: docx
+---
+
+We compared how long it took shrimp from four treatment groups to contact shelter after being placed in an unfamiliar environment. 
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Import libraries.
+```{r}
+
+```
+
+
+Import data.
+```{r}
+
+```
+
+
+Describe and provide data summaries to inform reader how many animals per treatment.
+
+```{r}
+
+```
+
+
+Create figures that support these claims:
+
+Shrimp without orbital hoods that were exposed to shock waves took longer to contact their burrows than shrimp with orbital hoods that were exposed to shock waves, shrimp without orbital hoods that were not exposed to shock waves, or shrimp with orbital hoods that were not exposed to shock waves. Animals in the AE, UC, and AC treatments did not
+differ in how long they took to contact their burrows.
+
+```{r}
+
+```
+
+
+We measured how long it took individuals to achieve a normal upright posture  following their release into the behavioral arena.Shrimp in the UE treatment took longer to become upright than animals in the AE, UC, or AC treatments. Animals in the AE, UC, and AC treatments did not differ in how long they took to achieve a normal posture.
+
+```{r}
+
+```
+
+
+In test subjects with unaltered orbital hoods, shock waves recorded internally always had lower magnitudes than those recorded externally (Data S1C). When we removed orbital hoods from test subjects, shock waves varied in whether they had higher magnitudes internally or externally (Data S1C).
+
+```{r}
+
+```

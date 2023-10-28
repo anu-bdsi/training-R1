@@ -29,3 +29,15 @@ Time | Content
 
 ## 🏋️‍♀️ Exercises
 
+{{< fa download >}} Download the following templates (written by Dr. Terry Neeman with some small modifications), the accompanying data and associated paper (if any). Work through each template to fill the gaps.
+
+- *Preliminary look at Clonal Haemopoeisis patients* <a href="_template-ch.qmd" download="learning-from-data-template-ch.qmd"><i class='fas fa-file-word'></i></a> <a href="data/ch-study-mock-data.xlsx" download><i class='fas fa-database'></i></a> 
+- *Do Orbital Hoods Protect Shrimp from Shock Waves?* <a href="_template-kingston.qmd" download="learning-from-data-template-kingston.qmd"><i class='fas fa-file-word'></i></a> <a href="data/kingston-data.xlsx" download><i class='fas fa-database'></i></a> <a href="papers/kingston-2022-shrimp-helmet.pdf" download><i class='fas fa-file-pdf'></i></a> 
+- *Preliminary look at guich data* <a href="_template-guich.qmd" download="learning-from-data-template-guich.qmd"><i class='fas fa-file-word'></i></a> <a href="data/guich-feed-data.csv" download><i class='fas fa-database'></i></a> 
+- *Erythrocyte-platelet complex formation* <a href="_template-complex-formation.qmd" download="learning-from-data-template-complex-formation.qmd"><i class='fas fa-file-word'></i></a> <a href="data/complex-formation.csv" download><i class='fas fa-database'></i></a> 
+
+
+
+
+
+
