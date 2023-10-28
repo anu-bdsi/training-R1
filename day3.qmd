@@ -16,11 +16,7 @@ date: 11/09/2023
 
 ## 🕙 Schedule
 
-::: callout-note
-
-This is a rough schedule -- we will change it based on your progresses.
-
-:::
+{{< include _draft_schedule.qmd >}}
 
 Time | Content 
 :-----------|:-----------------|
