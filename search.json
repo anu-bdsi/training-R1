@@ -1,64 +1,36 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "BDSI R Training I",
+    "objectID": "day4.html",
+    "href": "day4.html",
+    "title": "Day 4",
     "section": "",
-    "text": "This is a training workshop for R beginners offered by the Australian National University (ANU) Biological Data Science Institute (BDSI).\nYou will develop the skills to work with your research data using R through the RStudio Desktop These workshops cover setting up R projects, importing data into R, principles of tidy data, basic data visualisation using ggplot2, data wrangling using tidyverse and setting up a reproducible statistical workflow in R.\nThis website is brought to you by ANU Biological Data Science Institute."
+    "text": "Learning objectives\n\n\n\n\nAdopt the full R workflow to write a reproducible scientific report\nThis website is brought to you by the ANU Biological Data Science Institute."
   },
   {
-    "objectID": "index.html#welcome",
-    "href": "index.html#welcome",
-    "title": "BDSI R Training I",
+    "objectID": "day4.html#aim",
+    "href": "day4.html#aim",
+    "title": "Day 4",
     "section": "",
-    "text": "This is a training workshop for R beginners offered by the Australian National University (ANU) Biological Data Science Institute (BDSI).\nYou will develop the skills to work with your research data using R through the RStudio Desktop These workshops cover setting up R projects, importing data into R, principles of tidy data, basic data visualisation using ggplot2, data wrangling using tidyverse and setting up a reproducible statistical workflow in R."
+    "text": "Learning objectives\n\n\n\n\nAdopt the full R workflow to write a reproducible scientific report"
   },
   {
-    "objectID": "index.html#preperation",
-    "href": "index.html#preperation",
-    "title": "BDSI R Training I",
-    "section": "Preperation",
-    "text": "Preperation\n Watch the following videos by Dr Robert Cope.\n\n\nVideos\n\n\n\n\n\n\n\n\nPlease ensure that you download and install\n\nthe latest version of R,\nthe latest version of RStudio Desktop,\nthe latest version of Quarto,\nSlack (alternatively you can use the web version), and\nthe following packages by opening RStudio Desktop, then copy and paste the command below in the Console section, pushing Enter after pasting.\n\ninstall.packages(c(\"tidyverse\", \"rmarkdown\", \"janitor\", \n                   \"readxl\", \"gtsummary\", \"lme4\", \n                   \"emmeans\", \"lmerTest\", \"ggResidpanel\", \"reprex\",\n                   \"palmerpenguins\", \"quarto\"))\n If you are having issues, see also here or talk to the teaching team."
-  },
-  {
-    "objectID": "index.html#teaching-team",
-    "href": "index.html#teaching-team",
-    "title": "BDSI R Training I",
-    "section": "Teaching team",
-    "text": "Teaching team\n\n\n\n\n\n\nDr. Emi Tanaka\n\n\n\n\n\n\n\nDr. Jon Roco\n\n\n\n\n\n\n\nDr. Terry Neeman"
-  },
-  {
-    "objectID": "day1.html",
-    "href": "day1.html",
-    "title": "Day 1",
-    "section": "",
-    "text": "Learning objectives\n\n\n\n\nSetting up your data project\nReading data into R\nThe basics of R programming\nComputing simple numerical summaries of your data in R\nTroubleshooting and producing minimal reproducible examples\nThis website is brought to you by ANU Biological Data Science Institute."
-  },
-  {
-    "objectID": "day1.html#aim",
-    "href": "day1.html#aim",
-    "title": "Day 1",
-    "section": "",
-    "text": "Learning objectives\n\n\n\n\nSetting up your data project\nReading data into R\nThe basics of R programming\nComputing simple numerical summaries of your data in R\nTroubleshooting and producing minimal reproducible examples"
-  },
-  {
-    "objectID": "day1.html#schedule",
-    "href": "day1.html#schedule",
-    "title": "Day 1",
+    "objectID": "day4.html#schedule",
+    "href": "day4.html#schedule",
+    "title": "Day 4",
     "section": "🕙 Schedule",
-    "text": "🕙 Schedule\n\n\n\n\n\n\nNote\n\n\n\nThis is a rough schedule – we will change it based on your progresses.\n\n\n\n\n\nTime\nContent\n\n\n\n\n10.00-10.20\nIntroduction\n\n\n10.20-11.00\nBasics of R programming\n\n\n10.20-10.40\nSetting up your project and importing data\n\n\n10.40-11.00\nComputing numerical summaries\n\n\n11.00-12.00\nGetting started with graphical summaries"
+    "text": "🕙 Schedule\n\n\n\n\n\n\nNote\n\n\n\nThis is a rough schedule – we will change it based on your progresses.\n\n\n\n\n\nTime\nContent\n\n\n\n\n10.00-12.00\nFull workflow"
   },
   {
-    "objectID": "day1.html#slides",
-    "href": "day1.html#slides",
-    "title": "Day 1",
+    "objectID": "day4.html#slides",
+    "href": "day4.html#slides",
+    "title": "Day 4",
     "section": "🔗 Slides",
-    "text": "🔗 Slides\n\nIntroduction\nBasics of R programming\nProject structure\nNumerical summaries"
+    "text": "🔗 Slides"
   },
   {
-    "objectID": "day1.html#exercises",
-    "href": "day1.html#exercises",
-    "title": "Day 1",
+    "objectID": "day4.html#exercises",
+    "href": "day4.html#exercises",
+    "title": "Day 4",
     "section": "🏋️‍♀️ Exercises",
     "text": "🏋️‍♀️ Exercises"
   },
@@ -67,7 +39,7 @@
     "href": "help.html",
     "title": "Help",
     "section": "",
-    "text": "You aren’t alone in your R journey. Make use of the experiences of those around you.\nThis website is brought to you by ANU Biological Data Science Institute."
+    "text": "You aren’t alone in your R journey. Make use of the experiences of those around you.\nThis website is brought to you by the ANU Biological Data Science Institute."
   },
   {
     "objectID": "help.html#during-the-workshop",
@@ -96,5 +68,138 @@
     "title": "Help",
     "section": "Providing feedback",
     "text": "Providing feedback\nWe want to always improve our delivery! Please let us know what is working, what is not working, and/or other feedback. For feedback, you can either email Emi (emi.tanaka@anu.edu.au) or using the survey link that was/will be emailed to you (for workshop participants)."
+  },
+  {
+    "objectID": "day3.html",
+    "href": "day3.html",
+    "title": "Day 3",
+    "section": "",
+    "text": "Learning objectives\n\n\n\n\nProduce reproducible documents using Quarto (next generation R markdown)\nThis website is brought to you by the ANU Biological Data Science Institute."
+  },
+  {
+    "objectID": "day3.html#aim",
+    "href": "day3.html#aim",
+    "title": "Day 3",
+    "section": "",
+    "text": "Learning objectives\n\n\n\n\nProduce reproducible documents using Quarto (next generation R markdown)"
+  },
+  {
+    "objectID": "day3.html#schedule",
+    "href": "day3.html#schedule",
+    "title": "Day 3",
+    "section": "🕙 Schedule",
+    "text": "🕙 Schedule\n\n\n\n\n\n\nNote\n\n\n\nThis is a rough schedule – we will change it based on your progresses.\n\n\n\n\n\nTime\nContent\n\n\n\n\n10.00-11.00\nR Markdown\n\n\n11.00-12.00\nQuarto"
+  },
+  {
+    "objectID": "day3.html#slides",
+    "href": "day3.html#slides",
+    "title": "Day 3",
+    "section": "🔗 Slides",
+    "text": "🔗 Slides"
+  },
+  {
+    "objectID": "day3.html#exercises",
+    "href": "day3.html#exercises",
+    "title": "Day 3",
+    "section": "🏋️‍♀️ Exercises",
+    "text": "🏋️‍♀️ Exercises"
+  },
+  {
+    "objectID": "day1.html",
+    "href": "day1.html",
+    "title": "Day 1",
+    "section": "",
+    "text": "Learning objectives\n\n\n\n\nSetting up your data project\nReading data into R\nThe basics of R programming\nComputing simple numerical summaries of your data in R\nTroubleshooting and producing minimal reproducible examples\nThis website is brought to you by the ANU Biological Data Science Institute."
+  },
+  {
+    "objectID": "day1.html#aim",
+    "href": "day1.html#aim",
+    "title": "Day 1",
+    "section": "",
+    "text": "Learning objectives\n\n\n\n\nSetting up your data project\nReading data into R\nThe basics of R programming\nComputing simple numerical summaries of your data in R\nTroubleshooting and producing minimal reproducible examples"
+  },
+  {
+    "objectID": "day1.html#schedule",
+    "href": "day1.html#schedule",
+    "title": "Day 1",
+    "section": "🕙 Schedule",
+    "text": "🕙 Schedule\n\n\n\n\n\n\nNote\n\n\n\nThis is a rough schedule – we will change it based on your progresses.\n\n\n\n\n\nTime\nContent\n\n\n\n\n10.00-10.20\nIntroduction\n\n\n10.20-11.00\nBasics of R programming\n\n\n10.20-10.40\nSetting up your project and importing data\n\n\n10.40-11.00\nComputing numerical summaries\n\n\n11.00-12.00\nGetting started with graphical summaries"
+  },
+  {
+    "objectID": "day1.html#slides",
+    "href": "day1.html#slides",
+    "title": "Day 1",
+    "section": "🔗 Slides",
+    "text": "🔗 Slides\n\nIntroduction\nBasics of R programming\nProject structure\nNumerical summaries"
+  },
+  {
+    "objectID": "day1.html#exercises",
+    "href": "day1.html#exercises",
+    "title": "Day 1",
+    "section": "🏋️‍♀️ Exercises",
+    "text": "🏋️‍♀️ Exercises\nWe will look at the penguins dataset that is contained in the palmerpenguins package. For more details about the data, see here.\nlibrary(skimr)\nlibrary(palmerpenguins)\ndata(penguins)\nUsing this data, answer the following questions.\n\nHave a quick skim of the data.\nHow many species were studied?\nHow many islands are there in the data?\nDid they find all species on every island?\nFor each biometric measure, are there difference between the species?\nExplore the associations between the biometric measurements bill length, bill depth, flipper length and body mass.\nAre there differences in these associations between species?"
+  },
+  {
+    "objectID": "day2.html",
+    "href": "day2.html",
+    "title": "Day 2",
+    "section": "",
+    "text": "Learning objectives\n\n\n\n\nWrangle data with dplyr and tidyr\nVisualise data with ggplot2\nThis website is brought to you by the ANU Biological Data Science Institute."
+  },
+  {
+    "objectID": "day2.html#aim",
+    "href": "day2.html#aim",
+    "title": "Day 2",
+    "section": "",
+    "text": "Learning objectives\n\n\n\n\nWrangle data with dplyr and tidyr\nVisualise data with ggplot2"
+  },
+  {
+    "objectID": "day2.html#schedule",
+    "href": "day2.html#schedule",
+    "title": "Day 2",
+    "section": "🕙 Schedule",
+    "text": "🕙 Schedule\n\n\n\n\n\n\nNote\n\n\n\nThis is a rough schedule – we will change it based on your progresses.\n\n\n\n\n\nTime\nContent\n\n\n\n\n10.00-11.00\nData wrangling\n\n\n11.00-12.00\nData visualisation"
+  },
+  {
+    "objectID": "day2.html#slides",
+    "href": "day2.html#slides",
+    "title": "Day 2",
+    "section": "🔗 Slides",
+    "text": "🔗 Slides"
+  },
+  {
+    "objectID": "day2.html#exercises",
+    "href": "day2.html#exercises",
+    "title": "Day 2",
+    "section": "🏋️‍♀️ Exercises",
+    "text": "🏋️‍♀️ Exercises\nThis exercise is written by Dr. Terry Neeman.\n{{}} The data for this exercise can be downloaded here.\n\nErythrocyte-Platelet complex formation\nWe have developed an assay to measure the formation of platelet-mediated erythrocyte-parasite complexes in the presence of P. falciparum infected erythrocytes, expressed as the percentage of erythrocytes (out of 500) that have formed complexes. We tested our assay using:\n\ninfected and uninfected erythrocytes,\n3 different platelet:erythrocyte concentration ratios (0.02:1, 0.2:1, and 2:1),\n2 different incubation times (2 hours - baseline and 24 hours - final).\n\nWe ran the experiment FIVE times. We would like to see if our new assay shows that malaria-infected red blood cells (RBC) induce complex formation.\n\nR workflow\nWe organise our analyses in R as follows:\n\nmake sure spreadsheet is properly formatted.\nPreparation: import libraries that we’ll need for the analyses.\nSet-up: import the data set, and do some initial checks.\nData management: set data types/ restructure/subset data as needed.\nData exploration: visualisation for assessing patterns/associations.\nFit statistical model:\n\nassess model assumptions\nstatistical inference\nobtain estimates of treatment effects (plus/minus uncertainty)\n\nGraphical or tabular summary of statistical model.\n\n\n\nSet up libraries\nlibrary(tidyverse)\nlibrary(lmerTest)\nlibrary(emmeans)\nlibrary(ggResidpanel)\n\nImport data and check data structure\nWe can check the data structure either using the function str() or glimpse()\nHow many observations for each Experiment, infection status, concentration ratio and incubation time? Remember to use group_by() and summarise(). Can you use pivot_wider() to make the table easier to read?\n\n\nData exploration\nThink of a few different ways to explore your data, keeping mind your research question. We would like to know if infected cells induce complex formation. Be sensitive to the order within factors, and change factor levels, if needed.\nYou might try a few different plots instead of just a single plot.\nFit a model to these data to address the research question. Include Experiment as a blocking factor\nlm.ery &lt;- lmer(complex ~ time * RBC * ratio + (1|Experiment), data = ery)\nUse the anova() function to get the ANOVA table. Interpret the table.\nanova(lm.ery)\nLooking at your exploratory graphs, we can start to piece together the story the data are telling.\nTypically, we look at the highest level interactions first. They tell us about interesting patterns. If an interaction is “statistically significant”, but the main effect is not, it could be that the individual effects (contrasts) average out to 0.\n(I1) Time:RBC interaction: There is a difference in the incubation time effect between infected and uninfected RBC (averaged across ratio) and across Experiment. This is what we are hoping to see! Describe this difference.\nIn the absence of treatment interactions, we can describe the main effects.\n(M1) There is a platelet:erythrocyte ratio effect. This is estimated as the effect of ratio, averaged across the other 2 conditions (time, RBC) and across Experiments. Referring to your graph, describe that pattern.\n(M2) There is an incubation time effect. This is estimated as the effect of incubation time, averaged across the other 2 conditions (ratio, RBC) and across Experiments. Referring to your graph, describe that pattern.\n(M3) There is an infection effect. This is estimated as the difference between infected and uninfected RBC, averaged across the other 2 conditions (time, ratio) and across Experiments. Referring to your graph, describe that pattern.\nAssess model assumptions with residual plots\nresid_panel(lm.ery)\nLook at parameter estimates and between-Experiment variation using the summary() function\nsummary(lm.ery)\nObtain mean estimates and standard errors for plotting using the emmeans() function\nresults1 &lt;- summary(emmeans(lm.ery, ~time * RBC * ratio))\nresults1\nFinally, create a graphic summarising the model\nggplot(results1, aes(x = RBC, y = emmean, fill = time)) +\n  geom_col(position = \"dodge\") +\n  geom_errorbar(aes(ymin = emmean-SE, ymax = emmean+SE), width = 0.2, position=position_dodge(width = 0.9))+\n  facet_wrap(~ratio)+\n  scale_fill_brewer(palette = \"Paired\")+\n  ylab(\"Mean Complex formation (%)\")+\n  theme_bw()"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "BDSI R Training I",
+    "section": "",
+    "text": "This is a training workshop for R beginners offered by the Australian National University (ANU) Biological Data Science Institute (BDSI).\nYou will develop the skills to work with your research data using R through the RStudio Desktop These workshops cover setting up R projects, importing data into R, principles of tidy data, basic data visualisation using ggplot2, data wrangling using tidyverse and setting up a reproducible statistical workflow in R.\nThis website is brought to you by the ANU Biological Data Science Institute."
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "BDSI R Training I",
+    "section": "",
+    "text": "This is a training workshop for R beginners offered by the Australian National University (ANU) Biological Data Science Institute (BDSI).\nYou will develop the skills to work with your research data using R through the RStudio Desktop These workshops cover setting up R projects, importing data into R, principles of tidy data, basic data visualisation using ggplot2, data wrangling using tidyverse and setting up a reproducible statistical workflow in R."
+  },
+  {
+    "objectID": "index.html#preperation",
+    "href": "index.html#preperation",
+    "title": "BDSI R Training I",
+    "section": "Preperation",
+    "text": "Preperation\n Watch the following videos by Dr Robert Cope.\n\n\nVideos\n\n\n\n\n\n\n\n\nPlease ensure that you download and install\n\nthe latest version of R,\nthe latest version of RStudio Desktop,\nthe latest version of Quarto,\nSlack (alternatively you can use the web version), and\nthe following packages by opening RStudio Desktop, then copy and paste the command below in the Console section, pushing Enter after pasting.\n\ninstall.packages(c(\"tidyverse\", \"rmarkdown\", \"janitor\", \n                   \"readxl\", \"gtsummary\", \"lme4\", \n                   \"emmeans\", \"lmerTest\", \"ggResidpanel\", \"reprex\",\n                   \"palmerpenguins\", \"quarto\", \"skimr\", \"ggbeeswarm\"))\n If you are having issues, see also here or talk to the teaching team."
+  },
+  {
+    "objectID": "index.html#teaching-team",
+    "href": "index.html#teaching-team",
+    "title": "BDSI R Training I",
+    "section": "Teaching team",
+    "text": "Teaching team\n\n\n\n\n\n\nDr. Emi Tanaka\n\n\n\n\n\n\n\nDr. Jon Roco\n\n\n\n\n\n\n\nDr. Terry Neeman"
   }
 ]

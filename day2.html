@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2023-11-03">
 
-<title>BDSI R Training I - Help</title>
+<title>BDSI R Training I - Day 2</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -90,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Day 1</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./day2.html" rel="" target="">
+    <a class="nav-link active" href="./day2.html" rel="" target="" aria-current="page">
  <span class="menu-text">Day 2</span></a>
   </li>  
   <li class="nav-item">
@@ -102,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Day 4</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./help.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="./help.html" rel="" target="">
  <span class="menu-text">Help</span></a>
   </li>  
 </ul>
@@ -123,10 +158,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#during-the-workshop" id="toc-during-the-workshop" class="nav-link active" data-scroll-target="#during-the-workshop">During the workshop</a></li>
-  <li><a href="#outside-of-the-workshop" id="toc-outside-of-the-workshop" class="nav-link" data-scroll-target="#outside-of-the-workshop">Outside of the workshop</a></li>
-  <li><a href="#reporting-mistakes" id="toc-reporting-mistakes" class="nav-link" data-scroll-target="#reporting-mistakes">Reporting mistakes</a></li>
-  <li><a href="#providing-feedback" id="toc-providing-feedback" class="nav-link" data-scroll-target="#providing-feedback">Providing feedback</a></li>
+  <li><a href="#aim" id="toc-aim" class="nav-link active" data-scroll-target="#aim">🎯 Aim</a></li>
+  <li><a href="#schedule" id="toc-schedule" class="nav-link" data-scroll-target="#schedule">🕙 Schedule</a></li>
+  <li><a href="#slides" id="toc-slides" class="nav-link" data-scroll-target="#slides">🔗 Slides</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">🏋️‍♀️ Exercises</a>
+  <ul class="collapse">
+  <li><a href="#erythrocyte-platelet-complex-formation" id="toc-erythrocyte-platelet-complex-formation" class="nav-link" data-scroll-target="#erythrocyte-platelet-complex-formation">Erythrocyte-Platelet complex formation</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -135,7 +173,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Help</h1>
+<h1 class="title">Day 2</h1>
 </div>
 
 
@@ -143,6 +181,12 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 3, 2023</p>
+    </div>
+  </div>
   
     
   </div>
@@ -150,49 +194,139 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>You aren’t alone in your R journey. Make use of the experiences of those around you.</p>
+<section id="aim" class="level2">
+<h2 class="anchored" data-anchor-id="aim">🎯 Aim</h2>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Writing reproducible examples
+Learning objectives
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If your issue is in coding, it often helps to present your problem with a minimally reproducible example (show your full code so that we can run it ourselves, details about your operating system, what was the error message?, etc). Provide us the details so that we can help you! Read more <a href="https://learnr.numbat.space/chapter3">here</a>.</p>
+<ul>
+<li>Wrangle data with <code>dplyr</code> and <code>tidyr</code></li>
+<li>Visualise data with <code>ggplot2</code></li>
+</ul>
 </div>
 </div>
-<section id="during-the-workshop" class="level2">
-<h2 class="anchored" data-anchor-id="during-the-workshop">During the workshop</h2>
+</section>
+<section id="schedule" class="level2">
+<h2 class="anchored" data-anchor-id="schedule">🕙 Schedule</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is a rough schedule – we will change it based on your progresses.</p>
+</div>
+</div>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Time</th>
+<th style="text-align: left;">Content</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">10.00-11.00</td>
+<td style="text-align: left;">Data wrangling</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">11.00-12.00</td>
+<td style="text-align: left;">Data visualisation</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="slides" class="level2">
+<h2 class="anchored" data-anchor-id="slides">🔗 Slides</h2>
+</section>
+<section id="exercises" class="level2">
+<h2 class="anchored" data-anchor-id="exercises">🏋️‍♀️ Exercises</h2>
+<p>This exercise is written by Dr.&nbsp;Terry Neeman.</p>
+<p>{{<fa download="">}} The data for this exercise can be downloaded <a href="data/complex-formation.csv" download="">here</a>.</fa></p>
+<section id="erythrocyte-platelet-complex-formation" class="level3">
+<h3 class="anchored" data-anchor-id="erythrocyte-platelet-complex-formation">Erythrocyte-Platelet complex formation</h3>
+<p>We have developed an assay to measure the formation of platelet-mediated erythrocyte-parasite complexes in the presence of P. falciparum infected erythrocytes, expressed as the percentage of erythrocytes (out of 500) that have formed complexes. We tested our assay using:</p>
 <ul>
-<li>Don’t be shy and ask fellow participants in the workshop.</li>
-<li>Flag and ask the teaching team.</li>
+<li>infected and uninfected erythrocytes,</li>
+<li>3 different platelet:erythrocyte concentration ratios (0.02:1, 0.2:1, and 2:1),</li>
+<li>2 different incubation times (2 hours - baseline and 24 hours - final).</li>
 </ul>
+<p>We ran the experiment FIVE times. We would like to see if our new assay shows that malaria-infected red blood cells (RBC) induce complex formation.</p>
+<section id="r-workflow" class="level4">
+<h4 class="anchored" data-anchor-id="r-workflow">R workflow</h4>
+<p>We organise our analyses in R as follows:</p>
+<ol start="0" type="1">
+<li><p>make sure spreadsheet is properly formatted.</p></li>
+<li><p>Preparation: import libraries that we’ll need for the analyses.</p></li>
+<li><p>Set-up: import the data set, and do some initial checks.</p></li>
+<li><p>Data management: set data types/ restructure/subset data as needed.</p></li>
+<li><p>Data exploration: visualisation for assessing patterns/associations.</p></li>
+<li><p>Fit statistical model:</p>
+<ol type="a">
+<li>assess model assumptions</li>
+<li>statistical inference</li>
+<li>obtain estimates of treatment effects (plus/minus uncertainty)</li>
+</ol></li>
+<li><p>Graphical or tabular summary of statistical model.</p></li>
+</ol>
 </section>
-<section id="outside-of-the-workshop" class="level2">
-<h2 class="anchored" data-anchor-id="outside-of-the-workshop">Outside of the workshop</h2>
-<ul>
-<li>Ask people around you. A second opinion is often helpfu in uncovering a step towards the solution to your problem.</li>
-<li>Ask the local experts such as at the <a href="https://bdsi.anu.edu.au/news-events/event-series/bdsi-bioinformatics-and-statistics-drop-sessions">BDSI Drop-In Sessions</a>.</li>
-<li>Use online resources such as:
-<ul>
-<li><a href="https://r4ds.hadley.nz/">R for Data Science</a></li>
-<li><a href="https://rfordatasci.com/">R4DS Online Learning Community</a></li>
-<li>Ask questions on <a href="https://stackoverflow.com/questions/tagged/r">Stack Overflow</a> or <a href="https://community.rstudio.com/">Posit Community</a>.</li>
-</ul></li>
-</ul>
+<section id="set-up-libraries" class="level4">
+<h4 class="anchored" data-anchor-id="set-up-libraries">Set up libraries</h4>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lmerTest)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(emmeans)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggResidpanel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="import-data-and-check-data-structure" class="level5">
+<h5 class="anchored" data-anchor-id="import-data-and-check-data-structure">Import data and check data structure</h5>
+<p>We can check the data structure either using the function str() or glimpse()</p>
+<p>How many observations for each Experiment, infection status, concentration ratio and incubation time? Remember to use group_by() and summarise(). Can you use pivot_wider() to make the table easier to read?</p>
 </section>
-<section id="reporting-mistakes" class="level2">
-<h2 class="anchored" data-anchor-id="reporting-mistakes">Reporting mistakes</h2>
-<p>Did you find mistakes in the workshop? Please let us know either by either emailing Emi (<a href="mailto:emi.tanaka@anu.edu.au">emi.tanaka@anu.edu.au</a>) or reporting it at <a href="https://github.com/anu-bdsi/training-R1/issues" class="uri">https://github.com/anu-bdsi/training-R1/issues</a> (latter preferred).</p>
-</section>
-<section id="providing-feedback" class="level2">
-<h2 class="anchored" data-anchor-id="providing-feedback">Providing feedback</h2>
-<p>We want to always improve our delivery! Please let us know what is working, what is not working, and/or other feedback. For feedback, you can either email Emi (<a href="mailto:emi.tanaka@anu.edu.au">emi.tanaka@anu.edu.au</a>) or using the survey link that was/will be emailed to you (for workshop participants).</p>
+<section id="data-exploration" class="level5">
+<h5 class="anchored" data-anchor-id="data-exploration">Data exploration</h5>
+<p>Think of a few different ways to explore your data, keeping mind your research question. We would like to know if infected cells induce complex formation. Be sensitive to the order within factors, and change factor levels, if needed.</p>
+<p>You might try a few different plots instead of just a single plot.</p>
+<p>Fit a model to these data to address the research question. Include Experiment as a blocking factor</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>lm.ery <span class="ot">&lt;-</span> <span class="fu">lmer</span>(complex <span class="sc">~</span> time <span class="sc">*</span> RBC <span class="sc">*</span> ratio <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>Experiment), <span class="at">data =</span> ery)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Use the anova() function to get the ANOVA table. Interpret the table.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">anova</span>(lm.ery)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Looking at your exploratory graphs, we can start to piece together the story the data are telling.</p>
+<p>Typically, we look at the highest level interactions first. They tell us about interesting patterns. If an interaction is “statistically significant”, but the main effect is not, it could be that the individual effects (contrasts) average out to 0.</p>
+<p>(I1) Time:RBC interaction: There is a difference in the incubation time effect between infected and uninfected RBC (averaged across ratio) and across Experiment. This is what we are hoping to see! Describe this difference.</p>
+<p>In the absence of treatment interactions, we can describe the main effects.</p>
+<p>(M1) There is a platelet:erythrocyte ratio effect. This is estimated as the effect of ratio, averaged across the other 2 conditions (time, RBC) and across Experiments. Referring to your graph, describe that pattern.</p>
+<p>(M2) There is an incubation time effect. This is estimated as the effect of incubation time, averaged across the other 2 conditions (ratio, RBC) and across Experiments. Referring to your graph, describe that pattern.</p>
+<p>(M3) There is an infection effect. This is estimated as the difference between infected and uninfected RBC, averaged across the other 2 conditions (time, ratio) and across Experiments. Referring to your graph, describe that pattern.</p>
+<p>Assess model assumptions with residual plots</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">resid_panel</span>(lm.ery)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Look at parameter estimates and between-Experiment variation using the summary() function</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm.ery)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Obtain mean estimates and standard errors for plotting using the emmeans() function</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>results1 <span class="ot">&lt;-</span> <span class="fu">summary</span>(<span class="fu">emmeans</span>(lm.ery, <span class="sc">~</span>time <span class="sc">*</span> RBC <span class="sc">*</span> ratio))</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>results1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Finally, create a graphic summarising the model</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(results1, <span class="fu">aes</span>(<span class="at">x =</span> RBC, <span class="at">y =</span> emmean, <span class="at">fill =</span> time)) <span class="sc">+</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="st">"dodge"</span>) <span class="sc">+</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> emmean<span class="sc">-</span>SE, <span class="at">ymax =</span> emmean<span class="sc">+</span>SE), <span class="at">width =</span> <span class="fl">0.2</span>, <span class="at">position=</span><span class="fu">position_dodge</span>(<span class="at">width =</span> <span class="fl">0.9</span>))<span class="sc">+</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>ratio)<span class="sc">+</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">"Paired"</span>)<span class="sc">+</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean Complex formation (%)"</span>)<span class="sc">+</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
+</section>
+</section>
+</section>
 </section>
 
 <p><span class="footer">This website is brought to you by the <a href="https://bdsi.anu.edu.au/">ANU Biological Data Science Institute</a>.</span></p></main> <!-- /main -->

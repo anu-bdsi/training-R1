@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -89,6 +123,18 @@ ul.task-list li input[type="checkbox"] {
   <li class="nav-item">
     <a class="nav-link active" href="./day1.html" rel="" target="" aria-current="page">
  <span class="menu-text">Day 1</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./day2.html" rel="" target="">
+ <span class="menu-text">Day 2</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./day3.html" rel="" target="">
+ <span class="menu-text">Day 3</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./day4.html" rel="" target="">
+ <span class="menu-text">Day 4</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./help.html" rel="" target="">
@@ -224,11 +270,25 @@ Note
 </section>
 <section id="exercises" class="level2">
 <h2 class="anchored" data-anchor-id="exercises">🏋️‍♀️ Exercises</h2>
+<p>We will look at the <code>penguins</code> dataset that is contained in the <code>palmerpenguins</code> package. For more details about the data, see <a href="https://allisonhorst.github.io/palmerpenguins/">here</a>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(skimr)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Using this data, answer the following questions.</p>
+<ol type="1">
+<li>Have a quick skim of the data.</li>
+<li>How many species were studied?</li>
+<li>How many islands are there in the data?</li>
+<li>Did they find all species on every island?</li>
+<li>For each biometric measure, are there difference between the species?</li>
+<li>Explore the associations between the biometric measurements bill length, bill depth, flipper length and body mass.</li>
+<li>Are there differences in these associations between species?</li>
+</ol>
 
 
 </section>
 
-<p><span class="footer">This website is brought to you by <a href="https://bdsi.anu.edu.au/">ANU Biological Data Science Institute</a>.</span></p></main> <!-- /main -->
+<p><span class="footer">This website is brought to you by the <a href="https://bdsi.anu.edu.au/">ANU Biological Data Science Institute</a>.</span></p></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
