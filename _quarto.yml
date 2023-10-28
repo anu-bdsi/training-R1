@@ -7,17 +7,13 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: day1.qmd
-        text: "Day 1"
-      #- href: day1.qmd
-      #  text: Day 2
-      #- href: day1.qmd
-      #  text: Day 3
-      #- href: day1.qmd
-      #  text: Day 4
+      - day1.qmd
+      - day2.qmd
+      - day3.qmd
+      - day4.qmd
       - help.qmd
   body-footer: | 
-    [This website is brought to you by [ANU Biological Data Science Institute](https://bdsi.anu.edu.au/).]{.footer}
+    [This website is brought to you by the [ANU Biological Data Science Institute](https://bdsi.anu.edu.au/).]{.footer}
   margin-header: |
     ![](/images/ANU_Secondary_Horizontal_GoldBlack.png)
 format:

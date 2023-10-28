@@ -1,0 +1,152 @@
+---
+title: "Day 2"
+date: 11/03/2023
+---
+
+## 🎯 Aim 
+
+::: callout-important
+
+## Learning objectives 
+
+- Wrangle data with `dplyr` and `tidyr`
+- Visualise data with `ggplot2`
+
+:::
+
+
+## 🕙 Schedule
+
+::: callout-note
+
+This is a rough schedule -- we will change it based on your progresses.
+
+:::
+
+Time | Content 
+:-----------|:-----------------|
+10.00-11.00 | Data wrangling |     
+11.00-12.00 | Data visualisation |
+
+## 🔗 Slides
+
+
+
+## 🏋️‍♀️ Exercises
+
+This exercise is written by Dr. Terry Neeman. 
+
+{{<fa download >}} The data for this exercise can be downloaded <a href="data/complex-formation.csv" download>here</a>.
+
+
+### Erythrocyte-Platelet complex formation
+
+We have developed an assay to measure the formation of platelet-mediated erythrocyte-parasite complexes in the presence of P. falciparum infected erythrocytes, expressed as the percentage of erythrocytes (out of 500) that have formed complexes. We tested our assay using:
+
+* infected and uninfected erythrocytes, 
+* 3 different platelet:erythrocyte concentration ratios (0.02:1, 0.2:1, and 2:1),
+* 2 different incubation times (2 hours - baseline and 24 hours - final). 
+
+We ran the experiment FIVE times. We would like to see if our new assay shows that malaria-infected red blood cells (RBC) induce complex formation.
+
+#### R workflow
+
+We organise our analyses in R as follows:
+
+(0) make sure spreadsheet is properly formatted.
+(1) Preparation: import libraries that we'll need for the analyses.
+(2) Set-up: import the data set, and do some initial checks.
+(3) Data management:  set data types/ restructure/subset data as needed.
+(4) Data exploration: visualisation for assessing patterns/associations.
+(5) Fit statistical model:
+
+    (a) assess model assumptions
+    (b) statistical inference
+    (c) obtain estimates of treatment effects (plus/minus uncertainty)
+    
+(6) Graphical or tabular summary of statistical model.
+
+
+#### Set up libraries
+
+```r
+library(tidyverse)
+library(lmerTest)
+library(emmeans)
+library(ggResidpanel)
+```
+
+##### Import data and check data structure
+
+We can check the data structure either using the function str() or glimpse()
+
+
+
+How many observations for each Experiment, infection status, concentration ratio and incubation time? Remember to use group_by() and summarise(). Can you use pivot_wider() to make the table easier to read?
+
+
+##### Data exploration
+
+Think of a few different ways to explore your data, keeping mind your research question. We would like to know if infected cells induce complex formation. Be sensitive to the order within factors, and change factor levels, if needed.
+
+You might try a few different plots instead of just a single plot.
+
+
+Fit a model to these data to address the research question. Include Experiment as a blocking factor
+
+```r
+lm.ery <- lmer(complex ~ time * RBC * ratio + (1|Experiment), data = ery)
+```
+
+Use the anova() function to get the ANOVA table. Interpret the table.
+
+```r
+anova(lm.ery)
+```
+Looking at your exploratory graphs, we can start to piece together the story the data are telling. 
+
+Typically, we look at the highest level interactions first. They tell us about interesting patterns. If an interaction is "statistically significant", but the main effect is not, it could be that the individual effects (contrasts) average out to 0. 
+
+(I1) Time:RBC interaction: There is a difference in the incubation time effect between infected and uninfected RBC (averaged across ratio) and across Experiment. This is what we are hoping to see! Describe this difference.
+
+
+In the absence of treatment interactions, we can describe the main effects. 
+
+(M1) There is a platelet:erythrocyte ratio effect. This is estimated as the effect of ratio, averaged across the other 2 conditions (time, RBC) and across Experiments. Referring to your graph, describe that pattern.
+
+(M2) There is an incubation time effect. This is estimated as the effect of incubation time, averaged across the other 2 conditions (ratio, RBC) and across Experiments. Referring to your graph, describe that pattern.
+
+(M3) There is an infection effect. This is estimated as the difference between infected and uninfected RBC, averaged across the other 2 conditions (time, ratio) and across Experiments. Referring to your graph, describe that pattern.
+
+
+Assess model assumptions with residual plots
+
+```r
+resid_panel(lm.ery)
+```
+
+
+Look at parameter estimates and between-Experiment variation using the summary() function
+
+```r
+summary(lm.ery)
+```
+
+Obtain mean estimates and standard errors for plotting using the emmeans() function
+
+```r
+results1 <- summary(emmeans(lm.ery, ~time * RBC * ratio))
+results1
+```
+
+Finally, create a graphic summarising the model
+```r
+ggplot(results1, aes(x = RBC, y = emmean, fill = time)) +
+  geom_col(position = "dodge") +
+  geom_errorbar(aes(ymin = emmean-SE, ymax = emmean+SE), width = 0.2, position=position_dodge(width = 0.9))+
+  facet_wrap(~ratio)+
+  scale_fill_brewer(palette = "Paired")+
+  ylab("Mean Complex formation (%)")+
+  theme_bw()
+```
+

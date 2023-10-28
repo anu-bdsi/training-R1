@@ -1,0 +1,34 @@
+---
+title: "Day 3"
+date: 11/09/2023
+---
+
+## 🎯 Aim 
+
+::: callout-important
+
+## Learning objectives 
+
+- Produce reproducible documents using Quarto (next generation R markdown)
+
+:::
+
+
+## 🕙 Schedule
+
+::: callout-note
+
+This is a rough schedule -- we will change it based on your progresses.
+
+:::
+
+Time | Content 
+:-----------|:-----------------|
+10.00-11.00 | R Markdown |     
+11.00-12.00 | Quarto |
+
+## 🔗 Slides
+
+
+
+## 🏋️‍♀️ Exercises

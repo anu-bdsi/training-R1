@@ -1,0 +1,35 @@
+---
+title: "Day 4"
+date: 11/10/2023
+---
+
+
+## 🎯 Aim 
+
+::: callout-important
+
+## Learning objectives 
+
+- Adopt the full R workflow to write a reproducible scientific report
+
+:::
+
+
+## 🕙 Schedule
+
+::: callout-note
+
+This is a rough schedule -- we will change it based on your progresses.
+
+:::
+
+Time | Content 
+:-----------|:-----------------|
+10.00-12.00 | Full workflow |     
+
+## 🔗 Slides
+
+
+
+## 🏋️‍♀️ Exercises
+

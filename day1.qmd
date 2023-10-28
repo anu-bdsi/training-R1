@@ -45,3 +45,20 @@ Time | Content
 
 ## 🏋️‍♀️ Exercises
 
+We will look at the `penguins` dataset that is contained in the `palmerpenguins` package. For more details about the data, see [here](https://allisonhorst.github.io/palmerpenguins/).
+
+```r
+library(skimr)
+library(palmerpenguins)
+data(penguins)
+```
+
+Using this data, answer the following questions.
+
+1. Have a quick skim of the data. 
+1. How many species were studied? 
+1. How many islands are there in the data?
+1. Did they find all species on every island?
+1. For each biometric measure, are there difference between the species?
+1. Explore the associations between the biometric measurements bill length, bill depth, flipper length and body mass. 
+1. Are there differences in these associations between species?
