@@ -1,0 +1,66 @@
+---
+title: "Erythrocyte-platelet complex formation"
+author: "YOUR NAME HERE"
+date: today
+format: docx
+---
+
+
+
+We have developed an assay to measure the formation of platelet-mediated erythrocyte-parasite complexes in the presence of P. falciparum infected erythrocytes, expressed as the percentage of erythrocytes (out of 500) that have formed complexes. We tested our assay using:
+
+* infected and uninfected erythrocytes, 
+* 3 different platelet:erythrocyte concentration ratios (0.02:1, 0.2:1, and 2:1),
+* 2 different incubation times (2 hours - baseline and 24 hours - final). 
+
+We ran the experiment FIVE times. We would like to see if our new assay shows that malaria-infected red blood cells (RBC) induce complex formation.
+
+Data from our experiment: "complex-formation.csv"
+
+### R workflow:
+We organise our analyses in R as follows:
+
+(0) make sure spreadsheet is properly formatted.
+(1) Preparation: import libraries that we'll need for the analyses.
+(2) Set-up: import the data set, and do some initial checks.
+(3) Data management:  set data types/ restructure/subset data as needed.
+(4) Data exploration: visualisation for assessing patterns/associations.
+(5) Fit statistical model:
+
+    (a) assess model assumptions
+    (b) statistical inference
+    (c) obtain estimates of treatment effects (plus/minus uncertainty)
+    
+(6) Graphical or tabular summary of statistical model.
+
+
+### Set up libraries
+
+```{r libraries, message = FALSE}
+
+```
+
+## Import data and check data structure
+
+We can check the data structure either using the function str() or glimpse()
+
+```{r import_data, message = FALSE}
+
+```
+
+How many observations for each Experiment, infection status, concentration ratio and incubation time? Remember to use group_by() and summarise(). Can you use pivot_wider() to make the table easier to read?
+
+```{r}
+
+```  
+
+## Data exploration
+
+Think of a few different ways to explore your data, keeping mind your research question. We would like to know if infected cells induce complex formation. Be sensitive to the order within factors, and change factor levels, if needed.
+
+You might try a few different plots instead of just a single plot.
+
+```{r data_exploration}
+
+
+```

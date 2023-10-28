@@ -1,0 +1,46 @@
+---
+title: "Preliminary look at guich data"
+author: "YOUR NAME HERE"
+date: today
+format: docx
+---
+
+These data come from a bigger experiment examining the how maternal investment in skinks may affect their offspring. This is a feeding experiment on skinks which is looking at how maternal investment in an egg laying species may affect the growth and behavior of the offspring.  The experiment was carried out on the same species of skink at 3x temperature treatments (23, 28, 32). There was also x2 yolk treatments: a control and the removal of approximately 16% of the yolk. In this data set the skinks were given crickets (usually 30) and the number of crickets eaten was recorded at day 2, 4 and 6. 
+
+A prediction may be that those with yolk removed may undergo compensatory growth , and this may require more food to fuel this growth. Also, at higher temperatures the skink's metabolism increases (ectotherms), which also may require more food to fuel. 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Set up libraries
+
+```{r message = FALSE}
+
+```
+
+Import data
+
+```{r}
+
+```
+
+Describe the data and provide some basic summary statistics. How many skinks in each treatment group? Identify measures of interest and summarise them by group. Comment on the data organisation. 
+
+```{r}
+
+```
+
+Have a look at the trial data over time. How much does each lizard weigh and how many crickets have they eaten? Consider experimental treatment (Yolk = C/A, Temp = 23/28) in your graph. 
+
+```{r}
+
+            
+```
+
+
+Does skink food intake depend upon treatment (yolk or temperature)?
+
+```{r}
+
+```

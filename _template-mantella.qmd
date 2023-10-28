@@ -1,0 +1,168 @@
+---
+title: "BDSI R workshop -- Learning from Data"
+author: "your name here"
+date: today
+format: html
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This document is a 'Quarto' document. You write normal text in the white spaces and R code in the grey 'chunks'. To create a new chunk you can either type the chunk code manually or use the insert button in the middle of the top of this section of RStudio.
+
+## Data reorganisation
+
+In this workshop we will look at some data from the following paper:
+
+Mantella, N. M., & Youngentob, S. L. (2014). Prenatal alcohol exposure increases postnatal acceptability of nicotine odor and taste in adolescent rats. PloS one, 9(7), e102255.
+
+In this study, rat dams were randomised to either alcohol exposure or an ad-lib alcohol-free diet. Their litters were then the test subjects. Each baby rat was offered water with a range of concentration of nicotine or sucrose.  The sucrose was a control substance; no group differences were expected.
+
+The research hypothesis is that rats exposed to alcohol prenatally will be more attracted to nicotine flavour compared with control rats. There are two response variables in this experiment: latency until first lick and average licks per period. 
+
+In the first part, we explore the response - average licks.
+
+These data are organised in a quite reasonable way -- they did four experiments and each gets its own sheet of the spreadsheet, and then within each sheet each row corresponds to an individual rat (measured at different stimulus concentrations). This is a little more complex than the csv style data.
+
+We will start by just looking at the third sheet. We need to load the tidyverse, janitor, and readxl packages.
+
+```{r}
+library(tidyverse)
+library(readxl)
+library(janitor)
+```
+
+Now we read in the data, specifying the sheet, and then check its structure.
+
+```{r}
+nicotine_avg <- read_xlsx("data/brief-access-lick-data.xlsx",
+                          sheet = "Nicotine Average Lick Data")%>%
+  clean_names()
+
+glimpse(nicotine_avg)
+```
+
+What do you notice about this?
+
+
+
+The column names are going to be a problem here -- we will start by using clean_names from the janitor package to automatically help:
+
+```{r}
+
+```
+
+
+Your task is to explore the data and develop an initial understanding of what is going on in this experiment -- perhaps like if you were a reviewer or statistical consultant.
+
+First, use what you learned last time to get a sense of the makeup of this dataset.
+
+How many rats in each treatment group?
+
+For each treatment group, provide summary statistics for weight and sex? Are the groups roughly balanced?
+
+
+```{r}
+nicotine_avg %>%
+  group_by(prenatal_exposure) %>%
+  summarise(count = n())
+```
+What is average weight in each group, by sex?
+```{r}
+nicotine_avg %>%
+  group_by(prenatal_exposure, sex) %>%
+  summarise(weight = mean(weight), sd_weight = sd(weight))
+```
+
+
+Average licks are recorded across 6 columns. In order to explore the patterns visually, we should restructure the data so that the response variable is in a single column.
+
+Restructure data 
+
+```{r}
+nicotine_long <- nicotine_avg %>%
+  pivot_longer(cols = starts_with("average"),
+               names_to = "concentration",
+               names_prefix = "average_licks_",
+               values_to = "licks")
+```
+
+Create a plot that allows you to compare average licks by Treatment over concentration. In this plot, connect the values with the same animal_id. You may need to reset the levels of Concentration.
+
+```{r}
+nicotine_long <- nicotine_long %>%
+  mutate(concentration = factor(concentration,
+                                levels = c("water",
+                                           "0_1m_m",
+                                           "0_3m_m",
+                                           "1_0m_m",
+                                           "3_0m_m",
+                                           "6_0m_m")))
+
+ggplot(nicotine_long, aes(concentration, licks,
+                          col = prenatal_exposure))+
+  geom_point() +
+  geom_line(aes(group = animal_id))
+```
+
+
+
+Another way of looking for potential patterns is using `geom_smooth()`.` In order to do this, Concentration should be numeric (not a factor). Create a new variable Concentration2 that is a numeric field.
+
+```{r}
+table(nicotine_long$concentration)
+
+nicotine_long <- nicotine_long %>%
+  mutate(concentration_n = factor(concentration,
+                                  labels = c("0","0.1",
+                                             "0.3",
+                                             "1.0",
+                                             "3.0",
+                                             "6.0")) %>%
+           as.character() %>%
+           as.numeric())
+
+summary(nicotine_long$concentration_n)
+```
+
+We can also put concentration (x-axis) on the log scale:
+
+```{r}
+ggplot(nicotine_long, 
+       aes(concentration_n, licks, color = prenatal_exposure)) + 
+  geom_point() + 
+  geom_smooth(method = "lm") +
+  scale_x_log10()
+```
+
+How would you interpret these data? What can you say about the association between pre-natal alcohol exposure and preference for nicotine-flavoured water?
+
+## Exercise: Repeat for the latency endpoint.
+
+```{r}
+
+```
+How many rats in each treatment group?
+For each treatment group, provide summary statistics for weight and sex? Are the groups roughly balanced?
+
+
+```{r}
+
+```
+
+
+
+Restructure data and create a plot to explore average latency across a range of concentrations. Choose a different colour for each group.
+
+```{r}
+
+```
+
+
+Also try exploring patterns using `geom_smooth()`. Why might a pattern be more evidence with `geom_smooth`? Try also making concentration numeric and log-transform the x-axis. Interpret these plots wrt the research question. 
+
+
+```{r}
+
+```
