@@ -46,6 +46,22 @@ install.packages(c("tidyverse", "rmarkdown", "janitor",
 
 {{< fa hand-holding-medical >}} If you are having issues, see also [here](https://learnr.numbat.space/chapter1) or talk to the teaching team.
 
+::: {.callout-note icon=false style="width:100%"}
+
+## <i class='fab fa-slack'></i> Slack workspace
+
+::: w-100
+
+[<button class="button">Join ANU Learning Data Slack Community</button>](https://join.slack.com/t/anulearningdata/signup){.no-decoration}
+
+:::
+
+- You must use your ANU email to sign up. 
+- Use your full name. 
+- By joining, you agree to abide by this [**code of conduct**](/slack.html).
+
+:::
+
 ## Teaching team 
 
 ::: {layout-ncol=3 style="text-align:center;"}
