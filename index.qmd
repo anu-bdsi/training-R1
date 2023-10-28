@@ -38,8 +38,10 @@ Please ensure that you download and install
 ```r
 install.packages(c("tidyverse", "rmarkdown", "janitor", 
                    "readxl", "gtsummary", "lme4", 
-                   "emmeans", "lmerTest", "ggResidpanel", "reprex",
-                   "palmerpenguins", "quarto", "skimr", "ggbeeswarm"))
+                   "emmeans", "lmerTest", "ggResidpanel",
+                   "reprex", "palmerpenguins", "quarto",
+                   "report", "correlation", "see",
+                   "parameters", "ggbeeswarm"))
 ```
 
 {{< fa hand-holding-medical >}} If you are having issues, see also [here](https://learnr.numbat.space/chapter1) or talk to the teaching team.
