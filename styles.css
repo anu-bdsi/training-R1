@@ -10,6 +10,8 @@ a {
   color: #BE830E;
 }
 
+a:hover { color: black; }
+
 .sidebar nav[role=doc-toc] ul>li>a.active, .sidebar nav[role=doc-toc] ul>li>ul>li>a.active {
   color: #BE830E!important;
   border-left: 1px solid #BE830E!important;
@@ -43,4 +45,43 @@ div.callout-note.callout-style-default>.callout-header {
   margin: auto;
   height: 120px;
   overflow: hidden;
+}
+
+.button {
+  background-color: #F5EDDE; 
+  border: none;
+  color: black;
+  padding: 10px 10px!important;
+  border-radius: 20px;
+  text-align: center;
+  margin: 20px auto!important;
+  text-decoration: none!important;
+  display: block;
+  font-size: 1.2em;
+  transition-duration: 0.4s;
+  box-shadow: 0 3px #999;
+}
+
+
+
+.w-100 {
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #BE830E;
+  color: white;
+}
+
+.no-decoration {
+  text-decoration: none!important;
+  -webkit-text-decoration: none!important;
+  -moz-text-decoration: none!important;
+  -ms-text-decoration: none!important;
+}
+
+.button:active {
+  background-color: #BE830E;
+  box-shadow: 0 1px #666;
+  transform: translateY(2px);
 }
