@@ -41,7 +41,7 @@ install.packages(c("tidyverse", "rmarkdown", "janitor",
                    "emmeans", "lmerTest", "ggResidpanel",
                    "reprex", "palmerpenguins", "quarto",
                    "report", "correlation", "see",
-                   "parameters", "ggbeeswarm"))
+                   "parameters", "ggbeeswarm", "hexbin"))
 ```
 
 {{< fa hand-holding-medical >}} If you are having issues, see also [here](https://learnr.numbat.space/chapter1) or talk to the teaching team.
