@@ -12,17 +12,34 @@ You will develop the skills to work with your research data using R through the 
 
 ## Preperation 
 
+<i class='fas fa-video'></i> Watch the following videos by Dr Robert Cope.
+
+<details>
+<summary>Videos</summary>
+
+<video width="100%" controls>
+<source src="videos/projects_reading_data_2.mp4" type="video/mp4">
+</video>
+
+<video width="100%" controls>
+<source src="videos/R_intro_packages.mp4" type="video/mp4">
+</video>
+
+</details>
+
 Please ensure that you download and install 
 
 - the latest version of [R](https://cran.csiro.au/),
 - the latest version of [RStudio Desktop](https://posit.co/download/rstudio-desktop/), 
-- install the latest version of [Quarto](https://quarto.org/docs/get-started/), and 
-- install the following packages by opening RStudio Desktop, then copy and paste the command below in the Console section, pushing Enter after pasting.
+- the latest version of [Quarto](https://quarto.org/docs/get-started/), 
+- [Slack](https://slack.com/intl/en-au) (alternatively you can use the web version), and 
+- the following packages by opening RStudio Desktop, then copy and paste the command below in the Console section, pushing Enter after pasting.
 
 ```r
 install.packages(c("tidyverse", "rmarkdown", "janitor", 
                    "readxl", "gtsummary", "lme4", 
-                   "emmeans", "lmerTest", "ggResidpanel"))
+                   "emmeans", "lmerTest", "ggResidpanel", "reprex",
+                   "palmerpenguins", "quarto"))
 ```
 
 {{< fa hand-holding-medical >}} If you are having issues, see also [here](https://learnr.numbat.space/chapter1) or talk to the teaching team.
