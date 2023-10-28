@@ -18,7 +18,7 @@
     "href": "index.html#preperation",
     "title": "BDSI R Training I",
     "section": "Preperation",
-    "text": "Preperation\nPlease ensure that you download and install\n\nthe latest version of R,\nthe latest version of RStudio Desktop,\ninstall the latest version of Quarto, and\ninstall the following packages by opening RStudio Desktop, then copy and paste the command below in the Console section, pushing Enter after pasting.\n\ninstall.packages(c(\"tidyverse\", \"rmarkdown\", \"janitor\", \n                   \"readxl\", \"gtsummary\", \"lme4\", \n                   \"emmeans\", \"lmerTest\", \"ggResidpanel\"))\n If you are having issues, see also here or talk to the teaching team."
+    "text": "Preperation\n Watch the following videos by Dr Robert Cope.\n\n\nVideos\n\n\n\n\n\n\n\n\nPlease ensure that you download and install\n\nthe latest version of R,\nthe latest version of RStudio Desktop,\nthe latest version of Quarto,\nSlack (alternatively you can use the web version), and\nthe following packages by opening RStudio Desktop, then copy and paste the command below in the Console section, pushing Enter after pasting.\n\ninstall.packages(c(\"tidyverse\", \"rmarkdown\", \"janitor\", \n                   \"readxl\", \"gtsummary\", \"lme4\", \n                   \"emmeans\", \"lmerTest\", \"ggResidpanel\", \"reprex\",\n                   \"palmerpenguins\", \"quarto\"))\n If you are having issues, see also here or talk to the teaching team."
   },
   {
     "objectID": "index.html#teaching-team",
@@ -32,14 +32,35 @@
     "href": "day1.html",
     "title": "Day 1",
     "section": "",
-    "text": "Time\nContent\nSlides\n\n\n\n\n10.00-10.20\nIntroduction\n\n\n\n10.20-10.40\nSetting up your project and importing data\n\n\n\n10.40-11.00\nComputing numerical summaries\n\n\n\n11.00-12.00\nGetting started with graphical summaries\nThis website is brought to you by ANU Biological Data Science Institute."
+    "text": "Learning objectives\n\n\n\n\nSetting up your data project\nReading data into R\nThe basics of R programming\nComputing simple numerical summaries of your data in R\nTroubleshooting and producing minimal reproducible examples\nThis website is brought to you by ANU Biological Data Science Institute."
+  },
+  {
+    "objectID": "day1.html#aim",
+    "href": "day1.html#aim",
+    "title": "Day 1",
+    "section": "",
+    "text": "Learning objectives\n\n\n\n\nSetting up your data project\nReading data into R\nThe basics of R programming\nComputing simple numerical summaries of your data in R\nTroubleshooting and producing minimal reproducible examples"
   },
   {
     "objectID": "day1.html#schedule",
     "href": "day1.html#schedule",
     "title": "Day 1",
-    "section": "",
-    "text": "Time\nContent\nSlides\n\n\n\n\n10.00-10.20\nIntroduction\n\n\n\n10.20-10.40\nSetting up your project and importing data\n\n\n\n10.40-11.00\nComputing numerical summaries\n\n\n\n11.00-12.00\nGetting started with graphical summaries"
+    "section": "🕙 Schedule",
+    "text": "🕙 Schedule\n\n\n\n\n\n\nNote\n\n\n\nThis is a rough schedule – we will change it based on your progresses.\n\n\n\n\n\nTime\nContent\n\n\n\n\n10.00-10.20\nIntroduction\n\n\n10.20-11.00\nBasics of R programming\n\n\n10.20-10.40\nSetting up your project and importing data\n\n\n10.40-11.00\nComputing numerical summaries\n\n\n11.00-12.00\nGetting started with graphical summaries"
+  },
+  {
+    "objectID": "day1.html#slides",
+    "href": "day1.html#slides",
+    "title": "Day 1",
+    "section": "🔗 Slides",
+    "text": "🔗 Slides\n\nIntroduction\nBasics of R programming\nProject structure\nNumerical summaries"
+  },
+  {
+    "objectID": "day1.html#exercises",
+    "href": "day1.html#exercises",
+    "title": "Day 1",
+    "section": "🏋️‍♀️ Exercises",
+    "text": "🏋️‍♀️ Exercises"
   },
   {
     "objectID": "help.html",
