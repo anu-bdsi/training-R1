@@ -71,6 +71,6 @@ install.packages(c("tidyverse", "rmarkdown", "janitor",
 
 ![Dr. Jon Roco](images/dummy.jpg){.circle-image-120}
 
-![Dr. Terry Neeman](images/dummy.jpg){.circle-image-120}
+![Dr. Terry Neeman](images/terry.jpeg){.circle-image-120}
 
 :::
