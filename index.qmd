@@ -15,7 +15,7 @@ You will develop the skills to work with your research data using R through the 
 <i class='fas fa-video'></i> Watch the following videos by Dr Robert Cope.
 
 <details>
-<summary>Videos</summary>
+<summary>Videos (click here)</summary>
 
 <video width="100%" controls>
 <source src="videos/projects_reading_data_2.mp4" type="video/mp4">
