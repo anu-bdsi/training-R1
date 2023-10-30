@@ -1,0 +1,4 @@
+- source: project
+  netlify:
+    - id: 604c86d9-15ba-448f-8785-5dc3709671eb
+      url: 'https://bdsi-r-training-i-dev.netlify.app'
