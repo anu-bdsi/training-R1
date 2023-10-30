@@ -8,7 +8,7 @@ subtitle: "Scientific Reproducibility in the Biological Sciences"
 
 This is a [training workshop for R beginners](](https://bdsi.anu.edu.au/training-courses/available-courses/bdsi-r-training-i-scientific-reproducibility-biological-sciences)) offered by the Australian National University (ANU) Biological Data Science Institute (BDSI).
 
-You will develop the skills to work with your research data using R through the RStudio Desktop These workshops cover setting up R projects, importing data into R, principles of tidy data, basic data visualisation using ggplot2, data wrangling using tidyverse and setting up a reproducible statistical workflow in R.
+You will develop the skills to work with your research data using R through the RStudio Desktop. These workshops cover setting up R projects, importing data into R, principles of tidy data, basic data visualisation using ggplot2, data wrangling using tidyverse and setting up a reproducible statistical workflow in R.
 
 ## Preperation 
 
