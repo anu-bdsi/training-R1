@@ -9,6 +9,8 @@ date: 11/09/2023
 
 ## Learning objectives 
 
+- Fit linear model with `lm()` and linear mixed models with `lme4::lmer()`
+- Diagnose and visualise statisitcal models
 - Produce reproducible documents using Quarto (next generation R markdown)
 
 :::
@@ -20,8 +22,9 @@ date: 11/09/2023
 
 Time | Content 
 :-----------|:-----------------|
-10.00-11.00 | R Markdown |     
-11.00-12.00 | Quarto |
+10.00-10.30 | Fitting linear models with `lm()` |
+10.30-11.00 | Linear mixed models with `lme4::lmer()` |
+11.00-12.00 | Reproducible documents with Quarto |
 
 ## 🔗 Slides
 

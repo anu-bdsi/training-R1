@@ -11,11 +11,11 @@ date: 11/02/2023
 
 ## Learning objectives 
 
-- Setting up your data project
-- Reading data into R
-- The basics of R programming
+- Setting up your data project (R project, folder structure)
+- Reading data into R (csv and xlsx)
+- The basics of R programming (atomic vectors, lists, data.frame, functions)
 - Computing simple numerical summaries of your data in R
-- Troubleshooting and producing minimal reproducible examples
+- Troubleshooting and producing minimal reproducible examples with `reprex`
 
 :::
 
@@ -44,7 +44,6 @@ Time | Content
 We will look at the `penguins` dataset that is contained in the `palmerpenguins` package. For more details about the data, see [here](https://allisonhorst.github.io/palmerpenguins/).
 
 ```r
-library(skimr)
 library(palmerpenguins)
 data(penguins)
 ```

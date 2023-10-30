@@ -11,7 +11,6 @@ date: 11/03/2023
 
 - Wrangle data with `dplyr` and `tidyr`
 - Visualise data with `ggplot2`
-
 :::
 
 
@@ -21,8 +20,9 @@ date: 11/03/2023
 
 Time | Content 
 :-----------|:-----------------|
-10.00-11.00 | Data wrangling |     
-11.00-12.00 | Data visualisation |
+10.00-10.10 | Introduction to tidy data with `tidyverse`
+10.10-10.40 | Data wrangling with `tidyr` and `dplyr` |
+10.40-12.00 | Starting data visualisation with `ggplot2` |
 
 ## 🔗 Slides
 
@@ -74,11 +74,11 @@ library(ggResidpanel)
 
 ##### Import data and check data structure
 
-We can check the data structure either using the function str() or glimpse()
+We can check the data structure either using the function `str()` or `glimpse()`
 
 
 
-How many observations for each Experiment, infection status, concentration ratio and incubation time? Remember to use group_by() and summarise(). Can you use pivot_wider() to make the table easier to read?
+How many observations for each Experiment, infection status, concentration ratio and incubation time? Remember to use `group_by()` and `summarise()`. Can you use `pivot_wider()` to make the table easier to read?
 
 
 ##### Data exploration
@@ -139,10 +139,12 @@ Finally, create a graphic summarising the model
 ```r
 ggplot(results1, aes(x = RBC, y = emmean, fill = time)) +
   geom_col(position = "dodge") +
-  geom_errorbar(aes(ymin = emmean-SE, ymax = emmean+SE), width = 0.2, position=position_dodge(width = 0.9))+
-  facet_wrap(~ratio)+
-  scale_fill_brewer(palette = "Paired")+
-  ylab("Mean Complex formation (%)")+
+  geom_errorbar(aes(ymin = emmean - SE, ymax = emmean + SE), 
+                width = 0.2,
+                position=position_dodge(width = 0.9))+
+  facet_wrap(~ratio) +
+  scale_fill_brewer(palette = "Paired") +
+  ylab("Mean Complex formation (%)") +
   theme_bw()
 ```
 
