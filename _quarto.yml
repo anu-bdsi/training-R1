@@ -1,5 +1,8 @@
 project:
   type: website
+  render:
+   - "*.qmd"
+   - "!slides/*"
 
 website:
   title: "BDSI R Training I"
@@ -7,7 +10,7 @@ website:
     left:
       - href: index.qmd
         text: Home
-      #- day1.qmd
+      - day1.qmd
       #- day2.qmd
       #- day3.qmd
       #- day4.qmd
