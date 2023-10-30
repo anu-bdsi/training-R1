@@ -121,22 +121,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./day1.html" rel="" target="">
- <span class="menu-text">Day 1</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./day2.html" rel="" target="" aria-current="page">
- <span class="menu-text">Day 2</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./day3.html" rel="" target="">
- <span class="menu-text">Day 3</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./day4.html" rel="" target="">
- <span class="menu-text">Day 4</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./help.html" rel="" target="">
  <span class="menu-text">Help</span></a>
   </li>  
@@ -225,7 +209,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This is a rough schedule – we will change it based on your collective progress.</p>
+<p>Please note this is an indicative schedule only!</p>
 </div>
 </div>
 <table class="table">
@@ -237,12 +221,16 @@ Note
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">10.00-11.00</td>
-<td style="text-align: left;">Data wrangling</td>
+<td style="text-align: left;">10.00-10.10</td>
+<td style="text-align: left;">Introduction to tidy data with <code>tidyverse</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">11.00-12.00</td>
-<td style="text-align: left;">Data visualisation</td>
+<td style="text-align: left;">10.10-10.40</td>
+<td style="text-align: left;">Data wrangling with <code>tidyr</code> and <code>dplyr</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">10.40-12.00</td>
+<td style="text-align: left;">Starting data visualisation with <code>ggplot2</code></td>
 </tr>
 </tbody>
 </table>
@@ -289,8 +277,8 @@ Note
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggResidpanel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <section id="import-data-and-check-data-structure" class="level5">
 <h5 class="anchored" data-anchor-id="import-data-and-check-data-structure">Import data and check data structure</h5>
-<p>We can check the data structure either using the function str() or glimpse()</p>
-<p>How many observations for each Experiment, infection status, concentration ratio and incubation time? Remember to use group_by() and summarise(). Can you use pivot_wider() to make the table easier to read?</p>
+<p>We can check the data structure either using the function <code>str()</code> or <code>glimpse()</code></p>
+<p>How many observations for each Experiment, infection status, concentration ratio and incubation time? Remember to use <code>group_by()</code> and <code>summarise()</code>. Can you use <code>pivot_wider()</code> to make the table easier to read?</p>
 </section>
 <section id="data-exploration" class="level5">
 <h5 class="anchored" data-anchor-id="data-exploration">Data exploration</h5>
@@ -317,11 +305,13 @@ Note
 <p>Finally, create a graphic summarising the model</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(results1, <span class="fu">aes</span>(<span class="at">x =</span> RBC, <span class="at">y =</span> emmean, <span class="at">fill =</span> time)) <span class="sc">+</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="st">"dodge"</span>) <span class="sc">+</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> emmean<span class="sc">-</span>SE, <span class="at">ymax =</span> emmean<span class="sc">+</span>SE), <span class="at">width =</span> <span class="fl">0.2</span>, <span class="at">position=</span><span class="fu">position_dodge</span>(<span class="at">width =</span> <span class="fl">0.9</span>))<span class="sc">+</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>ratio)<span class="sc">+</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">"Paired"</span>)<span class="sc">+</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean Complex formation (%)"</span>)<span class="sc">+</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> emmean <span class="sc">-</span> SE, <span class="at">ymax =</span> emmean <span class="sc">+</span> SE), </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">width =</span> <span class="fl">0.2</span>,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">position=</span><span class="fu">position_dodge</span>(<span class="at">width =</span> <span class="fl">0.9</span>))<span class="sc">+</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>ratio) <span class="sc">+</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">"Paired"</span>) <span class="sc">+</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Mean Complex formation (%)"</span>) <span class="sc">+</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>

@@ -121,22 +121,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./day1.html" rel="" target="" aria-current="page">
- <span class="menu-text">Day 1</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./day2.html" rel="" target="">
- <span class="menu-text">Day 2</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./day3.html" rel="" target="">
- <span class="menu-text">Day 3</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./day4.html" rel="" target="">
- <span class="menu-text">Day 4</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./help.html" rel="" target="">
  <span class="menu-text">Help</span></a>
   </li>  
@@ -204,11 +188,11 @@ Learning objectives
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Setting up your data project</li>
-<li>Reading data into R</li>
-<li>The basics of R programming</li>
+<li>Setting up your data project (R project, folder structure)</li>
+<li>Reading data into R (csv and xlsx)</li>
+<li>The basics of R programming (atomic vectors, lists, data.frame, functions)</li>
 <li>Computing simple numerical summaries of your data in R</li>
-<li>Troubleshooting and producing minimal reproducible examples</li>
+<li>Troubleshooting and producing minimal reproducible examples with <code>reprex</code></li>
 </ul>
 </div>
 </div>
@@ -225,7 +209,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This is a rough schedule – we will change it based on your collective progress.</p>
+<p>Please note this is an indicative schedule only!</p>
 </div>
 </div>
 <table class="table">
@@ -271,9 +255,8 @@ Note
 <section id="exercises" class="level2">
 <h2 class="anchored" data-anchor-id="exercises">🏋️‍♀️ Exercises</h2>
 <p>We will look at the <code>penguins</code> dataset that is contained in the <code>palmerpenguins</code> package. For more details about the data, see <a href="https://allisonhorst.github.io/palmerpenguins/">here</a>.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(skimr)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Using this data, answer the following questions.</p>
 <ol type="1">
 <li>Have a quick skim of the data.</li>
