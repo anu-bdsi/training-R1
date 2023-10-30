@@ -48,7 +48,7 @@ install.packages(c("tidyverse", "rmarkdown", "janitor",
 
 ::: {.callout-note icon=false style="width:100%"}
 
-## <i class='fab fa-slack'></i> Slack workspace
+## <i class='fab fa-slack'></i> [Slack workspace]{#slack}
 
 ::: w-100
 
