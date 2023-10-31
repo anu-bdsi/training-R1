@@ -5,10 +5,9 @@ format:
   anu-light-revealjs:
     width: 1920
     height: 1080
-    chalkboard: true
     auto-stretch: false
     html-math-method: katex
-    self-contained: false
+    self-contained: true
     css: assets/custom.css
     footer: anu-bdsi.github.io/training-R1/
 author: Emi Tanaka
@@ -17,6 +16,19 @@ date: 2023/11/02
 date-format: "D[nd] MMMM YYYY"
 ---
 
-## What is R?
+## Simple statistical summaries 
 
-- R is a programming language predominately for statistical analysis
+- Mean: `mean()`
+- Median: `median()`
+- Five number summary: `fivenum()`
+- Minimum: `min()`
+- Maximum: `max()`
+- Correlation coefficient: `cor()`
+
+
+## Parametric distributions 
+
+- `rnorm()`
+- `qnorm()`
+- `pnorm()`
+- `dnorm()`
