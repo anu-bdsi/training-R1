@@ -11,3 +11,19 @@ institute: Biological Data Science Institute
 date: 2023/11/02
 date-format: "D[th] MMMM YYYY"
 ---
+
+
+# Welcome 👋
+
+
+## Teaching team 
+
+## Who are you?
+
+- Introduce yourself to people around you
+  - What do you do at ANU?
+  - What interest you now?
+
+## Learning objectives
+
+## Help!
