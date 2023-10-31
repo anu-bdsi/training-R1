@@ -1,0 +1,22 @@
+---
+title: Computing numerical summaries
+subtitle: BDSI R Training I
+format:
+  anu-light-revealjs:
+    width: 1920
+    height: 1080
+    chalkboard: true
+    auto-stretch: false
+    html-math-method: katex
+    self-contained: false
+    css: assets/custom.css
+    footer: anu-bdsi.github.io/training-R1/
+author: Emi Tanaka
+institute: Biological Data Science Institute
+date: 2023/11/02
+date-format: "D[nd] MMMM YYYY"
+---
+
+## What is R?
+
+- R is a programming language predominately for statistical analysis
