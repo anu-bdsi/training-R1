@@ -5,11 +5,16 @@ format:
   anu-light-revealjs:
     width: 1920
     height: 1080
-    self-contained: true
+    chalkboard: true
+    auto-stretch: false
+    html-math-method: katex
+    self-contained: false
+    css: assets/custom.css
+    footer: anu-bdsi.github.io/training-R1/
 author: Emi Tanaka
 institute: Biological Data Science Institute
 date: 2023/11/02
-date-format: "D[th] MMMM YYYY"
+date-format: "D[nd] MMMM YYYY"
 ---
 
 
@@ -18,12 +23,42 @@ date-format: "D[th] MMMM YYYY"
 
 ## Teaching team 
 
-## Who are you?
+::: {layout-ncol=3 style="text-align:center;"}
 
-- Introduce yourself to people around you
-  - What do you do at ANU?
-  - What interest you now?
+
+![Dr. Emi Tanaka](images/emi-square.png){.circle-image-120}
+
+![Dr. Jon Roco](images/dummy.jpg){.circle-image-120}
+
+![Dr. Terry Neeman](images/terry.jpeg){.circle-image-120}
+
+:::
+
+::: fragment
+
+- Who are you?
+  - Introduce yourself to people around you
+    - What do you do at ANU?
+    - What interests do you have? Etc.
+    
+:::
+
+# Workshop materials
+
+::: box
+
+All materials will be hosted at<br> [<https://anu-bdsi.github.io/training-R1/>]{.f-headline target="_blank"}
+
+:::
+
 
 ## Learning objectives
 
-## Help!
+::: callout-note
+
+## Overall goal
+
+Develop skills to work with your research data using R 
+
+:::
+
