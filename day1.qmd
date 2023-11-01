@@ -14,9 +14,10 @@ date: 11/02/2023
 - Setting up your data project (R project, folder structure)
 - Reading data into R (csv and xlsx)
 - The basics of R programming (atomic vectors, lists, data.frame, subsetting R objects)
+- Troubleshooting and producing minimal reproducible examples with `reprex`
 - Compute numerical summaries
 - Be familiar with computing density, distribution quantile and random generation of some parametric distributions
-- Troubleshooting and producing minimal reproducible examples with `reprex`
+
 
 :::
 
@@ -38,6 +39,8 @@ Time | Content
 
 - Learn R Chapter 1: Getting started with R & RStudio [{{< fa link >}}](https://learnr.numbat.space/chapter1){target="_blank"}
 - Learn R Chapter 2: R programming basics [{{< fa link >}}](https://learnr.numbat.space/chapter2){target="_blank"}
+- Learn R Chapter 3: Troubleshooting and asking for help [{{< fa link >}}](https://learnr.numbat.space/chapter3){target="_blank"}
+- Learn R Chapter 4: Project structure and importing data [{{< fa link >}}](https://learnr.numbat.space/chapter4){target="_blank"}
 
 ## 🏋️‍♀️ Exercises
 
