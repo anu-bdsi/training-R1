@@ -89,7 +89,7 @@ Today:
 
 - RStudio Desktop (or RStudio IDE) is the most common way to use R
 
-![](images/rstudio-desktop-annotation.png){.ba}
+![](images/rstudio-desktop-annotation.png){.ba width="75%"}
 
 - You can type operations directly into the Console pane
 

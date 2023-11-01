@@ -86,8 +86,6 @@ character_vec <- c("A", "B", 'C', 'D')
 - If you attempt to combine mismatched types together, it will try to coerce all values to the same type.
 
 ```{r}
-c(TRUE, 1L)
-c("A", 3)
 c(TRUE, F, "3", 10, 'X')
 ```
 
