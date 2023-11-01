@@ -13,7 +13,7 @@ date: 11/02/2023
 
 - Setting up your data project (R project, folder structure)
 - Reading data into R (csv and xlsx)
-- The basics of R programming (atomic vectors, lists, data.frame, functions)
+- The basics of R programming (atomic vectors, lists, data.frame, subsetting R objects)
 - Computing simple numerical summaries of your data in R
 - Troubleshooting and producing minimal reproducible examples with `reprex`
 
@@ -29,7 +29,7 @@ Time | Content
 10.00-10.15 | [Introduction](slides/day1-slide1.html){target="_blank"} |     
 10.15-10.45 | [Basics of R programming](slides/day1-slide2.html){target="_blank"} |
 10.45-11.00 | _Your turn_ |
-11.00-11.15 | [Setting up your project and importing data](slides/day1-slide3.html){target="_blank"} |   
+11.00-11.15 | [Setting up your data project](slides/day1-slide3.html){target="_blank"} |   
 11.15-11.30 | [Computing numerical summaries](slides/day1-slide4.html){target="_blank"} |   
 11.30-12.00 | _Your turn_ |   
 
