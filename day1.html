@@ -74,6 +74,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -121,6 +123,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link active" href="./day1.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Day 1</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./help.html" rel="" target="">
  <span class="menu-text">Help</span></a>
   </li>  
@@ -144,8 +150,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#aim" id="toc-aim" class="nav-link active" data-scroll-target="#aim">🎯 Aim</a></li>
   <li><a href="#schedule" id="toc-schedule" class="nav-link" data-scroll-target="#schedule">🕙 Schedule</a></li>
-  <li><a href="#slides" id="toc-slides" class="nav-link" data-scroll-target="#slides">🔗 Slides</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">🏋️‍♀️ Exercises</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">📑 Resources</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">🏋️‍♀️ Exercises</a>
+  <ul class="collapse">
+  <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1">Exercise 1</a></li>
+  <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2">Exercise 2</a></li>
+  <li><a href="#exercise-3" id="toc-exercise-3" class="nav-link" data-scroll-target="#exercise-3">Exercise 3</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -190,9 +201,10 @@ Learning objectives
 <ul>
 <li>Setting up your data project (R project, folder structure)</li>
 <li>Reading data into R (csv and xlsx)</li>
-<li>The basics of R programming (atomic vectors, lists, data.frame, functions)</li>
-<li>Computing simple numerical summaries of your data in R</li>
+<li>The basics of R programming (atomic vectors, lists, data.frame, subsetting R objects)</li>
 <li>Troubleshooting and producing minimal reproducible examples with <code>reprex</code></li>
+<li>Compute numerical summaries</li>
+<li>Be familiar with computing density, distribution quantile and random generation of some parametric distributions</li>
 </ul>
 </div>
 </div>
@@ -221,45 +233,71 @@ Note
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">10.00-10.20</td>
-<td style="text-align: left;">Introduction</td>
+<td style="text-align: left;">10.00-10.15</td>
+<td style="text-align: left;"><a href="slides/day1-slide1.html" target="_blank">Introduction</a></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">10.20-11.00</td>
-<td style="text-align: left;">Basics of R programming</td>
+<td style="text-align: left;">10.15-10.45</td>
+<td style="text-align: left;"><a href="slides/day1-slide2.html" target="_blank">Basics of R programming</a></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">10.20-10.40</td>
-<td style="text-align: left;">Setting up your project and importing data</td>
+<td style="text-align: left;">10.45-11.00</td>
+<td style="text-align: left;"><em>Your turn</em> (Exercise 1)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">10.40-11.00</td>
-<td style="text-align: left;">Computing numerical summaries</td>
+<td style="text-align: left;">11.00-11.15</td>
+<td style="text-align: left;"><a href="slides/day1-slide3.html" target="_blank">Setting up your data project</a></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">11.00-12.00</td>
-<td style="text-align: left;">Getting started with graphical summaries</td>
+<td style="text-align: left;">11.15-11.30</td>
+<td style="text-align: left;"><a href="slides/day1-slide4.html" target="_blank">Computing numerical summaries and parametric distributions</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">11.30-12.00</td>
+<td style="text-align: left;"><em>Your turn</em> (Exercise 2-3)</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="slides" class="level2">
-<h2 class="anchored" data-anchor-id="slides">🔗 Slides</h2>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">📑 Resources</h2>
 <ul>
-<li>Introduction</li>
-<li>Basics of R programming</li>
-<li>Project structure</li>
-<li>Numerical summaries</li>
+<li>Learn R Chapter 1: Getting started with R &amp; RStudio <a href="https://learnr.numbat.space/chapter1" target="_blank"><i class="fa-solid fa-link" aria-label="link"></i></a></li>
+<li>Learn R Chapter 2: R programming basics <a href="https://learnr.numbat.space/chapter2" target="_blank"><i class="fa-solid fa-link" aria-label="link"></i></a></li>
+<li>Learn R Chapter 3: Troubleshooting and asking for help <a href="https://learnr.numbat.space/chapter3" target="_blank"><i class="fa-solid fa-link" aria-label="link"></i></a></li>
+<li>Learn R Chapter 4: Project structure and importing data <a href="https://learnr.numbat.space/chapter4" target="_blank"><i class="fa-solid fa-link" aria-label="link"></i></a></li>
 </ul>
 </section>
 <section id="exercises" class="level2">
 <h2 class="anchored" data-anchor-id="exercises">🏋️‍♀️ Exercises</h2>
+<section id="exercise-1" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-1">Exercise 1</h3>
+<p>Go through the exercises in <a href="https://learnr.numbat.space/chapter2" target="_blank">Learn R Chapter 2: R programming basics</a> (you can skip the Matrices section).</p>
+</section>
+<section id="exercise-2" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-2">Exercise 2</h3>
+<p>The following are all the datasets for this training workshop. Download these and try to read this into R.</p>
+<ul>
+<li><a href="data/brief-access-lick-data-latency.csv" download="">brief-access-lick-data-latency.csv</a></li>
+<li><a href="data/brief-access-lick-data.xlsx" download="">brief-access-lick-data.xlsx</a></li>
+<li><a href="data/ch-study-mock-data.xlsx" download="">ch-study-mock-data.xlsx</a></li>
+<li><a href="data/complex-formation.csv" download="">complex-formation.csv</a></li>
+<li><a href="data/cuzick-2010-breast-cancer-density.csv" download="">cuzick-2010-breast-cancer-density.csv</a></li>
+<li><a href="data/guich-feed-data.csv" download="">guich-feed-data.csv</a></li>
+<li><a href="data/kingston-data.xlsx" download="">kingston-data.xlsx</a></li>
+<li><a href="data/marcato-2021-immunity.csv" download="">marcato-2021-immunity.csv</a></li>
+<li><a href="data/overview-20220413-CD45freq-recomp-counts.csv" download="">overview-20220413-CD45freq-recomp-counts.csv</a></li>
+</ul>
+</section>
+<section id="exercise-3" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-3">Exercise 3</h3>
+<p><em>The following exercise is written by Dr.&nbsp;Terry Neeman with slight modifications.</em></p>
 <p>We will look at the <code>penguins</code> dataset that is contained in the <code>palmerpenguins</code> package. For more details about the data, see <a href="https://allisonhorst.github.io/palmerpenguins/">here</a>.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Using this data, answer the following questions.</p>
 <ol type="1">
-<li>Have a quick skim of the data.</li>
+<li>Produce a numerical summary of the data.</li>
 <li>How many species were studied?</li>
 <li>How many islands are there in the data?</li>
 <li>Did they find all species on every island?</li>
@@ -269,6 +307,7 @@ Note
 </ol>
 
 
+</section>
 </section>
 
 <p><span class="footer">This website is brought to you by the <a href="https://bdsi.anu.edu.au/">ANU Biological Data Science Institute</a>.</span></p></main> <!-- /main -->

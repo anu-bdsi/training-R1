@@ -88,35 +88,35 @@
     "href": "day1.html",
     "title": "Day 1",
     "section": "",
-    "text": "Learning objectives\n\n\n\n\nSetting up your data project (R project, folder structure)\nReading data into R (csv and xlsx)\nThe basics of R programming (atomic vectors, lists, data.frame, functions)\nComputing simple numerical summaries of your data in R\nTroubleshooting and producing minimal reproducible examples with reprex\nThis website is brought to you by the ANU Biological Data Science Institute."
+    "text": "Learning objectives\n\n\n\n\nSetting up your data project (R project, folder structure)\nReading data into R (csv and xlsx)\nThe basics of R programming (atomic vectors, lists, data.frame, subsetting R objects)\nTroubleshooting and producing minimal reproducible examples with reprex\nCompute numerical summaries\nBe familiar with computing density, distribution quantile and random generation of some parametric distributions\nThis website is brought to you by the ANU Biological Data Science Institute."
   },
   {
     "objectID": "day1.html#aim",
     "href": "day1.html#aim",
     "title": "Day 1",
     "section": "",
-    "text": "Learning objectives\n\n\n\n\nSetting up your data project (R project, folder structure)\nReading data into R (csv and xlsx)\nThe basics of R programming (atomic vectors, lists, data.frame, functions)\nComputing simple numerical summaries of your data in R\nTroubleshooting and producing minimal reproducible examples with reprex"
+    "text": "Learning objectives\n\n\n\n\nSetting up your data project (R project, folder structure)\nReading data into R (csv and xlsx)\nThe basics of R programming (atomic vectors, lists, data.frame, subsetting R objects)\nTroubleshooting and producing minimal reproducible examples with reprex\nCompute numerical summaries\nBe familiar with computing density, distribution quantile and random generation of some parametric distributions"
   },
   {
     "objectID": "day1.html#schedule",
     "href": "day1.html#schedule",
     "title": "Day 1",
     "section": "🕙 Schedule",
-    "text": "🕙 Schedule\n\n\n\n\n\n\nNote\n\n\n\nPlease note this is an indicative schedule only!\n\n\n\n\n\nTime\nContent\n\n\n\n\n10.00-10.20\nIntroduction\n\n\n10.20-11.00\nBasics of R programming\n\n\n10.20-10.40\nSetting up your project and importing data\n\n\n10.40-11.00\nComputing numerical summaries\n\n\n11.00-12.00\nGetting started with graphical summaries"
+    "text": "🕙 Schedule\n\n\n\n\n\n\nNote\n\n\n\nPlease note this is an indicative schedule only!\n\n\n\n\n\nTime\nContent\n\n\n\n\n10.00-10.15\nIntroduction\n\n\n10.15-10.45\nBasics of R programming\n\n\n10.45-11.00\nYour turn (Exercise 1)\n\n\n11.00-11.15\nSetting up your data project\n\n\n11.15-11.30\nComputing numerical summaries and parametric distributions\n\n\n11.30-12.00\nYour turn (Exercise 2-3)"
   },
   {
-    "objectID": "day1.html#slides",
-    "href": "day1.html#slides",
+    "objectID": "day1.html#resources",
+    "href": "day1.html#resources",
     "title": "Day 1",
-    "section": "🔗 Slides",
-    "text": "🔗 Slides\n\nIntroduction\nBasics of R programming\nProject structure\nNumerical summaries"
+    "section": "📑 Resources",
+    "text": "📑 Resources\n\nLearn R Chapter 1: Getting started with R & RStudio \nLearn R Chapter 2: R programming basics \nLearn R Chapter 3: Troubleshooting and asking for help \nLearn R Chapter 4: Project structure and importing data"
   },
   {
     "objectID": "day1.html#exercises",
     "href": "day1.html#exercises",
     "title": "Day 1",
     "section": "🏋️‍♀️ Exercises",
-    "text": "🏋️‍♀️ Exercises\nWe will look at the penguins dataset that is contained in the palmerpenguins package. For more details about the data, see here.\nlibrary(palmerpenguins)\ndata(penguins)\nUsing this data, answer the following questions.\n\nHave a quick skim of the data.\nHow many species were studied?\nHow many islands are there in the data?\nDid they find all species on every island?\nFor each biometric measure, are there difference between the species?\nExplore the associations between the biometric measurements bill length, bill depth, flipper length and body mass.\nAre there differences in these associations between species?"
+    "text": "🏋️‍♀️ Exercises\n\nExercise 1\nGo through the exercises in Learn R Chapter 2: R programming basics (you can skip the Matrices section).\n\n\nExercise 2\nThe following are all the datasets for this training workshop. Download these and try to read this into R.\n\nbrief-access-lick-data-latency.csv\nbrief-access-lick-data.xlsx\nch-study-mock-data.xlsx\ncomplex-formation.csv\ncuzick-2010-breast-cancer-density.csv\nguich-feed-data.csv\nkingston-data.xlsx\nmarcato-2021-immunity.csv\noverview-20220413-CD45freq-recomp-counts.csv\n\n\n\nExercise 3\nThe following exercise is written by Dr. Terry Neeman with slight modifications.\nWe will look at the penguins dataset that is contained in the palmerpenguins package. For more details about the data, see here.\nlibrary(palmerpenguins)\ndata(penguins)\nUsing this data, answer the following questions.\n\nProduce a numerical summary of the data.\nHow many species were studied?\nHow many islands are there in the data?\nDid they find all species on every island?\nFor each biometric measure, are there difference between the species?\nExplore the associations between the biometric measurements bill length, bill depth, flipper length and body mass.\nAre there differences in these associations between species?"
   },
   {
     "objectID": "day2.html",
