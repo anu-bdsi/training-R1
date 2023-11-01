@@ -1,5 +1,5 @@
 ---
-title: Computing numerical summaries
+title: Computing numerical summaries and parametric distributions
 subtitle: BDSI R Training I
 format:
   anu-light-revealjs:
@@ -23,14 +23,30 @@ date-format: "D[nd] MMMM YYYY"
 - Five number summary: `fivenum()`
 - Minimum: `min()`
 - Maximum: `max()`
+- Quantile: `quantile()`
 - Correlation coefficient: `cor()`
 
 
-## Parametric distributions 
+## Some parametric distributions 
+
+::: flex
+
+::: {.w-50}
 
 - `rnorm()`
 - `qnorm()`
 - `pnorm()`
 - `dnorm()`
+
+:::
+
+::: {.w-50 .pl3}
+
+:::
+
+:::
+
+
+
 
 ## Missing values
