@@ -124,7 +124,7 @@ nrow(df)
 ncol(df)
 ```
 
-## Subsetting [Part 1]{.f3}
+## Subsetting vectors [Part 1]{.f3}
 
 - **Positive integers** select elements at the specified positions:
 
@@ -146,7 +146,7 @@ x[-c(3, 1)]
 x[c(-3, 1)] # you can't mix positive and negative integers
 ```
 
-## Subsetting [Part 2]{.f3}
+## Subsetting vectors [Part 2]{.f3}
 
 - **Logical vectors** select elements where logical value is `TRUE`.
 
@@ -161,7 +161,7 @@ x[x > 3]
 x[c(TRUE, FALSE)] # the same as the first one
 ```
 
-## Subsetting [Part 3]{.f3}
+## Subsetting named vectors 
 
 - **Character vectors** select elements based on the name of the vector (if any):
 
@@ -170,5 +170,56 @@ y <- c("a" = 1.1, "b" = 2.2, "c" = 3.3, "d" = 4.4, "e" = 5.5)
 y
 y[c("c", "a", "a", "f")]
 ```
+
+## Subsetting lists
+
+::: flex
+
+::: {.w-50}
+
+```{r}
+str(l)
+```
+
+
+:::
+
+::: {.w-50 .pl3}
+
+```{r}
+#| error: true
+l[1]
+l[[1]]
+l[c(1, 2)]
+l[[c(1, 2)]] # what's happened here?!
+```
+
+:::
+
+:::
+
+
+
+
+## Subsetting named lists
+
+
+```{r}
+l2 <- list(A = c(1, 2, 3),
+           log = c(TRUE, FALSE),
+           who = c("Terry", "Jon"))
+
+l2$A
+l2[c("A", "log")]
+l2[["A"]]
+```
+
+
+
+
+
+
+
+
 
 
