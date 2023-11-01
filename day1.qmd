@@ -28,10 +28,10 @@ Time | Content
 :-----------|:-----------------|
 10.00-10.15 | [Introduction](slides/day1-slide1.html){target="_blank"} |     
 10.15-10.45 | [Basics of R programming](slides/day1-slide2.html){target="_blank"} |
-10.45-11.00 | _Your turn_ |
+10.45-11.00 | _Your turn_ (Exercise 1) |
 11.00-11.15 | [Setting up your data project](slides/day1-slide3.html){target="_blank"} |   
-11.15-11.30 | [Computing numerical summaries](slides/day1-slide4.html){target="_blank"} |   
-11.30-12.00 | _Your turn_ |   
+11.15-11.30 | [Common ](slides/day1-slide4.html){target="_blank"} |   
+11.30-12.00 | _Your turn_ (Exercise 2) |   
 
 ## 📑 Resources
 
@@ -39,6 +39,13 @@ Time | Content
 - Learn R Chapter 2: R programming basics [{{< fa link >}}](https://learnr.numbat.space/chapter2){target="_blank"}
 
 ## 🏋️‍♀️ Exercises
+
+### Exercise 1
+
+Go through the exercises in [Learn R Chapter 2: R programming basics](https://learnr.numbat.space/chapter2){target="_blank"} (you can skip the Matrices section).
+
+
+### Exercise 2
 
 We will look at the `penguins` dataset that is contained in the `palmerpenguins` package. For more details about the data, see [here](https://allisonhorst.github.io/palmerpenguins/).
 
