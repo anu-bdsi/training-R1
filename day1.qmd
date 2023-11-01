@@ -52,13 +52,6 @@ Go through the exercises in [Learn R Chapter 2: R programming basics](https://le
 
 The following are all the datasets for this training workshop. Download these and try to read this into R. 
 
-```{r}
-#| eval: false
-#| echo: false
-fns <- dir("data")
-glue::glue("- <a href='data/{fns}' download>{fns}</a>")
-```
-
 
 - <a href='data/brief-access-lick-data-latency.csv' download>brief-access-lick-data-latency.csv</a>
 - <a href='data/brief-access-lick-data.xlsx' download>brief-access-lick-data.xlsx</a>
