@@ -32,3 +32,5 @@ date-format: "D[nd] MMMM YYYY"
 - `qnorm()`
 - `pnorm()`
 - `dnorm()`
+
+## Missing values
