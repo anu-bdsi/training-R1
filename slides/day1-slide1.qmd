@@ -53,11 +53,55 @@ All materials will be hosted at<br> [<https://anu-bdsi.github.io/training-R1/>]{
 
 ## Learning objectives
 
-::: callout-note
+::: {.callout-note icon=false}
 
-## Overall goal
+## {{< fa crosshairs >}} Overall goal
 
 Develop skills to work with your research data using R 
 
 :::
 
+Today:
+
+- Setting up your data project (R project, folder structure)
+- Reading data into R (csv and xlsx)
+- The basics of R programming (atomic vectors, lists, data.frame, functions)
+- Computing simple numerical summaries of your data in R
+- Troubleshooting and producing minimal reproducible examples with `reprex`
+
+
+  
+  
+## What is R?
+
+::: incremental
+
+- **R** is a programming language predominately for data analysis
+- **RStudio Desktop** is an integrated development environment (**IDE**) that helps you to use R
+- **R packages** are community developed extensions to R [(much like apps on your mobile)]{.grey}
+- The Comprehensive R Archive Network (**CRAN**) is a volunteer maintained repository that hosts submitted R packages that are approved [(much like an app store)]{.grey}
+  - There are close to 20,000 packages available on CRAN
+  - The qualities of R packages vary 
+- There are other repositories that host R packages, e.g. **Bioconductor** for bioinformatics [(we won't cover this)]{.grey}
+:::
+
+## How to use R?
+
+- RStudio Desktop (or RStudio IDE) is the most common way to use R
+
+![](images/rstudio-desktop-annotation.png){.ba}
+
+- You can type operations directly into the Console pane
+
+## Why learn R?
+
+::: incremental
+
+- R is one of the top programming languages for statistics or data science
+- R was developed by statisticians for statisticians 
+- R has an active and friendly community 
+- R is a free and open source software (FOSS) 
+  - free = money is not a barrier to use it
+  - open source software = transparency
+  
+:::

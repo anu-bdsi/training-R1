@@ -1235,22 +1235,6 @@ Emi Tanaka
 
   <p class="date">2nd November 2023</p>
 </section>
-<section id="what-is-r" class="slide level2">
-<h2>What is R?</h2>
-<div>
-<ul>
-<li class="fragment"><strong>R</strong> is a programming language predominately for data analysis</li>
-<li class="fragment"><strong>RStudio Desktop</strong> is an integrated development environment (<strong>IDE</strong>) that helps you to use R</li>
-<li class="fragment"><strong>R packages</strong> are community developed extensions to R <span class="grey">(much like apps on your mobile)</span></li>
-<li class="fragment">The Comprehensive R Archive Network (<strong>CRAN</strong>) is a volunteer maintained repository that hosts submitted R packages that are approved <span class="grey">(much like an app store)</span>
-<ul>
-<li class="fragment">There are over 10,000 packages available</li>
-<li class="fragment">The qualities of R packages vary</li>
-</ul></li>
-<li class="fragment">There are other repositories that host R packages, e.g. <strong>Bioconductor</strong> for bioinformatics <span class="grey">(we won’t cover this)</span></li>
-</ul>
-</div>
-</section>
 <section id="simple-algebraic-operations" class="slide level2">
 <h2>Simple algebraic operations</h2>
 <ul>
@@ -1284,6 +1268,214 @@ Emi Tanaka
 </section>
 <section id="vectors" class="slide level2">
 <h2>Vectors</h2>
+<ul>
+<li>We can combine scalars to form vectors using <code>c()</code>:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb5-2"><a href="#cb5-2"></a>a <span class="sc">/</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5 1.0 1.5</code></pre>
+</div>
+</div>
+<div class="fragment">
+<ul>
+<li>This is a vector of length 3</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">length</span>(a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+</div>
+</div>
+<div class="fragment">
+<ul>
+<li>This vector is stored as a <code>double</code> with the class as <code>numeric</code></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">typeof</span>(a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] &quot;double&quot;</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">class</span>(a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] &quot;numeric&quot;</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="vectors-types" class="slide level2">
+<h2>Vectors types</h2>
+<ul>
+<li>There are four primary types of atomic vectors: <strong>logical</strong>, <strong>integer</strong>, <strong>double</strong> and <strong>character</strong>.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>logical_vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>, T, F)</span>
+<span id="cb13-2"><a href="#cb13-2"></a>integer_vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>L, <span class="dv">2</span>L, <span class="dv">3</span>L, <span class="dv">4</span>L)</span>
+<span id="cb13-3"><a href="#cb13-3"></a>double_vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>)</span>
+<span id="cb13-4"><a href="#cb13-4"></a>character_vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&#39;C&#39;</span>, <span class="st">&#39;D&#39;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>The integer and double vectors are collectively called <strong>numeric</strong> vectors.</li>
+</ul>
+<div class="fragment">
+<ul>
+<li>A vector can only consist of the same type.</li>
+<li>If you attempt to combine mismatched types together, it will try to coerce all values to the same type.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="dv">1</span>L)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1 1</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] &quot;A&quot; &quot;3&quot;</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">c</span>(<span class="cn">TRUE</span>, F, <span class="st">&quot;3&quot;</span>, <span class="dv">10</span>, <span class="st">&#39;X&#39;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] &quot;TRUE&quot;  &quot;FALSE&quot; &quot;3&quot;     &quot;10&quot;    &quot;X&quot;    </code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="lists" class="slide level2">
+<h2>Lists</h2>
+<ul>
+<li>Lists allow to combine elements of different types.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>l <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), </span>
+<span id="cb20-2"><a href="#cb20-2"></a>          <span class="fu">c</span>(<span class="fl">2.5</span>, <span class="fl">3.0</span>),</span>
+<span id="cb20-3"><a href="#cb20-3"></a>          <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>),</span>
+<span id="cb20-4"><a href="#cb20-4"></a>          <span class="fu">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>You can use <code>str()</code> to see the internal structure of an object in R.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">str</span>(l)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>List of 4
+ $ : num [1:3] 1 2 3
+ $ : num [1:2] 2.5 3
+ $ : logi [1:2] TRUE FALSE
+ $ : chr [1:2] &quot;a&quot; &quot;b&quot;</code></pre>
+</div>
+</div>
+</section>
+<section id="data-frames" class="slide level2">
+<h2>Data frames</h2>
+<ul>
+<li><code>data.frame</code> is a special type of a <em>named</em> list where each element of the vector is the same length.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">grade =</span> <span class="fu">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;C&quot;</span>),</span>
+<span id="cb23-2"><a href="#cb23-2"></a>                     <span class="at">n =</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">14</span>, <span class="dv">30</span>))</span>
+<span id="cb23-3"><a href="#cb23-3"></a></span>
+<span id="cb23-4"><a href="#cb23-4"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  grade  n
+1     A 10
+2     B 14
+3     C 30</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="fu">colnames</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] &quot;grade&quot; &quot;n&quot;    </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="fu">nrow</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="fu">ncol</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+</div>
+</section>
+<section id="subsetting-part-1" class="slide level2">
+<h2>Subsetting <span class="f3">Part 1</span></h2>
+<ul>
+<li><strong>Positive integers</strong> select elements at the specified positions:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">1.1</span>, <span class="fl">2.2</span>, <span class="fl">3.3</span>, <span class="fl">4.4</span>, <span class="fl">5.5</span>)</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>x[<span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">1</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3.3 1.1</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>x[<span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.2 2.2</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>x[<span class="fu">c</span>(<span class="fl">2.3</span>, <span class="fl">2.8</span>)] <span class="co"># double is silently truncated to integers</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.2 2.2</code></pre>
+</div>
+</div>
+<div class="fragment">
+<ul>
+<li><strong>Negative integers</strong> exclude elements at the specified positions:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>x[<span class="sc">-</span><span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">1</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.2 4.4 5.5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>x[<span class="fu">c</span>(<span class="sc">-</span><span class="dv">3</span>, <span class="dv">1</span>)] <span class="co"># you can&#39;t mix positive and negative integers</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>Error in x[c(-3, 1)]: only 0&#39;s may be mixed with negative subscripts</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="subsetting-part-2" class="slide level2">
+<h2>Subsetting <span class="f3">Part 2</span></h2>
+<ul>
+<li><strong>Logical vectors</strong> select elements where logical value is <code>TRUE</code>.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a>x[<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.1 3.3 5.5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a>x[x <span class="sc">&gt;</span> <span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3.3 4.4 5.5</code></pre>
+</div>
+</div>
+<ul>
+<li>If the logical vector used for subsetting a vector is shorter than it then the logical vector is <em>recycled</em> to match the length of the vector.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a>x[<span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>)] <span class="co"># the same as the first one</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.1 3.3 5.5</code></pre>
+</div>
+</div>
+</section>
+<section id="subsetting-part-3" class="slide level2">
+<h2>Subsetting <span class="f3">Part 3</span></h2>
+<ul>
+<li><strong>Character vectors</strong> select elements based on the name of the vector (if any):</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;a&quot;</span> <span class="ot">=</span> <span class="fl">1.1</span>, <span class="st">&quot;b&quot;</span> <span class="ot">=</span> <span class="fl">2.2</span>, <span class="st">&quot;c&quot;</span> <span class="ot">=</span> <span class="fl">3.3</span>, <span class="st">&quot;d&quot;</span> <span class="ot">=</span> <span class="fl">4.4</span>, <span class="st">&quot;e&quot;</span> <span class="ot">=</span> <span class="fl">5.5</span>)</span>
+<span id="cb47-2"><a href="#cb47-2"></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  a   b   c   d   e 
+1.1 2.2 3.3 4.4 5.5 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a>y[<span class="fu">c</span>(<span class="st">&quot;c&quot;</span>, <span class="st">&quot;a&quot;</span>, <span class="st">&quot;a&quot;</span>, <span class="st">&quot;f&quot;</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   c    a    a &lt;NA&gt; 
+ 3.3  1.1  1.1   NA </code></pre>
+</div>
+</div>
 <p><img src="data:image/png;base64,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" class="slide-logo"></p>
 <div class="footer footer-default">
 <p>anu-bdsi.github.io/training-R1/</p>
