@@ -64,9 +64,10 @@ Today:
 
 - Setting up your data project (R project, folder structure)
 - Reading data into R (csv and xlsx)
-- The basics of R programming (atomic vectors, lists, data.frame, functions)
-- Computing simple numerical summaries of your data in R
+- The basics of R programming (atomic vectors, lists, data.frame, subsetting R objects)
 - Troubleshooting and producing minimal reproducible examples with `reprex`
+- Compute numerical summaries
+- Be familiar with computing density, distribution quantile and random generation of some parametric distributions
 
 
   
