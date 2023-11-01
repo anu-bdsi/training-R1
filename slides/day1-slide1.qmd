@@ -33,12 +33,11 @@ date-format: "D[nd] MMMM YYYY"
 
 :::
 
-::: fragment
+::: incremental
 
 - Who are you?
+  - What statistical software have you used before?
   - Introduce yourself to people around you
-    - What do you do at ANU?
-    - What interests do you have? Etc.
     
 :::
 
@@ -98,10 +97,29 @@ Today:
 ::: incremental
 
 - R is one of the top programming languages for statistics or data science
-- R was developed by statisticians for statisticians 
+  - Python is also a good alternative language for data science 
+  - Better to have a mastery of at least one language rather than none
+- R was initially developed by statisticians for statisticians 
+  - State-of-the-art statistical methods are generally more readily available in R
 - R has an active and friendly community 
 - R is a free and open source software (FOSS) 
   - free = money is not a barrier to use it
   - open source software = transparency
   
+:::
+
+
+## How to get better at R?
+
+::: incremental
+
+- [PRACTICE]{.f-headline}
+- Practice with a purpose (e.g. using R on your own data)
+- Try teaching and helping others with their R problem 
+- Have a [willingness to _continuously_ learn and adapt]{.f-subheadline}
+  - R is an ever evolving language [(check the [release news](https://cran.r-project.org/doc/manuals/r-release/NEWS.html) every so often)]{.grey}
+  - new features and packages are added very frequently
+  - whether you are a beginner or not, there are always things we do not know about R
+- Do you have any strategies or tips? Please share!
+
 :::
