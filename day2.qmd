@@ -31,6 +31,13 @@ Time | Content
 11.05-11.40 | [Getting started with `ggplot2`](slides/day2-slide3.html){target="_blank"}  |
 11.40-12.00 | *Your turn* |
 
+## 📑 Resources
+
+- Learn R Chapter 5: Data wrangling with R [{{< fa link >}}](https://learnr.numbat.space/chapter5)
+- Learn R Chapter 6: Data visualisation with R [{{< fa link >}}](https://learnr.numbat.space/chapter6)
+- Data visualisation with R workshop [{{< fa link >}}](https://emitanaka.org/dataviz-workshop/)
+
+
 ## 🏋️‍♀️ Exercises
 
 This exercise is written by Dr. Terry Neeman. 
@@ -155,4 +162,4 @@ ggplot(results1, aes(x = RBC, y = emmean, fill = time)) +
 ### Homework
 
 - Go through the exercises [here](https://emitanaka.org/dataviz-workshop/exercises/).
-- You can find some materials related to these exercises [here](https://emitanaka.org/dataviz-workshop/)
+- See the Resources section for some helpful related materials.
