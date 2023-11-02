@@ -533,7 +533,7 @@ immunity %>%
 * `starts_with()` selects columns with the given prefix
 * `ends_with()` selects columns with the given suffix
 * `contains()` selects columns with a literal string
-* `matches()` selects columns that match the regular expression .font_small[we'll learn this next!]
+* `matches()` selects columns that match the regular expression
 * `num_range()` selects columns with a numerical range
 * `all_of()` for selecting columns based on a character vector
 * `any_of()` is the same as `all_of()` but no error when variables do not exist
