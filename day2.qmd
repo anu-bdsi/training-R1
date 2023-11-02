@@ -88,7 +88,7 @@ Think of a few different ways to explore your data, keeping mind your research q
 You might try a few different plots instead of just a single plot.
 
 
-Fit a model to these data to address the research question. Include Experiment as a blocking factor
+Fit a model to these data to address the research question. Include Experiment as a blocking factor. *(Note: we will talk more about modelling in R next time).*
 
 ```r
 lm.ery <- lmer(complex ~ time * RBC * ratio + (1|Experiment), data = ery)
