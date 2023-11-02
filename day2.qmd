@@ -31,8 +31,9 @@ Time | Content
 
 This exercise is written by Dr. Terry Neeman. 
 
-{{<fa download >}} The data for this exercise can be downloaded <a href="data/complex-formation.csv" download>here</a>.
+{{< fa download >}} The data for this exercise can be downloaded <a href="data/complex-formation.csv" download>here</a>.
 
+<i class='fas fa-tasks'></i> Write the answer to the following exercise using an R script
 
 ### Erythrocyte-Platelet complex formation
 
