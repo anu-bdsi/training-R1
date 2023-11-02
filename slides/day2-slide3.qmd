@@ -28,7 +28,7 @@ execute:
 ## What is `ggplot2`?
 
 
-*  An R-package that was initially developed by **Hadley Wickham** as part of his PhD project, now maintained by **Thomas Lin Pedersen**,<br> [along with Hadley Wickham, Winston Chang, Lionel Henry, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani and Dewey Dunnington]{.f4}.
+*  An R-package that was initially developed by **Hadley Wickham** as part of his PhD project, now maintained by **Thomas Lin Pedersen**,<br> [along with Hadley Wickham, Winston Chang, Lionel Henry, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani and Dewey Dunnington]{.f2}.
 * Implements an interpretation of the **"The Grammar of Graphics"** by Leland Wilkinson.
 * One of the most popular packages in R for data visualisation and widely used in scientific outputs, reports, and even news articles.
 
@@ -60,10 +60,18 @@ Gorman KB, Williams TD, Fraser WR (2014). Ecological sexual dimorphism and envir
 
 ## Initialising the plot
 
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+theme_set(theme(text = element_text(size = 24)))
+```
+
+
 
 ```{r plot-initial}
 #| output-location: fragment
-#| fig-height: 3
 library(tidyverse) # OR library(ggplot2)
 ggplot(data = penguins) 
 ```
@@ -81,7 +89,6 @@ This graph isn't really useful.
 
 ```{r plot-mapping}
 #| code-line-numbers: 2
-#| fig-height: 3
 #| output-location: fragment
 ggplot(data = penguins,
        mapping = aes(x = bill_depth_mm, y = bill_length_mm)) 
@@ -101,8 +108,6 @@ Notice that the scales are automatically setup based on the data -- less work fo
 ![](images/hidden-ggplot-argument-names.png)
 
 ```{r plot-omit-argnames}
-#| fig-width: 2
-#| fig-height: 2
 ggplot(penguins, aes(bill_depth_mm, bill_length_mm)) 
 ```
 
@@ -152,7 +157,6 @@ ggplot(penguins, aes(bill_depth_mm)) +
 
 ```{r geom-histogram}
 #| code-line-numbers: "1-2|3|"
-#| fig-height: 3
 ggplot(data = penguins, 
        mapping = aes(x = bill_depth_mm)) +
   geom_histogram()
@@ -265,7 +269,7 @@ geoms$matches %>%
 ::: {.w-45 .pr3 .fragment}
 
 ```{r}
-#| fig-height: 3
+#| fig-height: 5
 #| code-line-numbers: false
 p + geom_histogram(bins = 50)
 ```
@@ -274,7 +278,7 @@ p + geom_histogram(bins = 50)
 ::: {.w-45 .pr3 .fragment}
 
 ```{r}
-#| fig-height: 3
+#| fig-height: 5
 #| code-line-numbers: false
 p + geom_histogram(binwidth = 0.01)
 ```
@@ -563,7 +567,6 @@ ggplot(penguins,
 
 ```{r aes-map}
 #| output-location: fragment
-#| fig-height: 3
 ggplot(penguins, aes(x = bill_depth_mm, y = bill_length_mm)) +
   geom_point(aes(color = "dodgerblue"))
 ```
@@ -618,7 +621,7 @@ ggplot(penguins, aes(x = bill_depth_mm, y = bill_length_mm),
 :::
 
 
-# Plotting multivariate data {background-color="#be830e"}
+# [Plotting multivariate data]{.anu-white} {background-color="#be830e"}
 
 ```{r}
 #| echo: false
@@ -633,8 +636,6 @@ cat(paste0("<img class='catalogue' src='images/catalogue/", fns, "'>", collapse 
 ## A hexagonal 2D heatmap with `geom_hex()`
 
 ```{r geom-hex}
-#| fig-width: 6
-#| fig-height: 4
 ggplot(penguins, aes(x = bill_depth_mm, y = bill_length_mm)) +
  geom_hex()
 ```
@@ -650,8 +651,6 @@ ggplot(penguins, aes(x = bill_depth_mm, y = bill_length_mm)) +
 ## `geom_bin_2d()`
 
 ```{r geom-bin2d}
-#| fig-width: 6
-#| fig-height: 4
 #| code-line-numbers: "2"
 ggplot(penguins, aes(x = bill_depth_mm, y = bill_length_mm)) +
   geom_bin_2d()
@@ -668,8 +667,6 @@ ggplot(penguins, aes(x = bill_depth_mm, y = bill_length_mm)) +
 ## `geom_count()`
 
 ```{r geom-count}
-#| fig-width: 6
-#| fig-height: 4
 #| code-line-numbers: "2"
 ggplot(penguins, aes(x = bill_depth_mm, y = bill_length_mm)) +
   geom_count()
@@ -685,8 +682,6 @@ ggplot(penguins, aes(x = bill_depth_mm, y = bill_length_mm)) +
 ## `geom_density_2d()`
 
 ```{r geom-density-2d}
-#| fig-width: 6
-#| fig-height: 3
 #| code-line-numbers: "2"
 ggplot(penguins, aes(x = bill_depth_mm, y = bill_length_mm)) +
   geom_density_2d()
@@ -704,8 +699,6 @@ ggplot(penguins, aes(x = bill_depth_mm, y = bill_length_mm)) +
 ## `geom_density_2d_filled()`
 
 ```{r geom-density-2d-filled}
-#| fig-width: 6
-#| fig-height: 3
 #| code-line-numbers: "2"
 ggplot(penguins, aes(x = bill_depth_mm, y = bill_length_mm)) +
   geom_density_2d_filled()
@@ -743,8 +736,6 @@ volcanod
 ## A 2D contour plot with `geom_contour()`
 
 ```{r geom-contour}
-#| fig-width: 6
-#| fig-height: 4
 #| code-line-numbers: "2"
 ggplot(data = volcanod, 
        mapping = aes(x = col, y = row, z = value)) + 
@@ -756,8 +747,6 @@ ggplot(data = volcanod,
 ## A 2D contour plot with `geom_contour_filled()`
 
 ```{r geom-contour-filled}
-#| fig-width: 6
-#| fig-height: 4
 #| code-line-numbers: "2"
 ggplot(data = volcanod, 
        mapping = aes(x = col, y = row, z = value)) + 
@@ -770,8 +759,6 @@ ggplot(data = volcanod,
 ## Tile plots with `geom_tile()`
 
 ```{r geom-tile}
-#| fig-width: 6
-#| fig-height: 4
 #| code-line-numbers: "2"
 ggplot(volcanod, aes(col, row, fill = value)) +
  geom_tile()
@@ -781,8 +768,6 @@ ggplot(volcanod, aes(col, row, fill = value)) +
 ## Raster plots with `geom_raster()`
 
 ```{r geom-raster}
-#| fig-width: 6
-#| fig-height: 4
 #| code-line-numbers: "2"
 ggplot(volcanod, aes(col, row, fill = value)) +
  geom_raster()
@@ -798,8 +783,6 @@ ggplot(volcanod, aes(col, row, fill = value)) +
 ## Rectangular plots with `geom_rect()`
 
 ```{r geom-rect}
-#| fig-width: 6
-#| fig-height: 4
 #| code-line-numbers: "2"
 ggplot(volcanod, aes(xmin = col - 0.5, xmax = col + 0.5,
                      ymin = row - 0.5, ymax = row + 0.5, fill = value)) +
@@ -825,8 +808,6 @@ economics
 ## Line plot with `geom_line()`
 
 ```{r geom-line}
-#| fig-width: 6
-#| fig-height: 4
 #| code-line-numbers: "2"
 ggplot(economics, aes(date, unemploy)) + 
   geom_line()
@@ -836,8 +817,6 @@ ggplot(economics, aes(date, unemploy)) +
 ## `geom_path()`
 
 ```{r geom-path}
-#| fig-width: 6
-#| fig-height: 4
 #| code-line-numbers: "2"
 ggplot(economics, aes(unemploy/pop, psavert)) +
   geom_path()
@@ -847,8 +826,6 @@ ggplot(economics, aes(unemploy/pop, psavert)) +
 ## `geom_step()`
 
 ```{r geom-step}
-#| fig-width: 6
-#| fig-height: 4
 #| code-line-numbers: "2"
 ggplot(economics, aes(unemploy/pop, psavert)) +
   geom_step()
@@ -872,8 +849,6 @@ world
 ## Drawing world map with `geom_polygon()`
 
 ```{r geom-polygon}
-#| fig-width: 6
-#| fig-height: 4
 #| code-line-numbers: "2-3"
 world <- map_data("world")
 ggplot(world, aes(long, lat, group = group)) +
