@@ -9,11 +9,13 @@ date: 11/09/2023
 
 ## Learning objectives 
 
-- Fit linear model with `lm()` and linear mixed models with `lme4::lmer()`
-- Diagnose and visualise statisitcal models
+- Compose diverse range of plots with `ggplot2`
+- Fit linear (mixed) models with R
+- Diagnose and visualise statistical models using R
 - Produce reproducible documents using Quarto (next generation R markdown)
 
 :::
+
 
 
 ## 🕙 Schedule
@@ -22,13 +24,14 @@ date: 11/09/2023
 
 Time | Content 
 :-----------|:-----------------|
-10.00-10.30 | Fitting linear models with `lm()` |
-10.30-11.00 | Linear mixed models with `lme4::lmer()` |
-11.00-12.00 | Reproducible documents with Quarto |
+10.00-10.45 | [Compose diverse and publication-ready plots with `ggplot2`](slides/day3-slide1.html){target="_blank"} |
+10.45-11.00 | *Your turn*
+11.00-11.25 | [Reproducible documents with Quarto](slides/day3-slide2.html){target="_blank"} |
+11.25-12.00 | [Fitting linear and linear mixed models with R](slides/day3-slide3.html){target="_blank"} |
 
-## 🔗 Slides
 
 
+## 📑 Resources
 
 ## 🏋️‍♀️ Exercises
 
