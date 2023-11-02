@@ -12,8 +12,8 @@ website:
         text: Home
       - day1.qmd
       - day2.qmd
-      - day3.qmd
-      - day4.qmd
+      #- day3.qmd
+      #- day4.qmd
       - help.qmd
   body-footer: | 
     [This website is brought to you by the [ANU Biological Data Science Institute](https://bdsi.anu.edu.au/).]{.footer}
