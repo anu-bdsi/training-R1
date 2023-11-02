@@ -389,6 +389,56 @@ Hadley Wickham (2007). Reshaping Data with the reshape
 :::
 
 
+## Lifecycle
+
+::: flex
+
+::: {.w-40 .f4}
+
+<img src="https://raw.githubusercontent.com/r-lib/lifecycle/master/vignettes/figures/lifecycle.svg">
+
+
+<img src="https://raw.githubusercontent.com/r-lib/lifecycle/master/man/figures/lifecycle-archived.svg">
+<img src="https://raw.githubusercontent.com/r-lib/lifecycle/master/man/figures/lifecycle-defunct.svg">
+<img src="https://raw.githubusercontent.com/r-lib/lifecycle/master/man/figures/lifecycle-deprecated.svg">
+<img src="https://raw.githubusercontent.com/r-lib/lifecycle/master/man/figures/lifecycle-experimental.svg">
+<img src="https://raw.githubusercontent.com/r-lib/lifecycle/master/man/figures/lifecycle-maturing.svg">
+<img src="https://raw.githubusercontent.com/r-lib/lifecycle/master/man/figures/lifecycle-questioning.svg">
+<img src="https://raw.githubusercontent.com/r-lib/lifecycle/master/man/figures/lifecycle-retired.svg">
+<img src="https://raw.githubusercontent.com/r-lib/lifecycle/master/man/figures/lifecycle-soft-deprecated.svg">
+<img src="https://raw.githubusercontent.com/r-lib/lifecycle/master/man/figures/lifecycle-stable.svg">
+<img src="https://raw.githubusercontent.com/r-lib/lifecycle/master/man/figures/lifecycle-superseded.svg">
+
+:::
+
+::: {.w-60 .pl3}
+
+
+* Functions (and sometimes arguments of functions) in `tidyverse` packages often are labelled with a badge like on the left
+* Find the definitions of badges [here](https://lifecycle.r-lib.org/articles/lifecycle.html)
+* Check out documentations below
+```{r, eval = FALSE}
+help(mutate, package = "dplyr")
+help(mutate_each, package = "dplyr")
+```
+
+:::
+
+:::
+
+
+
+
+
+
+::: {.absolute bottom=0 .f3}
+
+Lionel Henry (2020). lifecycle: Manage the Life Cycle of your Package Functions. R package version 0.2.0.
+
+:::
+
+
+
 ## Pivotting data with `tidyr` [Part 1]{.f2}
 
 
