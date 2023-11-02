@@ -13,7 +13,7 @@ date: 11/03/2023
 - Understand the concept of tidy data 
 - Tidy data with `tidyr`
 - Wrangle data with `dplyr`
-- Visualise data with `ggplot2`
+- Plot a layer with `ggplot2`
 
 :::
 
@@ -28,7 +28,7 @@ Time | Content
 10.25-10.40 | *Your turn* |
 10.40-11.10 | [Data wrangling with `dplyr`](slides/day2-slide2.html){target="_blank"}  |
 11.10-11.20 | *Your turn* |
-11.20-12.00 | [Data visualisation with `ggplot2`](slides/day2-slide3.html){target="_blank"}  |
+11.20-12.00 | [Getting started with `ggplot2`](slides/day2-slide3.html){target="_blank"}  |
 
 
 ## 🏋️‍♀️ Exercises

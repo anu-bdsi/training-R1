@@ -18,6 +18,14 @@ execute:
   echo: true
 ---
 
+## Today's learning objectives 
+
+- Be familiar with the `tidyverse` ecosystem
+- Understand the concept of tidy data 
+- Tidy data with `tidyr`
+- Wrangle data with `dplyr`
+- Plot a layer with `ggplot2` 
+
 ## Tidyverse
 
 * **Tidyverse** refers to a collection of R-packages that share a common design philosophy, grammar and data structure.
