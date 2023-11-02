@@ -1552,26 +1552,19 @@ Volvo 142E          21.4</code></pre>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>mtcars <span class="sc">%&gt;%</span> </span>
 <span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">slice</span>(<span class="dv">3</span><span class="sc">:</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>               mpg cyl disp  hp drat    wt  qsec vs am gear
-Datsun 710    22.8   4  108  93 3.85 2.320 18.61  1  1    4
-Mazda RX4 Wag 21.0   6  160 110 3.90 2.875 17.02  0  1    4
-Mazda RX4     21.0   6  160 110 3.90 2.620 16.46  0  1    4
-              carb
-Datsun 710       1
-Mazda RX4 Wag    4
-Mazda RX4        4</code></pre>
+<pre><code>               mpg cyl disp  hp drat    wt  qsec vs am gear carb
+Datsun 710    22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+Mazda RX4 Wag 21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+Mazda RX4     21.0   6  160 110 3.90 2.620 16.46  0  1    4    4</code></pre>
 </div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>mtcars <span class="sc">%&gt;%</span> </span>
 <span id="cb11-2"><a href="#cb11-2"></a>  <span class="fu">filter</span>(<span class="fu">rownames</span>(.) <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;Datsun 710&quot;</span>, <span class="st">&quot;Mazda RX4&quot;</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>            mpg cyl disp  hp drat   wt  qsec vs am gear
-Mazda RX4  21.0   6  160 110 3.90 2.62 16.46  0  1    4
-Datsun 710 22.8   4  108  93 3.85 2.32 18.61  1  1    4
-           carb
-Mazda RX4     4
-Datsun 710    1</code></pre>
+<pre><code>            mpg cyl disp  hp drat   wt  qsec vs am gear carb
+Mazda RX4  21.0   6  160 110 3.90 2.62 16.46  0  1    4    4
+Datsun 710 22.8   4  108  93 3.85 2.32 18.61  1  1    4    1</code></pre>
 </div>
 </div>
 <ul>
@@ -1609,72 +1602,39 @@ Use <code class="monash-blue">tibble::rownames_to_column()</code> to convert row
 <span id="cb13-6"><a href="#cb13-6"></a>                         cyl<span class="sc">==</span><span class="dv">4</span> <span class="sc">~</span> <span class="dv">10</span>,</span>
 <span id="cb13-7"><a href="#cb13-7"></a>                           <span class="cn">TRUE</span> <span class="sc">~</span> <span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>                     mpg cyl  disp hp drat           wt
-Mazda RX4           21.0   6 160.0 11 3.90 1.000000e+01
-Mazda RX4 Wag       21.0   6 160.0 11 3.90 1.000000e+01
-Datsun 710          22.8   4 108.0 10 3.85 1.923669e-03
-Hornet 4 Drive      21.4   6 258.0 11 3.08 1.000000e+01
-Hornet Sportabout   18.7   8 360.0  3 3.15 2.859676e-03
-Valiant             18.1   6 225.0 11 2.76 1.000000e+01
-Duster 360          14.3   8 360.0  3 3.21 4.890215e-03
-Merc 240D           24.4   4 146.7 10 3.69 1.679656e-03
-Merc 230            22.8   4 140.8 10 3.92 1.923669e-03
-Merc 280            19.2   6 167.6 11 3.92 1.000000e+01
-Merc 280C           17.8   6 167.6 11 3.92 1.000000e+01
-Merc 450SE          16.4   8 275.8  3 3.07 3.718025e-03
-Merc 450SL          17.3   8 275.8  3 3.07 3.341241e-03
-Merc 450SLC         15.2   8 275.8  3 3.07 4.328255e-03
-Cadillac Fleetwood  10.4   8 472.0  3 2.93 9.245562e-03
-Lincoln Continental 10.4   8 460.0  3 3.00 9.245562e-03
-Chrysler Imperial   14.7   8 440.0  3 3.23 4.627701e-03
-Fiat 128            32.4   4  78.7 10 4.08 9.525987e-04
-Honda Civic         30.4   4  75.7 10 4.93 1.082064e-03
-Toyota Corolla      33.9   4  71.1 10 4.22 8.701630e-04
-Toyota Corona       21.5   4 120.1 10 3.70 2.163332e-03
-Dodge Challenger    15.5   8 318.0  3 2.76 4.162331e-03
-AMC Javelin         15.2   8 304.0  3 3.15 4.328255e-03
-Camaro Z28          13.3   8 350.0  3 3.73 5.653231e-03
-Pontiac Firebird    19.2   8 400.0  3 3.08 2.712674e-03
-Fiat X1-9           27.3   4  79.0 10 4.08 1.341760e-03
-Porsche 914-2       26.0   4 120.3 10 4.43 1.479290e-03
-Lotus Europa        30.4   4  95.1 10 3.77 1.082064e-03
-Ford Pantera L      15.8   8 351.0  3 4.22 4.005768e-03
-Ferrari Dino        19.7   6 145.0 11 3.62 1.000000e+01
-Maserati Bora       15.0   8 301.0  3 3.54 4.444444e-03
-Volvo 142E          21.4   4 121.0 10 4.11 2.183597e-03
-                     qsec vs am gear carb        gpm
-Mazda RX4           16.46  0  1    4    4 0.04761905
-Mazda RX4 Wag       17.02  0  1    4    4 0.04761905
-Datsun 710          18.61  1  1    4    1 0.04385965
-Hornet 4 Drive      19.44  1  0    3    1 0.04672897
-Hornet Sportabout   17.02  0  0    3    2 0.05347594
-Valiant             20.22  1  0    3    1 0.05524862
-Duster 360          15.84  0  0    3    4 0.06993007
-Merc 240D           20.00  1  0    4    2 0.04098361
-Merc 230            22.90  1  0    4    2 0.04385965
-Merc 280            18.30  1  0    4    4 0.05208333
-Merc 280C           18.90  1  0    4    4 0.05617978
-Merc 450SE          17.40  0  0    3    3 0.06097561
-Merc 450SL          17.60  0  0    3    3 0.05780347
-Merc 450SLC         18.00  0  0    3    3 0.06578947
-Cadillac Fleetwood  17.98  0  0    3    4 0.09615385
-Lincoln Continental 17.82  0  0    3    4 0.09615385
-Chrysler Imperial   17.42  0  0    3    4 0.06802721
-Fiat 128            19.47  1  1    4    1 0.03086420
-Honda Civic         18.52  1  1    4    2 0.03289474
-Toyota Corolla      19.90  1  1    4    1 0.02949853
-Toyota Corona       20.01  1  0    3    1 0.04651163
-Dodge Challenger    16.87  0  0    3    2 0.06451613
-AMC Javelin         17.30  0  0    3    2 0.06578947
-Camaro Z28          15.41  0  0    3    4 0.07518797
-Pontiac Firebird    17.05  0  0    3    2 0.05208333
-Fiat X1-9           18.90  1  1    4    1 0.03663004
-Porsche 914-2       16.70  0  1    5    2 0.03846154
-Lotus Europa        16.90  1  1    5    2 0.03289474
-Ford Pantera L      14.50  0  1    5    4 0.06329114
-Ferrari Dino        15.50  0  1    5    6 0.05076142
-Maserati Bora       14.60  0  1    5    8 0.06666667
-Volvo 142E          18.60  1  1    4    2 0.04672897</code></pre>
+<pre><code>                     mpg cyl  disp hp drat           wt  qsec vs am gear carb        gpm
+Mazda RX4           21.0   6 160.0 11 3.90 1.000000e+01 16.46  0  1    4    4 0.04761905
+Mazda RX4 Wag       21.0   6 160.0 11 3.90 1.000000e+01 17.02  0  1    4    4 0.04761905
+Datsun 710          22.8   4 108.0 10 3.85 1.923669e-03 18.61  1  1    4    1 0.04385965
+Hornet 4 Drive      21.4   6 258.0 11 3.08 1.000000e+01 19.44  1  0    3    1 0.04672897
+Hornet Sportabout   18.7   8 360.0  3 3.15 2.859676e-03 17.02  0  0    3    2 0.05347594
+Valiant             18.1   6 225.0 11 2.76 1.000000e+01 20.22  1  0    3    1 0.05524862
+Duster 360          14.3   8 360.0  3 3.21 4.890215e-03 15.84  0  0    3    4 0.06993007
+Merc 240D           24.4   4 146.7 10 3.69 1.679656e-03 20.00  1  0    4    2 0.04098361
+Merc 230            22.8   4 140.8 10 3.92 1.923669e-03 22.90  1  0    4    2 0.04385965
+Merc 280            19.2   6 167.6 11 3.92 1.000000e+01 18.30  1  0    4    4 0.05208333
+Merc 280C           17.8   6 167.6 11 3.92 1.000000e+01 18.90  1  0    4    4 0.05617978
+Merc 450SE          16.4   8 275.8  3 3.07 3.718025e-03 17.40  0  0    3    3 0.06097561
+Merc 450SL          17.3   8 275.8  3 3.07 3.341241e-03 17.60  0  0    3    3 0.05780347
+Merc 450SLC         15.2   8 275.8  3 3.07 4.328255e-03 18.00  0  0    3    3 0.06578947
+Cadillac Fleetwood  10.4   8 472.0  3 2.93 9.245562e-03 17.98  0  0    3    4 0.09615385
+Lincoln Continental 10.4   8 460.0  3 3.00 9.245562e-03 17.82  0  0    3    4 0.09615385
+Chrysler Imperial   14.7   8 440.0  3 3.23 4.627701e-03 17.42  0  0    3    4 0.06802721
+Fiat 128            32.4   4  78.7 10 4.08 9.525987e-04 19.47  1  1    4    1 0.03086420
+Honda Civic         30.4   4  75.7 10 4.93 1.082064e-03 18.52  1  1    4    2 0.03289474
+Toyota Corolla      33.9   4  71.1 10 4.22 8.701630e-04 19.90  1  1    4    1 0.02949853
+Toyota Corona       21.5   4 120.1 10 3.70 2.163332e-03 20.01  1  0    3    1 0.04651163
+Dodge Challenger    15.5   8 318.0  3 2.76 4.162331e-03 16.87  0  0    3    2 0.06451613
+AMC Javelin         15.2   8 304.0  3 3.15 4.328255e-03 17.30  0  0    3    2 0.06578947
+Camaro Z28          13.3   8 350.0  3 3.73 5.653231e-03 15.41  0  0    3    4 0.07518797
+Pontiac Firebird    19.2   8 400.0  3 3.08 2.712674e-03 17.05  0  0    3    2 0.05208333
+Fiat X1-9           27.3   4  79.0 10 4.08 1.341760e-03 18.90  1  1    4    1 0.03663004
+Porsche 914-2       26.0   4 120.3 10 4.43 1.479290e-03 16.70  0  1    5    2 0.03846154
+Lotus Europa        30.4   4  95.1 10 3.77 1.082064e-03 16.90  1  1    5    2 0.03289474
+Ford Pantera L      15.8   8 351.0  3 4.22 4.005768e-03 14.50  0  1    5    4 0.06329114
+Ferrari Dino        19.7   6 145.0 11 3.62 1.000000e+01 15.50  0  1    5    6 0.05076142
+Maserati Bora       15.0   8 301.0  3 3.54 4.444444e-03 14.60  0  1    5    8 0.06666667
+Volvo 142E          21.4   4 121.0 10 4.11 2.183597e-03 18.60  1  1    4    2 0.04672897</code></pre>
 </div>
 </div>
 <div class="ba" style="position:absolute;right:20px;margin-right:0px!important;top:50px;margin-left:0;width:550px;font-size: 20pt;background-color:white;">
@@ -1701,144 +1661,78 @@ You can call multiple <code>mutate</code> but computational performance is usual
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>mtcars <span class="sc">%&gt;%</span> </span>
 <span id="cb15-2"><a href="#cb15-2"></a>  <span class="fu">select</span>(<span class="fu">sort</span>(<span class="fu">names</span>(.)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>                    am carb cyl  disp drat gear  hp  mpg
-Mazda RX4            1    4   6 160.0 3.90    4 110 21.0
-Mazda RX4 Wag        1    4   6 160.0 3.90    4 110 21.0
-Datsun 710           1    1   4 108.0 3.85    4  93 22.8
-Hornet 4 Drive       0    1   6 258.0 3.08    3 110 21.4
-Hornet Sportabout    0    2   8 360.0 3.15    3 175 18.7
-Valiant              0    1   6 225.0 2.76    3 105 18.1
-Duster 360           0    4   8 360.0 3.21    3 245 14.3
-Merc 240D            0    2   4 146.7 3.69    4  62 24.4
-Merc 230             0    2   4 140.8 3.92    4  95 22.8
-Merc 280             0    4   6 167.6 3.92    4 123 19.2
-Merc 280C            0    4   6 167.6 3.92    4 123 17.8
-Merc 450SE           0    3   8 275.8 3.07    3 180 16.4
-Merc 450SL           0    3   8 275.8 3.07    3 180 17.3
-Merc 450SLC          0    3   8 275.8 3.07    3 180 15.2
-Cadillac Fleetwood   0    4   8 472.0 2.93    3 205 10.4
-Lincoln Continental  0    4   8 460.0 3.00    3 215 10.4
-Chrysler Imperial    0    4   8 440.0 3.23    3 230 14.7
-Fiat 128             1    1   4  78.7 4.08    4  66 32.4
-Honda Civic          1    2   4  75.7 4.93    4  52 30.4
-Toyota Corolla       1    1   4  71.1 4.22    4  65 33.9
-Toyota Corona        0    1   4 120.1 3.70    3  97 21.5
-Dodge Challenger     0    2   8 318.0 2.76    3 150 15.5
-AMC Javelin          0    2   8 304.0 3.15    3 150 15.2
-Camaro Z28           0    4   8 350.0 3.73    3 245 13.3
-Pontiac Firebird     0    2   8 400.0 3.08    3 175 19.2
-Fiat X1-9            1    1   4  79.0 4.08    4  66 27.3
-Porsche 914-2        1    2   4 120.3 4.43    5  91 26.0
-Lotus Europa         1    2   4  95.1 3.77    5 113 30.4
-Ford Pantera L       1    4   8 351.0 4.22    5 264 15.8
-Ferrari Dino         1    6   6 145.0 3.62    5 175 19.7
-Maserati Bora        1    8   8 301.0 3.54    5 335 15.0
-Volvo 142E           1    2   4 121.0 4.11    4 109 21.4
-                     qsec vs    wt
-Mazda RX4           16.46  0 2.620
-Mazda RX4 Wag       17.02  0 2.875
-Datsun 710          18.61  1 2.320
-Hornet 4 Drive      19.44  1 3.215
-Hornet Sportabout   17.02  0 3.440
-Valiant             20.22  1 3.460
-Duster 360          15.84  0 3.570
-Merc 240D           20.00  1 3.190
-Merc 230            22.90  1 3.150
-Merc 280            18.30  1 3.440
-Merc 280C           18.90  1 3.440
-Merc 450SE          17.40  0 4.070
-Merc 450SL          17.60  0 3.730
-Merc 450SLC         18.00  0 3.780
-Cadillac Fleetwood  17.98  0 5.250
-Lincoln Continental 17.82  0 5.424
-Chrysler Imperial   17.42  0 5.345
-Fiat 128            19.47  1 2.200
-Honda Civic         18.52  1 1.615
-Toyota Corolla      19.90  1 1.835
-Toyota Corona       20.01  1 2.465
-Dodge Challenger    16.87  0 3.520
-AMC Javelin         17.30  0 3.435
-Camaro Z28          15.41  0 3.840
-Pontiac Firebird    17.05  0 3.845
-Fiat X1-9           18.90  1 1.935
-Porsche 914-2       16.70  0 2.140
-Lotus Europa        16.90  1 1.513
-Ford Pantera L      14.50  0 3.170
-Ferrari Dino        15.50  0 2.770
-Maserati Bora       14.60  0 3.570
-Volvo 142E          18.60  1 2.780</code></pre>
+<pre><code>                    am carb cyl  disp drat gear  hp  mpg  qsec vs    wt
+Mazda RX4            1    4   6 160.0 3.90    4 110 21.0 16.46  0 2.620
+Mazda RX4 Wag        1    4   6 160.0 3.90    4 110 21.0 17.02  0 2.875
+Datsun 710           1    1   4 108.0 3.85    4  93 22.8 18.61  1 2.320
+Hornet 4 Drive       0    1   6 258.0 3.08    3 110 21.4 19.44  1 3.215
+Hornet Sportabout    0    2   8 360.0 3.15    3 175 18.7 17.02  0 3.440
+Valiant              0    1   6 225.0 2.76    3 105 18.1 20.22  1 3.460
+Duster 360           0    4   8 360.0 3.21    3 245 14.3 15.84  0 3.570
+Merc 240D            0    2   4 146.7 3.69    4  62 24.4 20.00  1 3.190
+Merc 230             0    2   4 140.8 3.92    4  95 22.8 22.90  1 3.150
+Merc 280             0    4   6 167.6 3.92    4 123 19.2 18.30  1 3.440
+Merc 280C            0    4   6 167.6 3.92    4 123 17.8 18.90  1 3.440
+Merc 450SE           0    3   8 275.8 3.07    3 180 16.4 17.40  0 4.070
+Merc 450SL           0    3   8 275.8 3.07    3 180 17.3 17.60  0 3.730
+Merc 450SLC          0    3   8 275.8 3.07    3 180 15.2 18.00  0 3.780
+Cadillac Fleetwood   0    4   8 472.0 2.93    3 205 10.4 17.98  0 5.250
+Lincoln Continental  0    4   8 460.0 3.00    3 215 10.4 17.82  0 5.424
+Chrysler Imperial    0    4   8 440.0 3.23    3 230 14.7 17.42  0 5.345
+Fiat 128             1    1   4  78.7 4.08    4  66 32.4 19.47  1 2.200
+Honda Civic          1    2   4  75.7 4.93    4  52 30.4 18.52  1 1.615
+Toyota Corolla       1    1   4  71.1 4.22    4  65 33.9 19.90  1 1.835
+Toyota Corona        0    1   4 120.1 3.70    3  97 21.5 20.01  1 2.465
+Dodge Challenger     0    2   8 318.0 2.76    3 150 15.5 16.87  0 3.520
+AMC Javelin          0    2   8 304.0 3.15    3 150 15.2 17.30  0 3.435
+Camaro Z28           0    4   8 350.0 3.73    3 245 13.3 15.41  0 3.840
+Pontiac Firebird     0    2   8 400.0 3.08    3 175 19.2 17.05  0 3.845
+Fiat X1-9            1    1   4  79.0 4.08    4  66 27.3 18.90  1 1.935
+Porsche 914-2        1    2   4 120.3 4.43    5  91 26.0 16.70  0 2.140
+Lotus Europa         1    2   4  95.1 3.77    5 113 30.4 16.90  1 1.513
+Ford Pantera L       1    4   8 351.0 4.22    5 264 15.8 14.50  0 3.170
+Ferrari Dino         1    6   6 145.0 3.62    5 175 19.7 15.50  0 2.770
+Maserati Bora        1    8   8 301.0 3.54    5 335 15.0 14.60  0 3.570
+Volvo 142E           1    2   4 121.0 4.11    4 109 21.4 18.60  1 2.780</code></pre>
 </div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>mtcars <span class="sc">%&gt;%</span> </span>
 <span id="cb17-2"><a href="#cb17-2"></a>  <span class="fu">relocate</span>(wt, gear, <span class="at">.after =</span> mpg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>                     mpg    wt gear cyl  disp  hp drat
-Mazda RX4           21.0 2.620    4   6 160.0 110 3.90
-Mazda RX4 Wag       21.0 2.875    4   6 160.0 110 3.90
-Datsun 710          22.8 2.320    4   4 108.0  93 3.85
-Hornet 4 Drive      21.4 3.215    3   6 258.0 110 3.08
-Hornet Sportabout   18.7 3.440    3   8 360.0 175 3.15
-Valiant             18.1 3.460    3   6 225.0 105 2.76
-Duster 360          14.3 3.570    3   8 360.0 245 3.21
-Merc 240D           24.4 3.190    4   4 146.7  62 3.69
-Merc 230            22.8 3.150    4   4 140.8  95 3.92
-Merc 280            19.2 3.440    4   6 167.6 123 3.92
-Merc 280C           17.8 3.440    4   6 167.6 123 3.92
-Merc 450SE          16.4 4.070    3   8 275.8 180 3.07
-Merc 450SL          17.3 3.730    3   8 275.8 180 3.07
-Merc 450SLC         15.2 3.780    3   8 275.8 180 3.07
-Cadillac Fleetwood  10.4 5.250    3   8 472.0 205 2.93
-Lincoln Continental 10.4 5.424    3   8 460.0 215 3.00
-Chrysler Imperial   14.7 5.345    3   8 440.0 230 3.23
-Fiat 128            32.4 2.200    4   4  78.7  66 4.08
-Honda Civic         30.4 1.615    4   4  75.7  52 4.93
-Toyota Corolla      33.9 1.835    4   4  71.1  65 4.22
-Toyota Corona       21.5 2.465    3   4 120.1  97 3.70
-Dodge Challenger    15.5 3.520    3   8 318.0 150 2.76
-AMC Javelin         15.2 3.435    3   8 304.0 150 3.15
-Camaro Z28          13.3 3.840    3   8 350.0 245 3.73
-Pontiac Firebird    19.2 3.845    3   8 400.0 175 3.08
-Fiat X1-9           27.3 1.935    4   4  79.0  66 4.08
-Porsche 914-2       26.0 2.140    5   4 120.3  91 4.43
-Lotus Europa        30.4 1.513    5   4  95.1 113 3.77
-Ford Pantera L      15.8 3.170    5   8 351.0 264 4.22
-Ferrari Dino        19.7 2.770    5   6 145.0 175 3.62
-Maserati Bora       15.0 3.570    5   8 301.0 335 3.54
-Volvo 142E          21.4 2.780    4   4 121.0 109 4.11
-                     qsec vs am carb
-Mazda RX4           16.46  0  1    4
-Mazda RX4 Wag       17.02  0  1    4
-Datsun 710          18.61  1  1    1
-Hornet 4 Drive      19.44  1  0    1
-Hornet Sportabout   17.02  0  0    2
-Valiant             20.22  1  0    1
-Duster 360          15.84  0  0    4
-Merc 240D           20.00  1  0    2
-Merc 230            22.90  1  0    2
-Merc 280            18.30  1  0    4
-Merc 280C           18.90  1  0    4
-Merc 450SE          17.40  0  0    3
-Merc 450SL          17.60  0  0    3
-Merc 450SLC         18.00  0  0    3
-Cadillac Fleetwood  17.98  0  0    4
-Lincoln Continental 17.82  0  0    4
-Chrysler Imperial   17.42  0  0    4
-Fiat 128            19.47  1  1    1
-Honda Civic         18.52  1  1    2
-Toyota Corolla      19.90  1  1    1
-Toyota Corona       20.01  1  0    1
-Dodge Challenger    16.87  0  0    2
-AMC Javelin         17.30  0  0    2
-Camaro Z28          15.41  0  0    4
-Pontiac Firebird    17.05  0  0    2
-Fiat X1-9           18.90  1  1    1
-Porsche 914-2       16.70  0  1    2
-Lotus Europa        16.90  1  1    2
-Ford Pantera L      14.50  0  1    4
-Ferrari Dino        15.50  0  1    6
-Maserati Bora       14.60  0  1    8
-Volvo 142E          18.60  1  1    2</code></pre>
+<pre><code>                     mpg    wt gear cyl  disp  hp drat  qsec vs am carb
+Mazda RX4           21.0 2.620    4   6 160.0 110 3.90 16.46  0  1    4
+Mazda RX4 Wag       21.0 2.875    4   6 160.0 110 3.90 17.02  0  1    4
+Datsun 710          22.8 2.320    4   4 108.0  93 3.85 18.61  1  1    1
+Hornet 4 Drive      21.4 3.215    3   6 258.0 110 3.08 19.44  1  0    1
+Hornet Sportabout   18.7 3.440    3   8 360.0 175 3.15 17.02  0  0    2
+Valiant             18.1 3.460    3   6 225.0 105 2.76 20.22  1  0    1
+Duster 360          14.3 3.570    3   8 360.0 245 3.21 15.84  0  0    4
+Merc 240D           24.4 3.190    4   4 146.7  62 3.69 20.00  1  0    2
+Merc 230            22.8 3.150    4   4 140.8  95 3.92 22.90  1  0    2
+Merc 280            19.2 3.440    4   6 167.6 123 3.92 18.30  1  0    4
+Merc 280C           17.8 3.440    4   6 167.6 123 3.92 18.90  1  0    4
+Merc 450SE          16.4 4.070    3   8 275.8 180 3.07 17.40  0  0    3
+Merc 450SL          17.3 3.730    3   8 275.8 180 3.07 17.60  0  0    3
+Merc 450SLC         15.2 3.780    3   8 275.8 180 3.07 18.00  0  0    3
+Cadillac Fleetwood  10.4 5.250    3   8 472.0 205 2.93 17.98  0  0    4
+Lincoln Continental 10.4 5.424    3   8 460.0 215 3.00 17.82  0  0    4
+Chrysler Imperial   14.7 5.345    3   8 440.0 230 3.23 17.42  0  0    4
+Fiat 128            32.4 2.200    4   4  78.7  66 4.08 19.47  1  1    1
+Honda Civic         30.4 1.615    4   4  75.7  52 4.93 18.52  1  1    2
+Toyota Corolla      33.9 1.835    4   4  71.1  65 4.22 19.90  1  1    1
+Toyota Corona       21.5 2.465    3   4 120.1  97 3.70 20.01  1  0    1
+Dodge Challenger    15.5 3.520    3   8 318.0 150 2.76 16.87  0  0    2
+AMC Javelin         15.2 3.435    3   8 304.0 150 3.15 17.30  0  0    2
+Camaro Z28          13.3 3.840    3   8 350.0 245 3.73 15.41  0  0    4
+Pontiac Firebird    19.2 3.845    3   8 400.0 175 3.08 17.05  0  0    2
+Fiat X1-9           27.3 1.935    4   4  79.0  66 4.08 18.90  1  1    1
+Porsche 914-2       26.0 2.140    5   4 120.3  91 4.43 16.70  0  1    2
+Lotus Europa        30.4 1.513    5   4  95.1 113 3.77 16.90  1  1    2
+Ford Pantera L      15.8 3.170    5   8 351.0 264 4.22 14.50  0  1    4
+Ferrari Dino        19.7 2.770    5   6 145.0 175 3.62 15.50  0  1    6
+Maserati Bora       15.0 3.570    5   8 301.0 335 3.54 14.60  0  1    8
+Volvo 142E          21.4 2.780    4   4 121.0 109 4.11 18.60  1  1    2</code></pre>
 </div>
 </div>
 </section>
@@ -1896,15 +1790,14 @@ Volvo 142E          18.60  1  1    2</code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 11
 # Groups:   gear [3]
-   gear    vs   mpg   cyl  disp    hp  drat    wt  qsec
-  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-1     3     0  15.0  8    358.  194.   3.12  4.10  17.1
-2     3     1  20.3  5.33 201.  104    3.18  3.05  19.9
-3     4     0  21    6    160   110    3.9   2.75  16.7
-4     4     1  25.2  4.4  116.   85.4  4.07  2.59  19.4
-5     5     0  19.1  6.5  229.  216.   3.95  2.91  15.3
-6     5     1  30.4  4     95.1 113    3.77  1.51  16.9
-# ℹ 2 more variables: am &lt;dbl&gt;, carb &lt;dbl&gt;</code></pre>
+   gear    vs   mpg   cyl  disp    hp  drat    wt  qsec    am  carb
+  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+1     3     0  15.0  8    358.  194.   3.12  4.10  17.1   0    3.08
+2     3     1  20.3  5.33 201.  104    3.18  3.05  19.9   0    1   
+3     4     0  21    6    160   110    3.9   2.75  16.7   1    4   
+4     4     1  25.2  4.4  116.   85.4  4.07  2.59  19.4   0.6  2   
+5     5     0  19.1  6.5  229.  216.   3.95  2.91  15.3   1    5   
+6     5     1  30.4  4     95.1 113    3.77  1.51  16.9   1    2   </code></pre>
 </div>
 </div>
 </section>
@@ -1937,7 +1830,7 @@ Volvo 142E          18.60  1  1    2</code></pre>
 <li>Remember tidy selection only works with functions that are compatible</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a>mtcars <span class="sc">%&gt;%</span> </span>
+<div class="sourceCode cell-code" id="cb27" data-code-line-numbers="2,4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a>mtcars <span class="sc">%&gt;%</span> </span>
 <span id="cb27-2"><a href="#cb27-2"></a>  <span class="fu">rowwise</span>() <span class="sc">%&gt;%</span> </span>
 <span id="cb27-3"><a href="#cb27-3"></a>  <span class="fu">summarise</span>(<span class="at">disp =</span> disp, <span class="at">hp =</span> hp, <span class="at">drat =</span> drat, <span class="at">wt =</span> wt,</span>
 <span id="cb27-4"><a href="#cb27-4"></a>            <span class="at">score =</span> <span class="fu">sum</span>(<span class="fu">c_across</span>(disp<span class="sc">:</span>wt))) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1965,7 +1858,7 @@ Volvo 142E          18.60  1  1    2</code></pre>
 <li>What happens if you omit <code>rowwise</code>?</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a>mtcars <span class="sc">%&gt;%</span> </span>
+<div class="sourceCode cell-code" id="cb29" data-code-line-numbers="2,4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a>mtcars <span class="sc">%&gt;%</span> </span>
 <span id="cb29-2"><a href="#cb29-2"></a>  <span class="co">#rowwise() %&gt;% </span></span>
 <span id="cb29-3"><a href="#cb29-3"></a>  <span class="fu">summarise</span>(<span class="at">disp =</span> disp, <span class="at">hp =</span> hp, <span class="at">drat =</span> drat, <span class="at">wt =</span> wt,</span>
 <span id="cb29-4"><a href="#cb29-4"></a>            <span class="at">score =</span> <span class="fu">sum</span>(<span class="fu">c_across</span>(disp<span class="sc">:</span>wt))) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>

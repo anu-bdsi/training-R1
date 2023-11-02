@@ -153,6 +153,12 @@ mtcars %>% select(mpg)
 ## Subsetting by row 
 
 ```{r}
+#| echo: false
+options(width = 100)
+```
+
+
+```{r}
 mtcars %>% 
   slice(3:1)
 ```
@@ -287,7 +293,7 @@ mtcars %>%
 * Remember tidy selection only works with functions that are compatible
 
 ```{r, message = FALSE}
-#| code-line-numbers: 4
+#| code-line-numbers: "2,4"
 mtcars %>% 
   rowwise() %>% 
   summarise(disp = disp, hp = hp, drat = drat, wt = wt,
@@ -299,7 +305,7 @@ mtcars %>%
 * What happens if you omit `rowwise`?
 
 ```{r, message = FALSE}
-#| code-line-numbers: 4
+#| code-line-numbers: "2,4"
 mtcars %>% 
   #rowwise() %>% 
   summarise(disp = disp, hp = hp, drat = drat, wt = wt,
