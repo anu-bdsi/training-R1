@@ -25,11 +25,11 @@ date: 11/03/2023
 Time | Content 
 :-----------|:-----------------|
 10.00-10.25 | [Welcome to the `tidyverse`](slides/day2-slide1.html){target="_blank"} |
-10.25-10.40 | *Your turn* |
-10.40-11.10 | [Data wrangling with `dplyr`](slides/day2-slide2.html){target="_blank"}  |
-11.10-11.20 | *Your turn* |
-11.20-12.00 | [Getting started with `ggplot2`](slides/day2-slide3.html){target="_blank"}  |
-
+10.25-10.30 | *Break* |
+10.30-11.00 | [Data wrangling with `dplyr`](slides/day2-slide2.html){target="_blank"}  |
+11.00-11.05 | *Break* |
+11.05-11.40 | [Getting started with `ggplot2`](slides/day2-slide3.html){target="_blank"}  |
+11.40-12.00 | *Your turn* |
 
 ## 🏋️‍♀️ Exercises
 
@@ -145,10 +145,14 @@ ggplot(results1, aes(x = RBC, y = emmean, fill = time)) +
   geom_col(position = "dodge") +
   geom_errorbar(aes(ymin = emmean - SE, ymax = emmean + SE), 
                 width = 0.2,
-                position=position_dodge(width = 0.9))+
+                position = position_dodge(width = 0.9))+
   facet_wrap(~ratio) +
   scale_fill_brewer(palette = "Paired") +
   ylab("Mean Complex formation (%)") +
   theme_bw()
 ```
 
+### Homework
+
+- Go through the exercises [here](https://emitanaka.org/dataviz-workshop/exercises/).
+- You can find some materials related to these exercises [here](https://emitanaka.org/dataviz-workshop/)
