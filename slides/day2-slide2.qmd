@@ -1,5 +1,5 @@
 ---
-title: Data wrangling with tidyr and dplyr
+title: Data wrangling with dplyr
 subtitle: BDSI R Training I
 format:
   anu-light-revealjs:
@@ -14,5 +14,533 @@ author: Emi Tanaka
 institute: Biological Data Science Institute
 date: 2023/11/03
 date-format: "D[rd] MMMM YYYY"
+execute: 
+  echo: true
 ---
+
+
+
+## A grammar of data manipulation
+
+```{r}
+library(dplyr) # or library(tidyverse)
+```
+
+```{r}
+#| echo: false
+options(width = 60)
+```
+
+
+* `dplyr` is a core package in `tidyverse` 
+* The earlier concept of `dplyr` (first on CRAN in 2014-01-29) was implemented in `plyr` (first on CRAN in 2008-10-08)
+* The functions in `dplyr` has been evolving frequently but `dplyr` v1.0.0 was released on CRAN in 2020-05-29
+* This new version contained new "verbs"
+* The major release suggests that functions in `dplyr` are maturing and thus the user interface is unlikely to change
+
+
+::: {.absolute bottom=0 .f3}
+
+Hadley Wickham, Romain François, Lionel Henry and Kirill Müller (2020). dplyr: A Grammar of Data Manipulation. R package version 1.0.2. 
+  
+Hadley Wickham (2011). The Split-Apply-Combine Strategy for Data Analysis. Journal of Statistical Software, 40(1), 1-29.
+  
+:::
+
+
+
+
+## `dplyr` "verbs"
+
+
+* The main functions of `dplyr` include: 
+<center>
+<table style="width:60%">
+  <tr>
+    <td><code>arrange</code></td>
+    <td><code>select</code></td>
+    <td><code>mutate</code></td>
+    <td><code>rename</code></td>
+    <td><code>group_by</code></td>
+    <td><code>summarise</code></td>
+  </tr>
+</table>
+</center>
+
+* Notice that these functions are _verbs_
+
+. . . 
+
+* Functions in `dplyr` generally have the form:
+
+<center>
+
+`verb(data, args)`
+
+</center>
+
+* I.e., the first argument `data` is a `data.frame` object
+
+. . . 
+
+* What do you think the following will do?
+
+<center>
+
+`rename(mtcars, miles_per_gallon = mpg)`  
+`arrange(mtcars, wt)`
+
+</center>
+
+## Pipe operator %>%
+
+* Almost all tidyverse packages import the `magrittr` package to use `%>%`
+
+* `x %>% f(y)` is the same as `f(x, y)`
+* `x %>% f(y) %>% g(z)` is the same as `g(f(x, y), z)`
+* When you see the pipe operator `%>%`, read it as "and then"
+
+```{r}
+mtcars %>%                          # take mtcars data, and then
+ rename(miles_per_gallon = mpg) %>% # rename mpg as miles_per_gallon, and then
+ arrange(wt)                        # arrange row by wt
+```
+
+
+
+::: {.absolute bottom=0 .f3}
+
+Stefan Milton Bache and Hadley Wickham (2020). magrittr: A
+  Forward-Pipe Operator for R. R package version 2.0.1.
+
+:::
+
+
+## Subsetting by column
+
+::: flex
+
+::: {.w-50}
+
+```{r, eval = FALSE}
+select(mtcars, c(mpg, cyl))
+select(mtcars, c("mpg", "cyl"))
+select(mtcars, mpg, cyl)
+select(mtcars, "mpg", "cyl")
+```
+All the same result as below
+```{r}
+mtcars %>% 
+  select(mpg, cyl)
+```
+
+:::
+
+::: {.w-50 .pl3}
+
+```{r}
+mtcars %>% select(mpg)
+```
+
+- Selecting one column doesn't "drop" it to a vector.
+- If you really want the vector then use `pull(mpg)`.
+
+:::
+
+:::
+
+
+## Subsetting by row 
+
+```{r}
+mtcars %>% 
+  slice(3:1)
+```
+
+```{r}
+mtcars %>% 
+  filter(rownames(.) %in% c("Datsun 710", "Mazda RX4"))
+```
+* Use `slice` to subset by *index* and `filter` by *logical vector*
+
+
+<div class="ba" style="position:absolute;right:20px;margin-right:0px!important;top:50px;margin-left:0;width:900px;font-size: 20pt;background-color:white;">
+<ul>
+<li>Placeholder binding</li>
+<ul>
+<li><code>x %>% f(y, g(.))</code> is the same as <code>f(x, y, g(x))</code></li>
+<li><code>x %>% f(y, .)</code> is the same as <code>f(y, x)</code></li>
+
+<li><i class="fas fa-exclamation-triangle red"></i> Note: row names do not follow tidy data principles</li>
+
+<li>Use <code class="monash-blue">tibble::rownames_to_column()</code> to convert rownames to a column to make into a tidy data</li>
+</ul>
+</div>
+
+
+
+## Adding or modifying a column 
+
+```{r mutate}
+mtcars %>% 
+  mutate(gpm = 1 / mpg,
+          wt = gpm^2,
+          wt = if_else(cyl==6, 10, wt),
+          hp = case_when(cyl==6 ~ 11,
+                         cyl==4 ~ 10,
+                           TRUE ~ 3))
+```
+
+
+<div class="ba" style="position:absolute;right:20px;margin-right:0px!important;top:50px;margin-left:0;width:550px;font-size: 20pt;background-color:white;">
+<ul>
+<li>Evaluation in <code>mutate</code> is done sequentially based on input order</li>
+<li>So you refer to the newly created variable in later input</li>
+
+<li>You can call multiple <code>mutate</code> but computational performance is usually better if done within the same <code>mutate</code> call</li>
+<pre>
+<code>mtcars %>%
+  mutate(gpm = 1 / mpg) %>% 
+  mutate(wt = gpm^2)
+</code></pre>
+</ul>
+</div>
+
+
+
+
+
+## Sorting columns 
+
+
+```{r}
+mtcars %>% 
+  select(sort(names(.)))
+```
+
+```{r}
+mtcars %>% 
+  relocate(wt, gear, .after = mpg)
+```
+
+
+
+## Calculating statistical summaries by group 
+
+
+::: flex
+
+::: {.w-50}
+
+🎯 Calculate the _average_ weight (`wt`) of a car for each gear type in (`gear`)  `mtcars`
+
+```{r}
+mtcars %>% 
+  group_by(gear) %>% 
+  summarise(avg_wt = mean(wt))
+```
+
+:::
+
+::: {.w-50 .pl3}
+
+🎯 Calculate the _median_ weight (`wt`) of a car for each gear (`gear`) and engine (`vs`) type in  `mtcars`
+
+```{r}
+mtcars %>% 
+  group_by(gear, vs) %>% 
+  summarise(avg_wt = mean(wt),
+            med_wt = median(wt))
+```
+
+:::
+
+:::
+
+
+
+##  `across` 
+
+* Using `across`, you can more easily apply a function to multiple columns
+
+```{r, message = FALSE}
+#| code-line-numbers: 3
+mtcars %>% 
+  group_by(gear, vs) %>% 
+  summarise(across(everything(), mean)) 
+```
+
+##  `where` 
+
+* You can combine `across` with the selection helper `where` 
+
+```{r, message = FALSE}
+#| code-line-numbers: 3
+mtcars %>% 
+  group_by(gear, vs) %>% 
+  summarise(across(where(function(x) n_distinct(x) > 10), mean)) 
+```
+
+
+##  `c_across`
+
+* Remember tidy selection only works with functions that are compatible
+
+```{r, message = FALSE}
+#| code-line-numbers: 4
+mtcars %>% 
+  rowwise() %>% 
+  summarise(disp = disp, hp = hp, drat = drat, wt = wt,
+            score = sum(c_across(disp:wt))) 
+```
+
+##  `rowwise`?
+
+* What happens if you omit `rowwise`?
+
+```{r, message = FALSE}
+#| code-line-numbers: 4
+mtcars %>% 
+  #rowwise() %>% 
+  summarise(disp = disp, hp = hp, drat = drat, wt = wt,
+            score = sum(c_across(disp:wt))) 
+```
+
+
+
+
+## Lazy and non-standard evaluation
+
+* In Base R:
+
+```{r}
+#| echo: false
+options(width = 80)
+```
+
+
+```{r}
+subset(mtcars, mpg > 31)
+```
+
+. . . 
+
+* But the second argument cannot be evaluated:
+
+```{r, error = TRUE}
+mpg > 31
+```
+
+. . . 
+
+* R employs what is called **lazy evaluation** for function inputs 
+
+* **Non-standard evaluation** uses this feature to capture the input expression within the function and evaluate only when requested
+
+
+
+## Tidy evaluation [Part 1]{.f2}
+
+* Tidy evaluation builds on the lazy and non-standard evaluation and is implemented in `rlang`
+* All core tidyverse packages import `rlang`
+* So what does it do?
+
+. . . 
+
+* Let's consider `filter`, the Tidyverse version of `subset`
+
+```{r}
+filter(mtcars, mpg > 31)
+```
+
+* <i class="fas fa-exclamation-triangle animated flash red"></i> If you get an error using `filter`, replace it with `dplyr::filter`<br> [for those interested, `dplyr::filter` is a conflict with `stats::filter` and it may be using `stats::filter` instead... I've fallen into this trap so many times!]{.f2}
+
+
+::: {.absolute bottom=0 .f3}
+
+Lionel Henry and Hadley Wickham (2020). rlang: Functions for Base
+  Types and Core R and 'Tidyverse' Features. R package version
+  0.4.8.
+
+:::
+
+
+## Tidy evaluation [Part 2]{.f2}
+
+* Suppose we have a silly function that subsets `mtcars` for a given condition
+
+```{r}
+myCarSubset <- function(cond) subset(mtcars, cond)
+myCarFilter <- function(cond) filter(mtcars, cond)
+```
+
+. . . 
+
+* This causes an issue because `cond` is evaluated before it is parsed into `subset` or `filter`
+
+```{r, error = TRUE}
+myCarSubset(mpg > 31)
+myCarFilter(mpg > 31)
+```
+
+
+## Tidy evaluation [Part 3]{.f2}
+
+* Functions that use non-standard evaluation is problematic
+
+```{r curly}
+myCarSubsetNew <- function(cond) subset(mtcars, {{ cond }})
+myCarFilterNew <- function(cond) filter(mtcars, {{ cond }})
+```
+. . . 
+
+```{r, error = TRUE, eval = TRUE}
+myCarSubsetNew(mpg > 31)
+```
+
+. . . 
+
+```{r, error = TRUE, eval = TRUE}
+myCarFilterNew(mpg > 31)
+```
+
+
+* `{{{ }}}` only works if the underlying function implements `rlang`
+
+## Data masking [Part 1]{.f2}
+
+
+```{r, error = TRUE}
+ind <- 1:nrow(cars) # nrow(cars) = 50
+filter(cars, ind > 49)
+```
+
+
+* For any variables that don't exist in the data, R searches the parental environment for evaluation.
+
+. . . 
+
+```{r}
+speed <- c(40, 51)
+filter(cars, speed > 24)
+```
+
+
+* The variables in data take priority for reference over those in parental environment
+
+
+
+## Data masking [Part 2]{.f2}
+
+::: flex
+
+::: {.w-50}
+
+```{r data-mask, eval = TRUE, echo = TRUE}
+speed <- 1:nrow(cars)
+filter(cars, .data$speed > 24)
+filter(cars, .env$speed > 24)
+```
+
+
+:::
+
+::: {.w-50 .pl3}
+
+* In Tidyverse, you can be explicit whether the variable is in the data or in the parental environment
+* `.data` is a special pronoun referring to variables in the data parsed in the first argument
+* `.env` is a special pronoun referring to variables in the environment (i.e. _not_ in the data parsed in the first argument)
+
+:::
+
+:::
+
+
+## Tidy select [Part 1]{.f2}
+
+* Tidyverse packages generally use syntax from the `tidyselect` package for variable/column selection
+
+```{r}
+immunity <- readr::read_csv("https://github.com/anu-bdsi/training-R1/raw/main/data/marcato-2021-immunity.csv")
+str(immunity) 
+```
+
+## Tidy select [Part 2]{.f2}
+
+::: flex
+
+::: {.w-50}
+
+```{r select}
+immunity %>% 
+ select(Timepoint, Batch, Animal)
+```
+
+
+:::
+
+::: {.w-50 .pl3}
+
+
+```{r select2}
+immunity %>% 
+  select(Timepoint:Animal)
+```
+
+
+:::
+
+:::
+
+
+- The `tidyselect` syntax `:` can be used to select contiguous columns in the data.
+
+
+## Tidy select [Part 3]{.f2}
+
+
+```{r}
+immunity %>% 
+  select(contains("perf"))
+```
+
+```{r}
+immunity %>% 
+  select(starts_with("Titer"))
+```
+
+
+
+## Selection language [Part 1]{.f2}
+
+* `:` for selecting contiguous variables
+* `!` for taking complement set of variables
+* `&` or `|` for selecting intersection or union of two sets of variables, e.g. 
+```{r}
+immunity %>% 
+  select(starts_with("Titer") & ends_with("IgG")) %>% 
+  str()
+```
+
+* `c()` for combining selections
+* `everything()` to select all variables
+* `last_col()` to select last variable, with option of an offset
+
+
+## Selection language [Part 2]{.f2}
+
+
+* `starts_with()` selects columns with the given prefix
+* `ends_with()` selects columns with the given suffix
+* `contains()` selects columns with a literal string
+* `matches()` selects columns that match the regular expression .font_small[we'll learn this next!]
+* `num_range()` selects columns with a numerical range
+* `all_of()` for selecting columns based on a character vector
+* `any_of()` is the same as `all_of()` but no error when variables do not exist
+* `where()` selects based on where given function return TRUE
+
+```{r, eval = FALSE}
+help(language, package = "tidyselect")
+```
+
 
