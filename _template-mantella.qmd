@@ -101,7 +101,7 @@ nicotine_long <- nicotine_long %>%
                                            "6_0m_m")))
 
 ggplot(nicotine_long, aes(concentration, licks,
-                          col = prenatal_exposure))+
+                          color = prenatal_exposure)) +
   geom_point() +
   geom_line(aes(group = animal_id))
 ```
