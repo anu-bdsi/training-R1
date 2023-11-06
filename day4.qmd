@@ -21,8 +21,8 @@ date: 11/10/2023
 
 Time | Content 
 :-----------|:-----------------|
-10.00-11.40 | [Full workflow](slides/day4-slide1.html){target="_blank"} |    
-11.40-12.00 | [Next steps](slides/day4-slide2.html){target="_blank"} |
+10.00-11.40 | Go through the exercises |    
+11.40-12.00 | Next steps |
 
 ## 📑 Resources
 
