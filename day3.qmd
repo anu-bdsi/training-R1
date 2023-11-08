@@ -21,8 +21,8 @@ date: 11/09/2023
 
 Time | Content 
 :-----------|:-----------------|
-10.00-10.30 | Reproducible documents with Quarto (live demo)
-10.30-12.00 | Going through exercises together
+10.00-11.30 | Going through exercises together 
+11.30-12.00 | Reproducible documents with Quarto (live demo)
 
 
 
