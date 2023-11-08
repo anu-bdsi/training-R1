@@ -3,11 +3,10 @@ title: "BDSI R workshop -- Learning from Data"
 author: "your name here"
 date: today
 format: html
+execute:
+  echo: true
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 This document is a 'Quarto' document. You write normal text in the white spaces and R code in the grey 'chunks'. To create a new chunk you can either type the chunk code manually or use the insert button in the middle of the top of this section of RStudio.
 

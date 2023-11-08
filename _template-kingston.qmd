@@ -3,14 +3,12 @@ title: "Do Orbital Hoods Protect Shrimp from Shock Waves?"
 author: "YOUR NAME HERE"
 date: today
 format: docx
+execute: 
+  echo: true
 ---
 
 We compared how long it took shrimp from four treatment groups to contact shelter after being placed in an unfamiliar environment. 
 
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 Import libraries.
 ```{r}
