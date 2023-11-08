@@ -38,6 +38,6 @@ Time | Content
 
 {{< fa download >}} Download <a href="_template-mantella.qmd" download="learning-from-data-template-mantella.qmd">this template</a> and work through it.
 
-<i class='fas fa-database'></i> Download the data <a href="data/brief-access-lick-data.xlsx" download>here</a>.
+<i class='fas fa-database'></i> Download the data <a href="data/brief-access-lick-data.xlsx" download>here</a> and for the latency data <a href="data/brief-access-lick-data-latency.csv" download>here</a>.
 
 This template is written by Dr. Robert Cope and Dr. Terry Neeman (with some small modifications).
