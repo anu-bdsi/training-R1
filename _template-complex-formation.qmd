@@ -48,7 +48,7 @@ We can check the data structure either using the function str() or glimpse()
 
 ```
 
-How many observations for each Experiment, infection status, concentration ratio and incubation time? Remember to use group_by() and summarise(). Can you use pivot_wider() to make the table easier to read?
+How many observations for each Experiment, infection status, concentration ratio and incubation time? Remember to use `group_by()` and `summarise()`. Can you use `pivot_wider()` to make the table easier to read?
 
 ```{r}
 

@@ -53,28 +53,28 @@
     "href": "day3.html",
     "title": "Day 3",
     "section": "",
-    "text": "Learning objectives\n\n\n\n\nFit linear model with lm() and linear mixed models with lme4::lmer()\nDiagnose and visualise statisitcal models\nProduce reproducible documents using Quarto (next generation R markdown)\nThis website is brought to you by the ANU Biological Data Science Institute."
+    "text": "Learning objectives\n\n\n\n\nProduce reproducible documents using Quarto (next generation R markdown)\nThis website is brought to you by the ANU Biological Data Science Institute."
   },
   {
     "objectID": "day3.html#aim",
     "href": "day3.html#aim",
     "title": "Day 3",
     "section": "",
-    "text": "Learning objectives\n\n\n\n\nFit linear model with lm() and linear mixed models with lme4::lmer()\nDiagnose and visualise statisitcal models\nProduce reproducible documents using Quarto (next generation R markdown)"
+    "text": "Learning objectives\n\n\n\n\nProduce reproducible documents using Quarto (next generation R markdown)"
   },
   {
     "objectID": "day3.html#schedule",
     "href": "day3.html#schedule",
     "title": "Day 3",
     "section": "🕙 Schedule",
-    "text": "🕙 Schedule\n\n\n\n\n\n\nNote\n\n\n\nPlease note this is an indicative schedule only!\n\n\n\n\n\nTime\nContent\n\n\n\n\n10.00-10.30\nFitting linear models with lm()\n\n\n10.30-11.00\nLinear mixed models with lme4::lmer()\n\n\n11.00-12.00\nReproducible documents with Quarto"
+    "text": "🕙 Schedule\n\n\n\n\n\n\nNote\n\n\n\nPlease note this is an indicative schedule only!\n\n\n\n\n\nTime\nContent\n\n\n\n\n10.00-11.30\nGoing through exercises together\n\n\n11.30-12.00\nReproducible documents with Quarto (live demo)"
   },
   {
-    "objectID": "day3.html#slides",
-    "href": "day3.html#slides",
+    "objectID": "day3.html#resources",
+    "href": "day3.html#resources",
     "title": "Day 3",
-    "section": "🔗 Slides",
-    "text": "🔗 Slides"
+    "section": "📑 Resources",
+    "text": "📑 Resources\n\nQuarto guide"
   },
   {
     "objectID": "day3.html#exercises",
@@ -172,21 +172,14 @@
     "href": "day4.html#schedule",
     "title": "Day 4",
     "section": "🕙 Schedule",
-    "text": "🕙 Schedule\n\n\n\n\n\n\nNote\n\n\n\nPlease note this is an indicative schedule only!\n\n\n\n\n\nTime\nContent\n\n\n\n\n10.00-11.40\nFull workflow\n\n\n11.40-12.00\nNext steps"
-  },
-  {
-    "objectID": "day4.html#slides",
-    "href": "day4.html#slides",
-    "title": "Day 4",
-    "section": "🔗 Slides",
-    "text": "🔗 Slides"
+    "text": "🕙 Schedule\n\n\n\n\n\n\nNote\n\n\n\nPlease note this is an indicative schedule only!\n\n\n\n\n\nTime\nContent\n\n\n\n\n10.00-11.40\nGo through the exercises\n\n\n11.40-12.00\nNext steps"
   },
   {
     "objectID": "day4.html#exercises",
     "href": "day4.html#exercises",
     "title": "Day 4",
     "section": "🏋️‍♀️ Exercises",
-    "text": "🏋️‍♀️ Exercises\n Download the following templates (written by Dr. Terry Neeman with some small modifications), the accompanying data and associated paper (if any). Work through each template to fill the gaps.\n\nPreliminary look at Clonal Haemopoeisis patients  \nDo Orbital Hoods Protect Shrimp from Shock Waves?   \nPreliminary look at guich data  \nErythrocyte-platelet complex formation"
+    "text": "🏋️‍♀️ Exercises\n Download the following templates (written by Dr. Terry Neeman with some small modifications), the accompanying data and associated paper (if any). Work through each template to fill the gaps.\n\nDo Orbital Hoods Protect Shrimp from Shock Waves?   \nErythrocyte-platelet complex formation"
   },
   {
     "objectID": "index.html",

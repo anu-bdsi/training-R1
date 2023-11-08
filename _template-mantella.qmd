@@ -3,11 +3,10 @@ title: "BDSI R workshop -- Learning from Data"
 author: "your name here"
 date: today
 format: html
+execute:
+  echo: true
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 This document is a 'Quarto' document. You write normal text in the white spaces and R code in the grey 'chunks'. To create a new chunk you can either type the chunk code manually or use the insert button in the middle of the top of this section of RStudio.
 
@@ -47,7 +46,7 @@ What do you notice about this?
 
 
 
-The column names are going to be a problem here -- we will start by using clean_names from the janitor package to automatically help:
+The column names are going to be a problem here -- we will start by using `clean_names` from the janitor package to automatically help:
 
 ```{r}
 
@@ -88,7 +87,7 @@ nicotine_long <- nicotine_avg %>%
                values_to = "licks")
 ```
 
-Create a plot that allows you to compare average licks by Treatment over concentration. In this plot, connect the values with the same animal_id. You may need to reset the levels of Concentration.
+Create a plot that allows you to compare average licks by Treatment over concentration. In this plot, connect the values with the same `animal_id`. You may need to reset the levels of Concentration.
 
 ```{r}
 nicotine_long <- nicotine_long %>%
@@ -101,7 +100,7 @@ nicotine_long <- nicotine_long %>%
                                            "6_0m_m")))
 
 ggplot(nicotine_long, aes(concentration, licks,
-                          col = prenatal_exposure))+
+                          color = prenatal_exposure)) +
   geom_point() +
   geom_line(aes(group = animal_id))
 ```
@@ -160,7 +159,7 @@ Restructure data and create a plot to explore average latency across a range of 
 ```
 
 
-Also try exploring patterns using `geom_smooth()`. Why might a pattern be more evidence with `geom_smooth`? Try also making concentration numeric and log-transform the x-axis. Interpret these plots wrt the research question. 
+Also try exploring patterns using `geom_smooth()`. Why might a pattern be more evidence with `geom_smooth`? Try also making concentration numeric and log-transform the x-axis. Interpret these plots with respect to the research question. 
 
 
 ```{r}
