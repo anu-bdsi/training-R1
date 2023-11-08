@@ -46,7 +46,7 @@ What do you notice about this?
 
 
 
-The column names are going to be a problem here -- we will start by using clean_names from the janitor package to automatically help:
+The column names are going to be a problem here -- we will start by using `clean_names` from the janitor package to automatically help:
 
 ```{r}
 
@@ -87,7 +87,7 @@ nicotine_long <- nicotine_avg %>%
                values_to = "licks")
 ```
 
-Create a plot that allows you to compare average licks by Treatment over concentration. In this plot, connect the values with the same animal_id. You may need to reset the levels of Concentration.
+Create a plot that allows you to compare average licks by Treatment over concentration. In this plot, connect the values with the same `animal_id`. You may need to reset the levels of Concentration.
 
 ```{r}
 nicotine_long <- nicotine_long %>%
