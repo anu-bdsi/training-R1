@@ -160,7 +160,7 @@ Restructure data and create a plot to explore average latency across a range of 
 ```
 
 
-Also try exploring patterns using `geom_smooth()`. Why might a pattern be more evidence with `geom_smooth`? Try also making concentration numeric and log-transform the x-axis. Interpret these plots wrt the research question. 
+Also try exploring patterns using `geom_smooth()`. Why might a pattern be more evidence with `geom_smooth`? Try also making concentration numeric and log-transform the x-axis. Interpret these plots with respect to the research question. 
 
 
 ```{r}
