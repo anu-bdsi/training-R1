@@ -41,3 +41,8 @@ Time | Content
 <i class='fas fa-database'></i> Download the data <a href="data/brief-access-lick-data.xlsx" download>here</a> and for the latency data <a href="data/brief-access-lick-data-latency.csv" download>here</a>.
 
 This template is written by Dr. Robert Cope and Dr. Terry Neeman (with some small modifications).
+
+## 📁 Files from live coding sessions
+
+- <a href="_template-complex-formation.qmd" download="analysis.qmd">Qmd file for Day 2 exercise</a>
+
