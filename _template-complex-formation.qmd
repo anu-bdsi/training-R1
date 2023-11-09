@@ -121,6 +121,7 @@ results1
 ```
 
 Finally, create a graphic summarising the model
+
 ```{r}
 ggplot(results1, aes(x = RBC, y = emmean, fill = time)) +
   geom_col(position = "dodge") +
