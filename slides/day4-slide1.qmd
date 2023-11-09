@@ -1,5 +1,5 @@
 ---
-title: Full workflow
+title: Next steps
 subtitle: BDSI R Training I
 format:
   anu-light-revealjs:
@@ -18,4 +18,31 @@ execute:
   echo: true
 ---
 
+## After the workshop
+
+::: incremental
+
+- Ask a second opinion from those around you!
+- Ask the local experts at the [BDSI Drop-In Sessions](https://bdsi.anu.edu.au/news-events/event-series/bdsi-bioinformatics-and-statistics-drop-sessions).
+- Use online resources such as:
+  - [R for Data Science](https://r4ds.hadley.nz/)
+  - [R4DS Online Learning Community](https://rfordatasci.com/)
+  - Ask questions on [Stack Overflow](https://stackoverflow.com/questions/tagged/r) or [Posit Community](https://community.rstudio.com/).
+- You can continue to use the [ANU Learning Data Slack Community](https://anu-bdsi.github.io/training-R1/#slack) to connect with each other _(please don't DM teaching team unless it is a private matter -- others can learn from your question!)_
+
+:::
+
+# Keep a local copy of the materials
+
+<i class='fas fa-download'></i> Click [here](https://github.com/anu-bdsi/training-R1/archive/refs/heads/gh-pages.zip
+) to download the materials. 
+
+
+Open the "index.html" in a web browser.
+
+
+
+# We want your feedback!
+
+We will be sending you a survey soon after this workshop. Please fill it out!
 
