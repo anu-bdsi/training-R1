@@ -39,7 +39,7 @@ differ in how long they took to contact their burrows.
 ```
 
 
-We measured how long it took individuals to achieve a normal upright posture  following their release into the behavioral arena.Shrimp in the UE treatment took longer to become upright than animals in the AE, UC, or AC treatments. Animals in the AE, UC, and AC treatments did not differ in how long they took to achieve a normal posture.
+We measured how long it took individuals to achieve a normal upright posture  following their release into the behavioral arena. Shrimp in the UE treatment took longer to become upright than animals in the AE, UC, or AC treatments. Animals in the AE, UC, and AC treatments did not differ in how long they took to achieve a normal posture.
 
 ```{r}
 
