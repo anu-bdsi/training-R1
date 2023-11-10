@@ -1,0 +1,194 @@
+---
+title: "Analysis for shrimp study"
+author: "Emi Tanaka"
+format: 
+  html:
+    code-fold: true
+    code-tools: true
+    self-contained: true
+---
+
+## Aim
+
+We compared how long it took shrimp from four treatment groups to contact shelter after being placed in an unfamiliar environment. 
+
+## Analysis
+
+```{r}
+#| warning: false
+library(tidyverse)
+library(readxl) # for importing excel files
+library(patchwork) # combining plots
+```
+
+### Tidy data
+
+Import data.
+```{r}
+#| code-fold: true
+data <- read_xlsx("data/kingston-data.xlsx", sheet = "A", skip = 1)
+glimpse(data)
+
+data
+```
+
+
+Describe and provide data summaries to inform reader how many animals per treatment.
+
+```{r}
+#| code-fold: true
+tidy_data <- data %>% 
+  pivot_longer(cols = -Animal,
+               names_to = "treatment",
+               values_to = "time") %>% 
+  separate(treatment, sep = "[(]", into = c("treatment_full", "treatment")) %>% 
+  mutate(treatment = str_replace(treatment, "[)]", ""),
+         treatment_full = str_trim(treatment_full))
+```
+
+### Figures
+
+Create figures that support these claims:
+
+Shrimp without orbital hoods that were exposed to shock waves took longer to contact their burrows than shrimp with orbital hoods that were exposed to shock waves, shrimp without orbital hoods that were not exposed to shock waves, or shrimp with orbital hoods that were not exposed to shock waves. Animals in the AE, UC, and AC treatments did not
+differ in how long they took to contact their burrows.
+
+See @fig-shelter.
+
+
+```{r demo}
+#| include: false
+#| warning: false
+#| message: false
+
+# this is for demonstration of the differences in log scale using scale_y_log10 vs log10(time)
+
+g1 <- ggplot(tidy_data, aes(treatment, time)) +
+  geom_boxplot() +
+  scale_y_log10() +
+  labs(tag = "(A)")
+
+
+g2 <- ggplot(tidy_data, aes(treatment, log10(time))) +
+  geom_boxplot() +
+  labs(tag = "(B)")
+
+g1 + g2
+
+```
+
+
+```{r fig-shelter}
+#| echo: false
+#| warning: false
+#| fig-height: 5
+#| fig-cap: "This figure shows the time to shelter across treatment groups."
+ggplot(data = tidy_data, 
+       mapping = aes(x = treatment,
+                     y = time)) +
+  #geom_boxplot() +
+  #ggbeeswarm::geom_quasirandom(aes(color = Animal %in% c(4, 29, 15))) +
+  ggrepel::geom_text_repel(aes(label = Animal),
+                           color = "red",
+                           data = ~filter(., 
+                                          Animal %in% c(4, 29, 15))) +
+  #ggrepel::geom_text_repel(aes(label = Animal),
+  #                         data = ~filter(.,
+  #                                        treatment == "AE",
+  #                                        time > 50)) +
+  geom_dotplot(binaxis = "y", stackdir = "down") +
+  scale_y_log10() +
+  guides(color = "none") + 
+  scale_color_manual(values = c("black", "red")) +
+  theme(plot.background = element_rect(fill = "white"),
+        panel.background = element_rect(fill = "whitesmoke"),
+        axis.line = element_line(color = "black"),
+        panel.grid.major = element_line(color = "darkgrey",
+                                        linetype = "dashed"),
+        plot.title = element_text(size = 18),
+        plot.title.position = "plot",
+        plot.tag = element_text(size = 16,
+                                margin = margin(b = 15))) +
+  labs(x = "Treatment group",
+       y = "Time to shelter (log scale)",
+       title = "Time to shelter: not much difference between AC, AE and UC",
+       caption = "By Emi",
+       tag = "(A)")
+```
+
+
+We measured how long it took individuals to achieve a normal upright posture  following their release into the behavioral arena. Shrimp in the UE treatment took longer to become upright than animals in the AE, UC, or AC treatments. Animals in the AE, UC, and AC treatments did not differ in how long they took to achieve a normal posture.
+
+```{r}
+upright <- read_xlsx("data/kingston-data.xlsx", sheet = "B", skip = 1) %>% 
+  pivot_longer(cols = -Animal,
+               names_to = "treatment",
+               values_to = "time") %>% 
+  separate(treatment, sep = "[(]", 
+           into = c("treatment_full", "treatment")) %>% 
+  mutate(treatment = str_replace(treatment, "[)]", ""))
+
+glimpse(upright)
+```
+
+```{r}
+ggplot(upright, aes(treatment, time + 1)) +
+  ggbeeswarm::geom_quasirandom() +
+  scale_y_log10()
+```
+
+```{r}
+m1 <- lm(time ~ treatment, data = upright)
+anova(m1)
+
+m2 <- lm(time ~ treatment, data = filter(upright, time < 100))
+anova(m2)
+```
+
+
+
+In test subjects with unaltered orbital hoods, shock waves recorded internally always had lower magnitudes than those recorded externally (Data S1C). When we removed orbital hoods from test subjects, shock waves varied in whether they had higher magnitudes internally or externally (Data S1C).
+
+```{r}
+data <- read_xlsx("data/kingston-data.xlsx",
+                  sheet = "C",
+                  skip = 2) %>% 
+  select(Animal = `Animal...1`,
+         HU_ES1 = `External Snap 1...2`,
+         HU_ES2 = `External Snap 2...3`,
+         HU_ES3 = `External Snap 3...4`,
+         HU_IS1 = `Internal Snap 1...5`,
+         HU_IS2 = `Internal Snap 2...6`,
+         HU_IS3 = `Internal Snap 3...7`,
+         HR_ES1 = `External Snap 1...10`,
+         HR_ES2 = `External Snap 2...11`,
+         HR_ES3 = `External Snap 3...12`,
+         HR_IS1 = `Internal Snap 1...13`,
+         HR_IS2 = `Internal Snap 2...14`,
+         HR_IS3 = `Internal Snap 3...15`) %>% 
+  pivot_longer(cols = -Animal,
+               names_to = "treatment",
+               values_to = "shockwave") %>% 
+  separate(treatment, into = c("hood_status", "snap"), sep = "_") %>% 
+  separate(snap, into = c("snap", "replicate"), sep = "S")
+
+glimpse(data)
+data
+```
+
+```{r}
+fit <- lm(shockwave ~ snap*hood_status, data = data)
+
+anova(fit)
+```
+
+```{r}
+ggplot(data, aes(interaction(hood_status, snap), shockwave)) +
+  ggbeeswarm::geom_quasirandom(aes(color = snap)) +
+  stat_summary() +
+  scale_y_log10()
+```
+
+
+
+
