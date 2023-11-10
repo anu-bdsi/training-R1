@@ -41,4 +41,7 @@ Time | Content
 --->
 
 
+## 📁 Files from live coding sessions
+
+- <a href="_livecoding-shrimp-study.qmd" download="shrimp-study.qmd">Qmd file for Day 4 shrimp study exercise</a>
 
