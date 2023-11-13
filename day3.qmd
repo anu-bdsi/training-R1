@@ -45,4 +45,5 @@ This template is written by Dr. Robert Cope and Dr. Terry Neeman (with some smal
 ## 📁 Files from live coding sessions
 
 - <a href="_template-complex-formation.qmd" download="analysis.qmd">Qmd file for Day 2 exercise</a>
+- <a href="day3.R" download>R script from live coding by Jon</a>
 
