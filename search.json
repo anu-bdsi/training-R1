@@ -53,14 +53,14 @@
     "href": "day3.html",
     "title": "Day 3",
     "section": "",
-    "text": "Learning objectives\n\n\n\n\nProduce reproducible documents using Quarto (next generation R markdown)\nThis website is brought to you by the ANU Biological Data Science Institute."
+    "text": "ImportantLearning objectives\n\n\n\n\nProduce reproducible documents using Quarto (next generation R markdown)\nThis website is brought to you by the ANU Biological Data Science Institute."
   },
   {
     "objectID": "day3.html#aim",
     "href": "day3.html#aim",
     "title": "Day 3",
     "section": "",
-    "text": "Learning objectives\n\n\n\n\nProduce reproducible documents using Quarto (next generation R markdown)"
+    "text": "ImportantLearning objectives\n\n\n\n\nProduce reproducible documents using Quarto (next generation R markdown)"
   },
   {
     "objectID": "day3.html#schedule",
@@ -95,14 +95,14 @@
     "href": "day1.html",
     "title": "Day 1",
     "section": "",
-    "text": "Learning objectives\n\n\n\n\nSetting up your data project (R project, folder structure)\nReading data into R (csv and xlsx)\nThe basics of R programming (atomic vectors, lists, data.frame, subsetting R objects)\nTroubleshooting and producing minimal reproducible examples with reprex\nCompute numerical summaries\nBe familiar with computing density, distribution quantile and random generation of some parametric distributions\nThis website is brought to you by the ANU Biological Data Science Institute."
+    "text": "ImportantLearning objectives\n\n\n\n\nSetting up your data project (R project, folder structure)\nReading data into R (csv and xlsx)\nThe basics of R programming (atomic vectors, lists, data.frame, subsetting R objects)\nTroubleshooting and producing minimal reproducible examples with reprex\nCompute numerical summaries\nBe familiar with computing density, distribution quantile and random generation of some parametric distributions\nThis website is brought to you by the ANU Biological Data Science Institute."
   },
   {
     "objectID": "day1.html#aim",
     "href": "day1.html#aim",
     "title": "Day 1",
     "section": "",
-    "text": "Learning objectives\n\n\n\n\nSetting up your data project (R project, folder structure)\nReading data into R (csv and xlsx)\nThe basics of R programming (atomic vectors, lists, data.frame, subsetting R objects)\nTroubleshooting and producing minimal reproducible examples with reprex\nCompute numerical summaries\nBe familiar with computing density, distribution quantile and random generation of some parametric distributions"
+    "text": "ImportantLearning objectives\n\n\n\n\nSetting up your data project (R project, folder structure)\nReading data into R (csv and xlsx)\nThe basics of R programming (atomic vectors, lists, data.frame, subsetting R objects)\nTroubleshooting and producing minimal reproducible examples with reprex\nCompute numerical summaries\nBe familiar with computing density, distribution quantile and random generation of some parametric distributions"
   },
   {
     "objectID": "day1.html#schedule",
@@ -130,14 +130,14 @@
     "href": "day2.html",
     "title": "Day 2",
     "section": "",
-    "text": "Learning objectives\n\n\n\n\nBe familiar with the tidyverse ecosystem\nUnderstand the concept of tidy data\nTidy data with tidyr\nWrangle data with dplyr\nPlot a layer with ggplot2\nThis website is brought to you by the ANU Biological Data Science Institute."
+    "text": "ImportantLearning objectives\n\n\n\n\nBe familiar with the tidyverse ecosystem\nUnderstand the concept of tidy data\nTidy data with tidyr\nWrangle data with dplyr\nPlot a layer with ggplot2\nThis website is brought to you by the ANU Biological Data Science Institute."
   },
   {
     "objectID": "day2.html#aim",
     "href": "day2.html#aim",
     "title": "Day 2",
     "section": "",
-    "text": "Learning objectives\n\n\n\n\nBe familiar with the tidyverse ecosystem\nUnderstand the concept of tidy data\nTidy data with tidyr\nWrangle data with dplyr\nPlot a layer with ggplot2"
+    "text": "ImportantLearning objectives\n\n\n\n\nBe familiar with the tidyverse ecosystem\nUnderstand the concept of tidy data\nTidy data with tidyr\nWrangle data with dplyr\nPlot a layer with ggplot2"
   },
   {
     "objectID": "day2.html#schedule",
@@ -165,14 +165,14 @@
     "href": "day4.html",
     "title": "Day 4",
     "section": "",
-    "text": "Learning objectives\n\n\n\n\nAdopt the full R workflow to write a reproducible scientific report\nThis website is brought to you by the ANU Biological Data Science Institute."
+    "text": "ImportantLearning objectives\n\n\n\n\nAdopt the full R workflow to write a reproducible scientific report\nThis website is brought to you by the ANU Biological Data Science Institute."
   },
   {
     "objectID": "day4.html#aim",
     "href": "day4.html#aim",
     "title": "Day 4",
     "section": "",
-    "text": "Learning objectives\n\n\n\n\nAdopt the full R workflow to write a reproducible scientific report"
+    "text": "ImportantLearning objectives\n\n\n\n\nAdopt the full R workflow to write a reproducible scientific report"
   },
   {
     "objectID": "day4.html#schedule",
@@ -214,7 +214,7 @@
     "href": "index.html#preperation",
     "title": "BDSI R Training I",
     "section": "Preperation",
-    "text": "Preperation\n Watch the following videos by Dr Robert Cope.\n\n\nVideos (click here)\n\n\n\n\n\n\n\n\nPlease ensure that you download and install\n\nthe latest version of R,\nthe latest version of RStudio Desktop,\nthe latest version of Quarto,\nSlack (alternatively you can use the web version), and\nthe following packages by opening RStudio Desktop, then copy and paste the command below in the Console section, pushing Enter after pasting.\n\ninstall.packages(c(\"tidyverse\", \"rmarkdown\", \"janitor\", \n                   \"readxl\", \"gtsummary\", \"lme4\", \n                   \"emmeans\", \"lmerTest\", \"ggResidpanel\",\n                   \"reprex\", \"palmerpenguins\", \"quarto\",\n                   \"report\", \"correlation\", \"see\",\n                   \"parameters\", \"ggbeeswarm\", \"hexbin\"))\n If you are having issues, see also here or talk to the teaching team.\n\n\n\n\n\n\n Slack workspace\n\n\n\n\nJoin ANU Learning Data Slack Community\n\n\nYou must use your ANU email to sign up.\nUse your full name.\nBy joining, you agree to abide by this code of conduct."
+    "text": "Preperation\n Watch the following videos by Dr Robert Cope.\n\n\nVideos (click here)\n\n\n\n\n\n\n\n\nPlease ensure that you download and install\n\nthe latest version of R,\nthe latest version of RStudio Desktop,\nthe latest version of Quarto,\nSlack (alternatively you can use the web version), and\nthe following packages by opening RStudio Desktop, then copy and paste the command below in the Console section, pushing Enter after pasting.\n\ninstall.packages(c(\"tidyverse\", \"rmarkdown\", \"janitor\", \n                   \"readxl\", \"gtsummary\", \"lme4\", \n                   \"emmeans\", \"lmerTest\", \"ggResidpanel\",\n                   \"reprex\", \"palmerpenguins\", \"quarto\",\n                   \"report\", \"correlation\", \"see\",\n                   \"parameters\", \"ggbeeswarm\", \"hexbin\"))\n If you are having issues, see also here or talk to the teaching team.\n\n\n\n\n\n\nNote Slack workspace\n\n\n\n\nJoin ANU Learning Data Slack Community\n\n\nYou must use your ANU email to sign up.\nUse your full name.\nBy joining, you agree to abide by this code of conduct."
   },
   {
     "objectID": "index.html#teaching-team",

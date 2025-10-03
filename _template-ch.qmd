@@ -1,0 +1,55 @@
+---
+title: "Preliminary look at Clonal Haemopoeisis patients"
+author: "YOUR NAME HERE"
+date: today
+format: docx
+---
+
+Clonal haematopoiesis (CH) describes a condition when a single hematopoietic stem cell or progenitor cell harbouring somatic mutations acquires a selective clonal advantage over hematopoietic stem/progenitor cells without these mutations. It is considered to be a phenomenon of aging, but has been reported amongst the HIV population as well amongst cancer patients who have undergone cytotoxic chemotherapy. 
+
+Patients are diagnosed with CH when the variant allelic fraction (VAF) of the clonal population exceeds 2%.
+
+There is some evidence that untreated CH confers higher risk of haematological malignancies and cardiovascular ischemic events. Therefore we are interested in modifying this condition with the eventual aim of reducing mortality in a high risk population.
+
+We have a large (mock) database of HIV patient records who have been followed longitudinally for up to 10 years. Some of these patients received Drug X (for another indication) that is potentially a VAF modifier, ie preventing CH. 
+
+Using these (mock) data, please consider at least one of the following claims to discuss, support or refute. 
+
+a.	VAF increases as subjects age.
+b.	VAF is a risk factor for cardiovascular events.
+c.	Drug X modifies the age-related VAF trajectory.
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Set up libraries
+
+```{r message = FALSE}
+
+```
+
+Import data
+
+```{r}
+
+```
+
+Describe the data and provide some basic summary statistics. In a clinical study we usually summarise demographics and baseline patient characteristics. Consider a table that separately summarises patients by Drug X (Yes/No) 
+
+```{r}
+
+```
+
+
+
+Have a look at the VAF data over time. Is there evidence that VAF increases as patients age (claim a)? Does it appear that patients who received Drug X have a different VAF trajectory (claim c)? 
+
+```{r}
+
+            
+```
+
+
+How might you assess claim b?
